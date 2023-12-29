@@ -1,0 +1,41 @@
+.inp-voise-mode[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.label-voise-mode {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 70px;
+	height: 40px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.label-voise-mode:after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.inp-voise-mode:checked + label {
+	background: #bada55;
+}
+
+.inp-voise-mode:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.label-voise-mode:active:after {
+	width: 30px;
+}

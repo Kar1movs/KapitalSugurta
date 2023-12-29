@@ -1,0 +1,23 @@
+*:focus {
+    box-shadow: none !important;
+    border: 0;
+}
+*:focus-visible {
+    box-shadow: none !important;
+    border: 0;
+}
+a{
+    text-decoration: none;
+}
+
+input:focus{
+    border: 1px solid black;
+}
+
+textarea:focus{
+    border: 1px solid var(--bs-primary);
+}
+
+.btn:active{
+    background: transparent;
+}
