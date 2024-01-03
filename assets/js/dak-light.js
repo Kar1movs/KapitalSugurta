@@ -7,24 +7,29 @@ const setDarkMode = (active = false) => {
       wrapper.setAttribute("data-theme", "light");
     }
   };
-  
+
   const toggleDarkMode = () => {
     const theme = document.querySelector(":root").getAttribute("data-theme");
     setDarkMode(theme === "light");
   };
-  
+
   const initDarkMode = () => {
     const query = window.matchMedia("(prefers-color-scheme: light)");
-  
+
     let active = query.matches;
 
-  
+
     setDarkMode(active);
-  
+
     query.addListener(e => setDarkMode(e.matches));
-  
+
     const toggleButton = document.querySelector(".js-dark-mode-toggle");
     toggleButton.addEventListener("click", toggleDarkMode);
   };
-  
+
   initDarkMode();
+
+  function onload() {
+    document.body.classList.toggle('setDarkMode', localStorage.getItem('wrapper') === 'true')
+  }
+document.addEventListener('DOMContentLoaded', onload)

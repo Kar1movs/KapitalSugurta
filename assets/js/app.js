@@ -224,6 +224,82 @@ if ($('.counter').length > 0) {
     $('h3').addClass('animated fadeIn');
 }
 
+// // input 
+// const tvejmqsForm = document.getElementById('tvejmqs-form');
+// const stateNumber = document.getElementById('state-number');
+// const pasportSeries = document.getElementById('pasport-series');
+// const pasportNumber = document.getElementById('pasport-number');
+
+// tvejmqsForm.addEventListener('sumbit', e => {
+//     e.preventDefault();
+
+//     validateInputs();
+// });
+
+// const setError = (element, message) => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
+
+//     errorDisplay.innerText = message;
+//     inputControl.classList.add('error');
+//     inputControl.classList.remove('success');
+// }
+
+// const setSuccess = element => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
+
+//     errorDisplay.innerText = '';
+//     inputControl.classList.add('success');
+//     inputControl.classList.remove('error');
+// }
+
+function noDigits(event) {
+    if ("1234567890".indexOf(event.key) != -1)
+        event.preventDefault();
+}
+
+// const validateInputs = () => {
+//     const stateNumberValue = stateNumber.value.trim();
+//     const pasportSeriesValue = pasportSeries.value.trim();
+//     const pasportNumberValue = pasportNumber.value.trim();
+
+//     if (stateNumberValue == '') {
+//         setError(stateNumber, "To'ldirish majburiy")
+//     } else {
+//         setSuccess(stateNumber)
+//     }
+
+//     if (pasportSeriesValue == '') {
+//         setError(pasportSeries, "To'ldirish majburiy")
+//     } else {
+//         setSuccess(pasportSeries)
+//     }
+
+//     if (pasportNumberValue == '') {
+//         setError(pasportNumber, "To'ldirish majburiy")
+//     } else {
+//         setSuccess(pasportNumber)
+//     }
+
+// };
+
+$('document').ready(function () {
+    $('#button-sumbit').on('click', function () {
+        $('.form_box .rfield').each(function () {
+            if ($(this).val() != '') {
+                console.log(32);
+                // Если поле не пустое удаляем класс-указание
+                $(this).removeClass('empty_field');
+            } else {
+                console.log(33);
+                // Если поле пустое добавляем класс-указание
+                $(this).addClass('empty_field');
+            }
+        });
+    });
+});
+
 // scroll up
 let mybutton = document.getElementById("btn-back-to-top");
 
