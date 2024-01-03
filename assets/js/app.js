@@ -300,6 +300,19 @@ $('document').ready(function () {
     });
 });
 
+$('.form_box').on('input', 'input[type="text"][maxlength]', function(){
+	if (this.value.length > this.maxLength){
+		this.value = this.value.slice(0, this.maxLength);
+	}
+});
+
+$('.form_box').on('input', 'input[type="number"][maxlength]', function(){
+	if (this.value.length > this.maxLength){
+		this.value = this.value.slice(0, this.maxLength);
+	}
+});
+
+
 // scroll up
 let mybutton = document.getElementById("btn-back-to-top");
 

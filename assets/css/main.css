@@ -126,7 +126,7 @@
     position: static;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: var(--bs-wheat);
 }
 
@@ -159,11 +159,11 @@
     color: var(--bs-black);
 }
 
-.dropdown-toggle{
+.dropdown-toggle {
     color: var(--bs-black);
 }
 
-.dropdown-a{
+.dropdown-a {
     color: var(--bs-black);
 }
 
@@ -1293,6 +1293,7 @@ th {
     background-repeat: no-repeat;
     background-position-y: 0;
     background-size: 100%;
+    padding-bottom: 100px;
 }
 
 /* tfjmsq-home-page  */
@@ -1303,6 +1304,7 @@ th {
     background-repeat: no-repeat;
     background-position-y: 0;
     background-size: 100%;
+    padding-bottom: 100px;
 }
 
 /* calculator-policy */
@@ -1310,19 +1312,40 @@ th {
     background-color: var(--bs-white);
 }
 
-/* input controls  */
-/* .input-controls.success input{
-    border-color: #09c372;
-}
-
-.input-controls.error input{
-    border-color: #ff3860;
-} */
-
 .form_box input.empty_field {
     border: 2px solid;
     border-width: 2px;
     border-color: red;
+}
+
+.page-404 {
+    background-color: var(--bs-primary);
+    color: var(--bs-black);
+}
+
+.home-page-404 {
+    background: var(--bs-white);
+    background-image: url(../img/tfjmsq/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 100px;
+}
+
+/* avtolux-information */
+.avtolux-information {
+    background-color: var(--bs-white);
+}
+
+.avtolux-information-home-page {
+    background: var(--bs-white);
+    background-image: url(../img/avtolux-information/avto-lux-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 100px;
 }
 
 /*========== SCROLL UP ==========*/
