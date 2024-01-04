@@ -1345,6 +1345,86 @@ th {
     background-repeat: no-repeat;
     background-position-y: 0;
     background-size: 100%;
+    padding-bottom: 50px;
+}
+
+.personal-insurance-home-page {
+    background: var(--bs-white);
+    background-image: url(../img/unfortunate-insurance/unfortunate-insurance.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 50px;
+}
+
+.personal-insurance-travel-home-page{
+    background: var(--bs-white);
+    background-image: url(../img/unfortunate-insurance/travel.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 50px;
+}
+
+.incoming-tourist-home-page{
+    background: var(--bs-white);
+    background-image: url(../img/unfortunate-insurance/dom.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 50px;
+}
+
+.dasgo-home-page{
+    background: var(--bs-white);
+    background-image: url(../img/tvejmqs/header.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 50px;
+}
+
+.capital-home-page{
+    background: var(--bs-white);
+    background-image: url(../img/unfortunate-insurance/dom.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 50px;
+}
+
+.kapitalofis-home-page{
+    background: var(--bs-white);
+    background-image: url(../img/property-insurance/kapital-ofis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 50px;
+}
+
+.bank-home-page{
+    background: var(--bs-white);
+    background-image: url(../img/property-insurance/bank.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
+    padding-bottom: 100px;
+}
+
+.personal-documnet-home-page{
+    background: var(--bs-white);
+    background-image: url(../img/property-insurance/shaxsiy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100%;
     padding-bottom: 100px;
 }
 
