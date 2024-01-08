@@ -69,7 +69,9 @@ const tabPanels = document.querySelectorAll("[role=tabpanel]");
 tabsContainer.addEventListener("mouseover", (e) => {
     const clickedTab = e.target.closest("button");
     const currentTab = tabsContainer.querySelector('[aria-selected="true"]');
-
+    if (clickedTab === currentTab){
+        switchTab(clickedTab);
+    }
     if (!clickedTab || clickedTab === currentTab) return;
 
     switchTab(clickedTab);
@@ -183,25 +185,6 @@ function moveIndicator(oldTab, newTab) {
         tabsContainer.style.setProperty("--_width", newTabWidth);
     }, 220);
 }
-
-
-// $(document).on('mouseenter', '[data-bs-toggle="pill"]', function () {
-//     $(this).tab('show');
-// });
-
-
-// $(document).on('mouseleave', '[data-bs-toggle-hover="active"]', function () {
-
-
-//     let childActive = $('.nav-item button.nav-link.active');
-
-//     if (childActive.hasClass('active')) {
-//         childActive.removeClass('active');
-//         $('.nav-tabs li.active').removeClass('active');
-//         $('.tab-content div.active').removeClass('active');
-//     }
-//     closeTab()
-// });
 
 
 $(document).ready(function () {

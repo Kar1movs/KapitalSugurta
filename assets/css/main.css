@@ -287,7 +287,7 @@
 }
 
 .swiper-link-a {
-    color: var(--bs-gray);
+    color: var(--bs-black);
     cursor: pointer;
     width: 100px;
     display: flex;
@@ -316,6 +316,8 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+    filter: var(--bs-filter);
+
 }
 
 .homepage-showcase-swiper.swiper {

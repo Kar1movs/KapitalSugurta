@@ -7,6 +7,9 @@
     <title>KAPITAL SUG'URTA Kompaniyasi | Toshkent va butun O'zbekiston Respublikasi bo'yicha barcha turdagi sug'urta
         turlari.</title>
 
+    <!-- dark-light  -->
+    <script src="assets/js/dak-light.js" defer></script>
+
     <!-- favico  -->
     <link type="image/x-icon" href="/assets/img/favico/favico.png" rel="shortcut icon">
 
@@ -31,6 +34,7 @@
     <!-- voise-mode -->
     <link rel="stylesheet" href="assets/css/voice-mode.css">
 
+    <!-- fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
@@ -55,32 +59,20 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="santa-a d-flex justify-content-center align-items-center" style="width: 85px;">
-                            <a href="#" class="modal-santa d-flex justify-content-center align-items-center">
-                                <h5></h5>
-                            </a>
-                        </div>
-                        <span class="fs-2 fw-bold modal-span">-</span>
-                        <h5 class="w-100 my-2 fw-bolder">Sichqonchaga ergashib yuruvchi qorboboni yoqish/o'chirish</h5>
-                    </div>
-
-                    <div class="dark-light d-flex align-items-center gap-2">
-                        <div class="darklight-button d-flex justify-content-center align-items-center"
-                            style="width: 85px;">
-                            <button class="js-dark-mode-toggle dark-mode-toggle" type="button"
-                                style="width: 50px; height: 50px;">
-                                <span class="dark-mode-toggle-icon" style="width: 20px; height: 20px;;"></span>
-                                <span class="dark-mode-toggle-text hidden--visually"
-                                    style="width: 20px; height: 20px;;">dark mode</span>
-                            </button>
-                        </div>
-                        <span class="fs-2 fw-bold modal-span">-</span>
+                        <div class="dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2">
+                            <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center">
+                                <input type="checkbox" id="toggle1" class="mode-theme-js toggle-unique dark-light-mode js-dark-mode-toggle dark-mode-toggle" value="on"
+                                    checked="false">
+                                <label class="label label-dark-light-mode" for="toggle1">dark/light</label>
+                            </div>
+                            <span class="fs-2 fw-bold modal-span">-</span>
                         <h5 class="w-100 my-2 fw-bolder">kunduzgi/tungi rejim</h5>
-                    </div>
+                        </div>
+                        
+                    <!-- </div> -->
 
-                    <div class="voise-mode d-flex align-items-center my-3 gap-2">
-                        <div class="inp d-flex align-items-center" style="width: 85px;">
+                    <div class="voise-mode d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
+                        <div class="inp d-flex align-items-center mx-1" style="width: 85px;">
                             <input type="checkbox" id="switch" class="inp-voise-mode" />
                             <label for="switch" class="label-voise-mode">Toggle</label>
                         </div>
@@ -354,7 +346,7 @@
 
 
                 <div class="tab-panels">
-                    <div id="tabPanel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+                    <div id="tabPanel-1" hidden role="tabpanel" tabindex="0" aria-labelledby="tab-1">
                         <div class="border-top">
                             <div class="row">
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
@@ -363,23 +355,27 @@
                                         <a href="assets/html/tabs/avtolux.html">"AVTO-LUX" sug'urta mahsuloti</a>
                                         <a href="assets/html/tabs/kasko-gaz.html">Kasko-Gaz</a>
                                         <a href="assets/html/tabs/kasko.html">Kasko</a>
-                                        <a href="assets/html/tabs/kapital-parking.html">"KAPITAL PARKING" sug'urta mahsuloti</a>
+                                        <a href="assets/html/tabs/kapital-parking.html">"KAPITAL PARKING" sug'urta
+                                            mahsuloti</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Shaxsiy sug'urta</h5>
-                                        <a href="assets/html/tabs/accidents.html">Baxtsiz hodisalardan sug'urta qilish</a>
+                                        <a href="assets/html/tabs/accidents.html">Baxtsiz hodisalardan sug'urta
+                                            qilish</a>
                                         <a href="assets/html/tabs/sports.html">Sportchilarni sug'urtasi</a>
                                         <a href="assets/html/tabs/travel.html">Sayohat sug'urtasi</a>
-                                        <a href="assets/html/tabs/incoming-tourists.html">O'zbekistonga kiruvchi turistlarni sug'urtalash</a>
+                                        <a href="assets/html/tabs/incoming-tourists.html">O'zbekistonga kiruvchi
+                                            turistlarni sug'urtalash</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Javobgarlik sug'urtasi</h5>
                                         <a href="assets/html/tabs/dasgo.html">"DASGO" sug'urta mahsuloti</a>
-                                        <a href="assets/html/tabs/avtotransport.html">Avtotransport vositalari egalarining
+                                        <a href="assets/html/tabs/avtotransport.html">Avtotransport vositalari
+                                            egalarining
                                             <br />
                                             fuqorolik javobgarligini majburiy
                                             <br />
@@ -409,11 +405,15 @@
                                         <h5>Mulkni sug'urtalash</h5>
                                         <a href="assets/html/404/404.html">Mulkni sug'urtalash</a>
                                         <a href="assets/html/tabs/cargo-insurance.html">Yuklarni sug'urta qilish</a>
-                                        <a href="assets/html/tabs/construction-and-installation.html">Qurilish va o'rnatish risklarni <br /> majburiy sug'urta
+                                        <a href="assets/html/tabs/construction-and-installation.html">Qurilish va
+                                            o'rnatish risklarni <br /> majburiy sug'urta
                                             qilish</a>
-                                        <a href="assets/html/tabs/construction-risk-insurance.html">Qurilish va o'rnatish xavfini <br /> sug'urtalash</a>
-                                        <a href="assets/html/tabs/car-breakdown-insurance.html">Mashina va jihozlarni buzilishlardan sug'urtalash</a>
-                                        <a href="assets/html/tabs/electronic-equipment-insurance.html">Elektron uskunlarni sug'urta qilish</a>
+                                        <a href="assets/html/tabs/construction-risk-insurance.html">Qurilish va
+                                            o'rnatish xavfini <br /> sug'urtalash</a>
+                                        <a href="assets/html/tabs/car-breakdown-insurance.html">Mashina va jihozlarni
+                                            buzilishlardan sug'urtalash</a>
+                                        <a href="assets/html/tabs/electronic-equipment-insurance.html">Elektron
+                                            uskunlarni sug'urta qilish</a>
                                         <a href="assets/html/tabs/ipotke-insurance.html">Ipoteka sug'urtasi</a>
                                     </div>
                                 </div>
@@ -430,14 +430,17 @@
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Tibbiy sug'urta</h5>
-                                        <a href="#">"Ixtiyoriy tibbiy sug'urta</a>
-                                        <a href="#">Baxtsiz hodisalardan sug'urta qilish</a>
+                                        <a href="assets/html/tabs/voluntary-health-insurance.html">"Ixtiyoriy tibbiy
+                                            sug'urta</a>
+                                        <a href="assets/html/tabs/accidents.html">Baxtsiz hodisalardan sug'urta
+                                            qilish</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Fuqorolik javobgarligi sug'urtasi</h5>
-                                        <a href="#">OSGOR - ish beruvchining fuqorolik <br />
+                                        <a href="assets/html/tabs/osgor-employer.html">OSGOR - ish beruvchining
+                                            fuqorolik <br />
                                             javobgarligini majburiy sug'urta <br />
                                             qilish
                                         </a>
@@ -678,11 +681,11 @@
                                         <p class="fw-medium text-product">Обязательное страхование гражданской
                                             ответственности
                                             перевозчика</p>
-                                            <a href="assets/html/purschase/tfjmsq.html">
-                                                <button class="btn btn-primary border-0 fs-5 rounded text-center sale">
-                                                    SOTIB OLISH
-                                                </button>
-                                            </a>
+                                        <a href="assets/html/purschase/tfjmsq.html">
+                                            <button class="btn btn-primary border-0 fs-5 rounded text-center sale">
+                                                SOTIB OLISH
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1353,9 +1356,9 @@
     <!-- <script src="assets/js/main.js"></script> -->
 
     <!-- seasons js  -->
-    <script src="assets/js/seasons.js"></script>
+    <!-- <script src="assets/js/seasons.js"></script> -->
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script>
     <script>
 
         const sr = ScrollReveal({
@@ -1372,7 +1375,7 @@
             origin: 'bottom',
             interval: 400,
         })
-    </script>
+    </script> -->
     <!-- santa js  -->
     <!-- <script src="assets/js/santa.js"></script> -->
 
@@ -1385,8 +1388,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- shepherd js -->
     <script src="assets/js/shepherd.min.js"></script>
-    <!-- dark-light  -->
-    <script src="assets/js/dak-light.js"></script>
+
     <!-- app js -->
     <script src="assets/js/app.js"></script>
 </body>

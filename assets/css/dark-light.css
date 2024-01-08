@@ -6,34 +6,53 @@
     --primary: #f1ca29;
     --grey--dark: #aca79a;
     --border-color-dark: #dee2e6;
+    --bs-filter: none;
 }
-  
-  :root[data-theme="dark"] {
+
+:root[data-theme="dark"] {
+    --bs-filter: brightness(0.5);
     --bs-wheat: #414140;
     --bs-ww: #414140;
     --bs-white: #222220;
     --bs-black: #ffffff;
     --primary: #f1ca29;
-    --border-color-dark: #ff8c00;
-  }
+    --border-color-dark: #f1ca29;
+}
 
-  .navbar-tabs-button:focus{
+html.dark-mode img,
+html.dark-mode video {
+    filter: grayscale(1) brightness(0.5);
+    -webkit-filter: grayscale(1) brightness(0.5);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+}
+
+.navbar-tabs-button:focus {
     color: var(--bs-black);
-  }
+}
 
-  h1,h2,h3,h4,h5,h6,p,th,td,label{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+label {
     color: var(--bs-black);
-  }
+}
 
-  body {
+body {
     font-size: 1rem;
     color: var(--black);
     background: var(--white);
     font-family: monospace;
     line-height: 1.7;
-  }
-  
-  .dark-mode-toggle {
+}
+
+.dark-mode-toggle {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -50,155 +69,69 @@
     overflow: hidden;
     border-radius: .4rem;
     border: .2rem solid var(--grey--dark);
-  }
-  
-  .dark-mode-toggle:focus {
-    outline: none;
-    border-color: var(--primary);
-  }
-  
-  :root[data-theme="dark"] .dark-mode-toggle-text:before {
-    content: "deactivate ";
-  }
-  
-  :root[data-theme="light"] .dark-mode-toggle-text:before {
-    content: "activate ";
-  }
-  
-  .dark-mode-toggle-icon {
+}
+
+.dark-light-mode[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.label-dark-light-mode {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 30px;
+    background: grey;
     display: block;
-    background: var(--grey--dark);
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    border-radius: 100px;
     position: relative;
-    transition: width 0.3s, height 0.3s;
-    z-index: 1;
-    transform: rotate(-20deg);
-  }
-  
-  .dark-mode-toggle-icon:before {
-    z-index: 0;
-    content: "";
+}
+
+.label-dark-light-mode:before {
+    content: '';
     position: absolute;
-    display: block;
-    border-right: none;
-    border-radius: 50%;
-    width: 2.4rem;
-    height: 2.4rem;
-    top: 50%;
-    left: 50%;
-    transition: opacity 0.3s, background-image 03s;
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(0deg);
-    animation: spin-rays 4s linear infinite;
-    background-image: linear-gradient(
-        0deg,
-        transparent 46%,
-        var(--grey--dark) 46%,
-        var(--grey--dark) 54%,
-        transparent 54%
-      ),
-      linear-gradient(
-        90deg,
-        transparent 46%,
-        var(--grey--dark) 46%,
-        var(--grey--dark) 54%,
-        transparent 54%
-      ),
-      linear-gradient(
-        45deg,
-        transparent 47%,
-        var(--grey--dark) 47%,
-        var(--grey--dark) 53%,
-        transparent 53%
-      ),
-      linear-gradient(
-        135deg,
-        transparent 47%,
-        var(--grey--dark) 47%,
-        var(--grey--dark) 53%,
-        transparent 53%
-      );
-  }
-  
-  .dark-mode-toggle-icon:after {
-    content: "";
-    position: absolute;
-    display: block;
-    background: var(--white);
-    border-radius: 0.7rem;
-    width: 1.4rem;
-    height: 1.4rem;
-    top: 50%;
-    left: 200%;
-    transform: translateY(-50%);
-    transition: left 0.3s;
-  }
-  
-  .dark-mode-toggle:hover .dark-mode-toggle-icon {
-    background: var(--primary);
-  }
-  .dark-mode-toggle:hover .dark-mode-toggle-icon:before {
-    background-image: linear-gradient(
-        0deg,
-        transparent 47%,
-        var(--primary) 47%,
-        var(--primary) 53%,
-        transparent 53%
-      ),
-      linear-gradient(
-        90deg,
-        transparent 47%,
-        var(--primary) 47%,
-        var(--primary) 53%,
-        transparent 53%
-      ),
-      linear-gradient(
-        45deg,
-        transparent 48%,
-        var(--primary) 48%,
-        var(--primary) 52%,
-        transparent 52%
-      ),
-      linear-gradient(
-        135deg,
-        transparent 48%,
-        var(--primary) 48%,
-        var(--primary) 52%,
-        transparent 52%
-      );
-  }
-  
-  :root[data-theme="light"] .dark-mode-toggle-icon:after {
-    left: 40%;
-  }
-  :root[data-theme="dark"] .dark-mode-toggle-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-  :root[data-theme="dark"] .dark-mode-toggle-icon:before {
-    opacity: 1;
-  }
-  
-  @keyframes spin-rays {
-    from {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-  }
-  
-  /* Hide only visually, but have it available for screenreaders */
-  .hidden--visually {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+#toggle1[type=checkbox] {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  opacity: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+#toggle1[type=checkbox][checked= true] + .label-dark-light-mode {
+    background-color: var(--bs-primary);
+}
+
+#toggle1[type=checkbox][checked= true] + .label-dark-light-mode:before {
+    background-color: var(--bs-white);
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+#toggle1[type=checkbox][checked= true] + .label-dark-light-mode:active:before {
+    width: 40px;
+}
+
+:root[data-theme="dark"] .dark-mode-toggle-text:before {
+    content: "deactivate ";
+}
+
+:root[data-theme="light"] .dark-mode-toggle-text:before {
+    content: "activate ";
+}
