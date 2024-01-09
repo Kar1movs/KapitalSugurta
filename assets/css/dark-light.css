@@ -21,10 +21,7 @@
 
 html.dark-mode img,
 html.dark-mode video {
-    filter: grayscale(1) brightness(0.5);
-    -webkit-filter: grayscale(1) brightness(0.5);
-    -moz-filter: grayscale(1);
-    -o-filter: grayscale(1);
+/* filter: brightness(0.5); */
 }
 
 .navbar-tabs-button:focus {

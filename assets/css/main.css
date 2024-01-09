@@ -36,6 +36,11 @@
 
 .modal-content {
     background: var(--bs-white);
+    width: 655px;
+}
+
+.modal-head {
+    width: 655px;
 }
 
 .modal-santa {
@@ -66,8 +71,21 @@
     width: 28%;
 }
 
+.header-logo{
+    height: 35px;
+}
+
+.logo-text{
+    color: var(--bs-black);
+}
+
 .navbar-icon {
     color: var(--bs-primary);
+}
+
+.main-header-top-actions-item {
+    background-color: var(--bs-wheat);
+    color: var(--bs-black);
 }
 
 .main-header-top-actions-item:hover {
@@ -1109,7 +1127,7 @@ button.swiper-pagination-bullet {
 
 .homepage-about-text {
     margin: 100px 0;
-    padding: 2rem 2rem 2rem 0;
+    padding: 2rem 1rem 2rem 0;
     margin-left: -40px;
     transform: translateX(50px);
     transition: all 300ms ease-in-out;
@@ -1154,7 +1172,7 @@ button.swiper-pagination-bullet {
 
 .news-position {
     position: absolute;
-    bottom: 134px;
+    top: 134px;
     left: 0;
 }
 
@@ -1268,7 +1286,7 @@ th {
 }
 
 .contact-links-a {
-    color: var(--bs-white);
+    color: var(--bs-black);
 }
 
 .contact-a {
@@ -1279,7 +1297,13 @@ th {
     color: var(--bs-primary);
 }
 
-
+.btn-search {
+    background-color: var(--bs-wheat);
+    color: var(--bs-black);
+    height: fit-content;
+    width: 100%;
+    text-align: start;
+}
 
 /* footer  */
 .footer {
@@ -1360,7 +1384,7 @@ th {
     padding-bottom: 50px;
 }
 
-.personal-insurance-travel-home-page{
+.personal-insurance-travel-home-page {
     background: var(--bs-white);
     background-image: url(../img/unfortunate-insurance/travel.jpg);
     background-position: center;
@@ -1370,7 +1394,7 @@ th {
     padding-bottom: 50px;
 }
 
-.incoming-tourist-home-page{
+.incoming-tourist-home-page {
     background: var(--bs-white);
     background-image: url(../img/unfortunate-insurance/dom.jpg);
     background-position: center;
@@ -1380,7 +1404,7 @@ th {
     padding-bottom: 50px;
 }
 
-.dasgo-home-page{
+.dasgo-home-page {
     background: var(--bs-white);
     background-image: url(../img/tvejmqs/header.PNG);
     background-position: center;
@@ -1390,7 +1414,7 @@ th {
     padding-bottom: 50px;
 }
 
-.capital-home-page{
+.capital-home-page {
     background: var(--bs-white);
     background-image: url(../img/unfortunate-insurance/dom.jpg);
     background-position: center;
@@ -1400,7 +1424,7 @@ th {
     padding-bottom: 50px;
 }
 
-.kapitalofis-home-page{
+.kapitalofis-home-page {
     background: var(--bs-white);
     background-image: url(../img/property-insurance/kapital-ofis.jpg);
     background-position: center;
@@ -1410,7 +1434,7 @@ th {
     padding-bottom: 50px;
 }
 
-.bank-home-page{
+.bank-home-page {
     background: var(--bs-white);
     background-image: url(../img/property-insurance/bank.jpg);
     background-position: center;
@@ -1420,7 +1444,7 @@ th {
     padding-bottom: 100px;
 }
 
-.personal-documnet-home-page{
+.personal-documnet-home-page {
     background: var(--bs-white);
     background-image: url(../img/property-insurance/shaxsiy.jpg);
     background-position: center;
@@ -1428,6 +1452,15 @@ th {
     background-position-y: 0;
     background-size: 100%;
     padding-bottom: 100px;
+}
+
+/* img  */
+.dark-light-img {
+    filter: var(--bs-filter);
+}
+
+.footer-text-size {
+    color: white;
 }
 
 /*========== SCROLL UP ==========*/
@@ -1478,8 +1511,20 @@ th {
         height: 500px
     }
 
+
     .search-input {
         width: 44.2%;
+    }
+
+    .news-position {
+        position: absolute;
+        top: 366px;
+        left: 0;
+    }
+
+    .card-new-img {
+        width: 100%;
+        height: 416px;
     }
 }
 
@@ -1497,15 +1542,19 @@ th {
         width: calc(var(--aspect-ratio) * 450px);
         height: 450px
     }
+
+    .news-position {
+        position: absolute;
+        top: 306px;
+        left: 0;
+    }
+
+    .card-new-img {
+        height: 356px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-    .homepage-about-text {
-        margin: 0;
-        padding: 0;
-        margin-left: 0;
-        transform: translateX(0);
-    }
 
     .homepage-showcase-swiper.swiper {
         height: 400px
@@ -1524,6 +1573,34 @@ th {
     .search-input {
         width: 35.3%;
     }
+
+    .news-position {
+        position: absolute;
+        top: 306px;
+        left: 0;
+    }
+
+    .card-new-img {
+        height: 356px;
+    }
+
+    .homepage-about-text {
+        transform: translateX(40px);
+        height: 400px;
+    }
+
+    .homepage-about-text:hover {
+        transform: translateX(40px);
+    }
+
+    .modal-content {
+        width: 600px;
+    }
+    
+    .modal-head {
+        width: 600px;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -1595,6 +1672,36 @@ th {
         width: 23.8%;
     }
 
+    .news-position {
+        position: absolute;
+        top: 246px;
+        left: 0;
+    }
+
+    .card-new-img {
+        height: 296px;
+    }
+
+    .homepage-about-text {
+        transform: translateX(40px);
+        height: 400px;
+    }
+
+    .homepage-about-text:hover {
+        transform: translateX(40px);
+    }
+
+    .footer-text-size {
+        font-size: 18px;
+    }
+
+    .modal-content {
+        width: 565px;
+    }
+    
+    .modal-head {
+        width: 565px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1614,6 +1721,42 @@ th {
         left: calc(var(--left-offset) + 25px);
         bottom: 40px
     }
+
+    .news-position {
+        position: absolute;
+        top: 282px;
+        left: 0;
+    }
+
+    .card-new-img {
+        height: 332px;
+        width: 100%;
+    }
+
+    .homepage-about-text {
+        transform: translateX(40px);
+        height: 470px;
+    }
+
+    .homepage-about-text:hover {
+        transform: translateX(40px);
+    }
+
+    .contact-links {
+        width: 100%;
+    }
+
+    .footer-text-size {
+        font-size: 15px;
+    }
+
+    .modal-content {
+        width: 548px;
+    }
+    
+    .modal-head {
+        width: 548px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -1627,6 +1770,45 @@ th {
         transition: 0.6s;
         width: 300px;
         height: 420px;
+    }
+
+    .card-new-img {
+        height: 509px;
+    }
+
+    .news-position {
+        position: absolute;
+        top: 459px;
+        left: 0;
+    }
+
+    .homepage-about-text {
+        transform: translateX(40px);
+        height: 470px;
+    }
+
+    .homepage-about-text:hover {
+        transform: translateX(40px);
+    }
+
+    .contact-links {
+        width: 100%;
+    }
+
+    .footer-text-size {
+        font-size: 11px;
+    }
+
+    .modal-content {
+        width: 350px;
+    }
+    
+    .modal-head {
+        width: 350px;
+    }
+
+    .modal-text{
+        font-size: 35px;
     }
 
 }

@@ -3453,7 +3453,7 @@ textarea.form-control.is-invalid {
     -moz-user-select: none;
     user-select: none;
     border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
-    border-radius: var(--bs-btn-border-radius);
+    
     background-color: var(--bs-btn-bg);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
@@ -3463,12 +3463,12 @@ textarea.form-control.is-invalid {
         transition: none
     }
 }
-
+/* 
 .btn:hover {
     color: var(--bs-btn-hover-color);
     background-color: var(--bs-btn-hover-bg);
     border-color: var(--bs-btn-hover-border-color)
-}
+} */
 
 .btn-check+.btn:hover {
     color: var(--bs-btn-color);
@@ -3496,7 +3496,7 @@ textarea.form-control.is-invalid {
 .btn:first-child:active,
 :not(.btn-check)+.btn:active {
     color: var(--bs-btn-active-color);
-    background-color: var(--bs-secondary);
+    background-color: var(--bs-primary);
     border-color: var(--bs-btn-active-border-color)
 }
 

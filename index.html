@@ -45,9 +45,9 @@
 
     <!-- modal  -->
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel">
-        <div class="modal-dialog modal-dialog-centered" style="width: 655px;">
-            <div class="modal-content" style="width: 655px;">
-                <div class="modal-head" style="width: 655px;">
+        <div class="modal-dialog modal-dialog-centered justify-content-center">
+            <div class="modal-content">
+                <div class="modal-head">
                     <div class="d-flex justify-content-between m-3">
                         <div class="modal-frame-text">
                             <h5 class="fw-bold">Maxsus imkoniyatlar</h5>
@@ -59,25 +59,25 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                        <div class="dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2">
+                        <div class="dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
                             <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center">
                                 <input type="checkbox" id="toggle1" class="mode-theme-js toggle-unique dark-light-mode js-dark-mode-toggle dark-mode-toggle" value="on"
                                     checked="false">
                                 <label class="label label-dark-light-mode" for="toggle1">dark/light</label>
                             </div>
-                            <span class="fs-2 fw-bold modal-span">-</span>
-                        <h5 class="w-100 my-2 fw-bolder">kunduzgi/tungi rejim</h5>
+                            <span class="fs-2 fw-bold modal-span "><i class="ri-subtract-line"></i></span>
+                        <h5 class="w-100 my-2 fw-bolder modal-text">kunduzgi/tungi rejim</h5>
                         </div>
                         
                     <!-- </div> -->
 
                     <div class="voise-mode d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
-                        <div class="inp d-flex align-items-center mx-1" style="width: 85px;">
+                        <div class="inp d-flex align-items-center mx-1" style="width: 83px;">
                             <input type="checkbox" id="switch" class="inp-voise-mode" />
                             <label for="switch" class="label-voise-mode">Toggle</label>
                         </div>
-                        <span class="fs-2 fw-bold modal-span">-</span>
-                        <h5 class="w-100 my-2 fw-bolder">matnni ovozli rejimda o'qish</h5>
+                        <span class="fs-2 fw-bold modal-span "><i class="ri-subtract-line"></i></span>
+                        <h5 class="w-100 my-2 fw-bolder modal-text">matnni ovozli rejimda o'qish</h5>
                     </div>
                 </div>
             </div>
@@ -106,10 +106,10 @@
             <nav class="navbar" id="navbar">
                 <div class="container">
                     <div class="logo">
-                        <a class="navbar-brand main-header-brand main-header-hat nuxt-link-exact-active nuxt-link-active"
+                        <a class="navbar-brand main-header-brand nuxt-link-exact-active "
                             href="/">
-                            <img class="header-logo img-fluid" src="assets/img/logo/logo.png" alt="Kapital Sug’urta">
-                            <span class="hatSanta"></span>
+                            <img class="header-logo mb-1 img-fluid" src="assets/img/favico/favico.png" alt="Kapital Sug’urta">
+                            <span class="logo-text fw-bold">KAPITAL SUG'URTA</span>
                         </a>
                     </div>
                     <div id="navbarNav" class="d-flex align-items-center">
@@ -328,22 +328,15 @@
                     </button>
 
                     <div class="search-input d-flex justify-content-end">
-                        <form class="">
-                            <div class="input-group btn-group my-2 " id="search-modal">
-                                <input type="text" class="form-control  d-none d-xl-block w-75"
-                                    aria-label="Text input with radio button" placeholder="Qidirish..."
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <div class="btn btn-secondary" style="width: 8%;">
-                                    <i class="ri-search-2-line" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"></i>
-                                </div>
+                        <div class="w-75 d-flex justify-content-end my-2 "  data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <button class="btn-search d-none d-xl-block rounded-start-2" type="submit">Qidirish</button>
+                            <div class="btn btn-secondary rounded-end-2" style="height: fit-content;">
+                                <i class="ri-search-2-line"></i>
                             </div>
-                        </form>
+                        </div>        
                     </div>
-
                 </div>
-
-
 
                 <div class="tab-panels">
                     <div id="tabPanel-1" hidden role="tabpanel" tabindex="0" aria-labelledby="tab-1">
@@ -625,7 +618,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/tvejmsq.jpg" alt="" class="img-fluid">
+                                        <img src="assets/img/homepage-insurance/tvejmsq.jpg" alt="" class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -651,7 +644,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/osgor.png" alt="" class="img-fluid">
+                                        <img src="assets/img/homepage-insurance/osgor.png" alt="" class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -673,7 +666,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/tfjmsq.png" alt="" class="img-fluid">
+                                        <img src="assets/img/homepage-insurance/tfjmsq.png" alt="" class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -697,7 +690,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/chempion.jpg" alt="" class="img-fluid">
+                                        <img src="assets/img/homepage-insurance/chempion.jpg" alt="" class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -718,7 +711,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/document.jpg" alt="" class="img-fluid">
+                                        <img src="assets/img/homepage-insurance/document.jpg" alt="" class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; 
@@ -740,7 +733,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/accidents.jpg" alt="" class="img-fluid">
+                                        <img src="assets/img/homepage-insurance/accidents.jpg" alt="" class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px;">
@@ -761,7 +754,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/travel.jpg" alt="" class="img-fluid">
+                                        <img src="assets/img/homepage-insurance/travel.jpg" alt="" class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px;">
@@ -792,7 +785,7 @@
                 <div
                     class="col-xxl-8 col-xl-8 d-flex flex-column justify-content-center align-items-center homepage-about-text rounded my-5">
                     <div class="mx-5">
-                        <div class="frame d-flex fs-2">
+                        <div class="frame d-flex fs-2 my-3">
                             <i class="ri-subtract-line span-insurance"></i>
                             <h1 class="fw-bold">KAPITAL SUG'URTA KOMPANIYASI</h1>
                         </div>
@@ -815,7 +808,7 @@
 
                 <div class="col-xxl-4 col-xl-4 col-lg-12 d-flex justify-content-center align-items-center">
                     <div class="homepage-about-img">
-                        <img src="assets/img/home-page/aboutImage.jpg" alt="" class="img-fluid">
+                        <img src="assets/img/home-page/aboutImage.jpg" alt="" class="img-fluid dark-light-img">
                     </div>
                 </div>
             </div>
@@ -889,35 +882,44 @@
                 <i class="ri-subtract-line span-insurance"></i>
             </div>
             <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3">
                     <a href="#" class="text-dark">
                         <div class="card-news border-0 rounded my-4">
-                            <img src="assets/img/news-pages/aban.jpg" alt="" class="rounded-top img-fluid">
+                            <img src="assets/img/news-pages/aban.jpg" alt="" class="rounded-top img-fluid card-new-img dark-light-img">
                             <span class="bg-primary p-2 news-position fs-5 fw-bold ">23.10.2023</span>
-                            <h6 class="px-4 my-3">Siz sug'urtalangan mulkdan voz kechishingiz va sug'urtaning to'liq
-                                summasini qaytarib
-                                olishingiz mumkinligini bilarmidingiz ?</h6>
+                            <div class="card-frame-text">
+                                <h6 class="px-4 my-3">Siz sug'urtalangan mulkdan voz kechishingiz va sug'urtaning to'liq
+                                    summasini qaytarib
+                                    olishingiz mumkinligini bilarmidingiz ?</h6>
+                            </div>
                         </div>
+                        
                     </a>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3">
                     <a href="#" class="text-dark">
                         <div class="card-news border-0 rounded my-4">
-                            <img src="assets/img/news-pages/21.png" alt="" class="rounded-top img-fluid">
+                            <img src="assets/img/news-pages/21.png" alt="" class="rounded-top img-fluid card-new-img dark-light-img">
                             <span class="bg-primary p-2 news-position fs-5 fw-bold ">21.10.2023</span>
-                            <h6 class="px-4 my-3">Aziz hamyurtlar! Sizlarni 21-oktabr – O‘zbek tiliga davlat tili maqomi
-                                berilgan kun bilan chin yurakdan muborakbod etamiz!</h6>
+                            <div class="card-frame-text">
+                                <h6 class="px-4 my-3">Aziz hamyurtlar! Sizlarni 21-oktabr – O‘zbek tiliga davlat tili maqomi
+                                    berilgan kun bilan chin yurakdan muborakbod etamiz!</h6>
+                            </div>
                         </div>
+                        
                     </a>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3">
                     <a href="#" class="text-dark">
                         <div class="card-news border-0 rounded my-4">
-                            <img src="assets/img/news-pages/parking.jpg" alt="" class="rounded-top img-fluid">
+                            <img src="assets/img/news-pages/parking.jpg" alt="" class="rounded-top img-fluid card-new-img dark-light-img">
                             <span class="bg-primary p-2 news-position fs-5 fw-bold ">04.10.2023</span>
-                            <h6 class="px-4 my-3">Do'stlar, sinoptiklar yomon ob-havoni bashorat qilmoqdalar.
-                            </h6>
+                            <div class="card-frame-text">
+                                <h6 class="px-4 my-3">Do'stlar, sinoptiklar yomon ob-havoni bashorat qilmoqdalar.
+                                </h6>
+                            </div>
                         </div>
+                        
                     </a>
                 </div>
             </div>
@@ -997,7 +999,7 @@
                             </div>
                         </form>
                         <div class=" d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btn-primary">Ovoz Berish</button>
+                            <button type="button" class="btn btn-primary rounded">Ovoz Berish</button>
                         </div>
                     </div>
                 </div>
@@ -1009,7 +1011,7 @@
 
     <!-- ============ mobile app section start ============  -->
 
-    <section class="mboile-app" id="mboile-app" style="padding-top: 100px;">
+    <section class="mboile-app" id="mboile-app" style="padding-top: 20px;">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-6 col-xl-6 col-lg-6 bottom">
@@ -1030,16 +1032,22 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="box-market d-flex gap-3 mb-3">
-                                <a href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
-                                    style="width: 350px;">
-                                    <img src="assets/img/mobile-app/playmarket.svg" alt=""
-                                        class="img-fluid border play-market p-2 bg-light rounded">
-                                </a>
-                                <a href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
-                                    style="width: 350px;">
-                                    <img src="assets/img/mobile-app/appStore.svg" alt=""
-                                        class="img-fluid border rounded bg-light play-market">
-                                </a>
+                                <div class="row ">
+                                    <div class="col-6 ">
+                                        <a href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
+                                            style="width: 350px;">
+                                            <img src="assets/img/mobile-app/playmarket.svg" alt=""
+                                                class="img-fluid  play-market p-2 bg-light rounded">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <a href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
+                                            style="width: 350px;">
+                                            <img src="assets/img/mobile-app/appStore.svg" alt=""
+                                                class="img-fluid rounded bg-light play-market">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1048,7 +1056,7 @@
                 <div class="col-xxl-6 col-xl-6 col-lg-6 bottom">
                     <div class="d-flex justify-content-center align-items-center mt-5">
                         <img src="assets/img/mobile-app/iphone.png" alt=""
-                            class="img-fluid iphone-img  d-none d-lg-block">
+                            class="img-fluid iphone-img  d-none d-lg-block dark-light-img">
                     </div>
                 </div>
             </div>
@@ -1294,18 +1302,24 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex gap-5 mb-5 mt-3">
-                <a class="btn btn-primary py-3 px-4 fw-bold text-dark d-flex justify-content-center align-items-center"
-                    href="https://t.me/ks_robot" role="button">
-                    <img src="assets/img/contact/Telegram_logo.svg.webp" alt="" class="mx-2" style="width: 32px;">
-                    TELEGRAM BOT orqali 1 daqiqada polis rasmilashtiring
-                </a>
-                <a href="" class="my-4 contact-links-a fw-bold">
-                    Maxfiylik siyosati
-                </a>
-                <a href="" class="my-4 contact-links-a fw-bold">
-                    Xizmat ko'rsatish shartlari
-                </a>
+            <div class="row mb-5 mt-3 ">
+                <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-12 col-sm-12">
+                    <a class="btn btn-primary py-3 px-4 fw-bold text-dark d-flex justify-content-center align-items-center rounded"
+                        href="https://t.me/ks_robot" role="button">
+                        <img src="assets/img/contact/Telegram_logo.svg.webp" alt="" class="mx-2" style="width: 32px;">
+                        TELEGRAM BOT orqali 1 daqiqada polis rasmilashtiring
+                    </a>
+                </div>
+                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 contact-links">
+                    <a href="" class="my-4 contact-links-a fw-bold  d-flex justify-content-center align-items-center">
+                        Maxfiylik siyosati
+                    </a>
+                </div>
+                <div class="col-3 col-xl-3 col-lg-3 col-md-6 contact-links">
+                    <a href="" class="my-4 contact-links-a fw-bold d-flex justify-content-center align-items-center">
+                        Xizmat ko'rsatish shartlari
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1319,14 +1333,14 @@
             <!-- <div class="d-flex gap-5 align-items-center justify-content-center">
             </div> -->
             <div class="row my-3">
-                <div class="col-4">
-                    <p class="text-white">© Kapital Sug’urta 1991 - 2023. Barcha huquqlar himoyalangan.</p>
+                <div class="col-xxl-4 col-xl-6 col-lg-12 text-center">
+                    <p class="text-white footer-text-size">© Kapital Sug’urta 1991 - 2023. Barcha huquqlar himoyalangan.</p>
                 </div>
-                <div class="col-5 text-center">
-                    <p class="text-white">Materiallardan nusxa olishda saytga havola ko'rsatish talab qilinadi</p>
+                <div class="col-xxl-5 col-xl-6 col-lg-12 text-center">
+                    <p class="text-white footer-text-size">Materiallardan nusxa olishda saytga havola ko'rsatish talab qilinadi</p>
                 </div>
-                <div class="col-3 text-end">
-                    <a href="https://triger.uz/" class="text-white">TRIGGER tomonidan ishlab
+                <div class="col-xxl-3 col-xl-12 col-lg-12 text-center">
+                    <a href="https://triger.uz/" class="footer-text-size contact-links-a">TRIGGER tomonidan ishlab
                         chiqilgan</a>
                 </div>
             </div>
@@ -1338,19 +1352,19 @@
 
 
     <!-- ============ scroll up ============  -->
-    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+    <button type="button" class="btn btn-primary btn-floating btn-lg rounded" id="btn-back-to-top">
         <i class="ri-arrow-up-double-fill"></i>
     </button>
 
 
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    <script src="assets/js/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery-2.1.3.min.js"></script>
+    <script src="assets/js/jquery-ui-1.11.2.min.js"></script>
+    <script src="assets/js/waypoints.min-2.0.3.js"></script>
+    <script src="assets/js/jquery.counterup-1.0.min.js"></script>
 
     <!-- main js  -->
     <!-- <script src="assets/js/main.js"></script> -->
@@ -1358,7 +1372,7 @@
     <!-- seasons js  -->
     <!-- <script src="assets/js/seasons.js"></script> -->
 
-    <!-- <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/scrollreveal.js"></script>
     <script>
 
         const sr = ScrollReveal({
@@ -1375,17 +1389,12 @@
             origin: 'bottom',
             interval: 400,
         })
-    </script> -->
-    <!-- santa js  -->
-    <!-- <script src="assets/js/santa.js"></script> -->
-
-    <!-- twitter bootstrap -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    </script>
 
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- shepherd js -->
     <script src="assets/js/shepherd.min.js"></script>
 

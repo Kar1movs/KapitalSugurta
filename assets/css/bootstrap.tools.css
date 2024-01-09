@@ -41,3 +41,17 @@ textarea:focus{
     /* Internet Explorer 10+ */
     color: red;
 }
+.btn:focus-visible{
+    padding: 0.43rem 0.80rem;
+}
+
+.btn:focus{
+    padding: 0.43rem 0.80rem;
+}
+
+.btn-search{
+    color: var(--bs-black);
+    background-color: var(--bs-wheat);
+    padding: 5.5px 13px;
+    border: none;
+}
