@@ -39,3 +39,30 @@
 .label-voise-mode:active:after {
 	width: 30px;
 }
+
+
+@media screen and (max-width: 576px) {
+    .label-voise-mode {
+        position: absolute;
+        z-index: 15;
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 60px;
+        height: 20px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+    }
+
+    .label-voise-mode:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+    }
+}

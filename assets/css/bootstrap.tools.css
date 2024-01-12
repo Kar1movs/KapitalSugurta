@@ -6,6 +6,11 @@
     box-shadow: none !important;
     border: 0;
 }
+
+:root{
+    
+}
+
 a{
     text-decoration: none;
 }
@@ -22,27 +27,8 @@ textarea:focus{
     background: transparent;
 }
 
-::-webkit-input-placeholder {
-    /* WebKit browsers */
-    color: red;
-}
-
-:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: red;
-}
-
-::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: red;
-}
-
-:-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    color: red;
-}
 .btn:focus-visible{
-    padding: 0.43rem 0.80rem;
+    padding: 0.40rem 0.80rem;
 }
 
 .btn:focus{
@@ -54,4 +40,8 @@ textarea:focus{
     background-color: var(--bs-wheat);
     padding: 5.5px 13px;
     border: none;
+}
+
+.btn:hover{
+background-color: var(--bs-primary-hover);
 }

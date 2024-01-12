@@ -16,6 +16,9 @@
     <!-- remix icon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css">
 
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -42,7 +45,6 @@
 </head>
 
 <body>
-
     <!-- modal  -->
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel">
         <div class="modal-dialog modal-dialog-centered justify-content-center">
@@ -51,7 +53,7 @@
                     <div class="d-flex justify-content-between m-3">
                         <div class="modal-frame-text">
                             <h5 class="fw-bold">Maxsus imkoniyatlar</h5>
-                            <p style="font-size: 14px;">Qulaylik uchun saytning mahsus imkoniyataridan foydalanishingiz
+                            <p>Qulaylik uchun saytning mahsus imkoniyataridan foydalanishingiz
                                 mumkin !</p>
                         </div>
                         <button type="button" class="btn-close bg-primary  my-2 p-2 border text-end"
@@ -59,16 +61,19 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                        <div class="dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
-                            <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center">
-                                <input type="checkbox" id="toggle1" class="mode-theme-js toggle-unique dark-light-mode js-dark-mode-toggle dark-mode-toggle" value="on"
-                                    checked="false">
-                                <label class="label label-dark-light-mode" for="toggle1">dark/light</label>
-                            </div>
-                            <span class="fs-2 fw-bold modal-span "><i class="ri-subtract-line"></i></span>
-                        <h5 class="w-100 my-2 fw-bolder modal-text">kunduzgi/tungi rejim</h5>
+                    <div
+                        class="dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
+                        <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center">
+                            <input type="checkbox" id="toggle1"
+                                class="mode-theme-js toggle-unique dark-light-mode js-dark-mode-toggle dark-mode-toggle"
+                                value="on" checked="false">
+                            <label class="label label-dark-light-mode bootstrap-notify-js" for="toggle1">dark/light</label>
                         </div>
-                        
+                        <span class="fs-2 fw-bold modal-span modal-text-span"><i class="ri-subtract-line"></i></span>
+                        <label for="toggle1" class="w-100 my-2 fw-bolder modal-text h5 cursor-pointer">kunduzgi/tungi
+                            rejim</label>
+                    </div>
+
                     <!-- </div> -->
 
                     <div class="voise-mode d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
@@ -76,7 +81,7 @@
                             <input type="checkbox" id="switch" class="inp-voise-mode" />
                             <label for="switch" class="label-voise-mode">Toggle</label>
                         </div>
-                        <span class="fs-2 fw-bold modal-span "><i class="ri-subtract-line"></i></span>
+                        <span class="fs-2 fw-bold modal-span modal-text-span-2"><i class="ri-subtract-line"></i></span>
                         <h5 class="w-100 my-2 fw-bolder modal-text">matnni ovozli rejimda o'qish</h5>
                     </div>
                 </div>
@@ -85,9 +90,8 @@
     </div>
 
     <!-- modal search -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-        style="margin-top: 130px;">
-        <div class="modal-dialog">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <input type="text" id="searchInpOpen"
                     class="form-control border d-none d-xl-block py-3 input-box-shadow"
@@ -106,26 +110,26 @@
             <nav class="navbar" id="navbar">
                 <div class="container">
                     <div class="logo">
-                        <a class="navbar-brand main-header-brand nuxt-link-exact-active "
-                            href="/">
-                            <img class="header-logo mb-1 img-fluid" src="assets/img/favico/favico.png" alt="Kapital Sug’urta">
+                        <a class="navbar-brand main-header-brand nuxt-link-exact-active " href="/">
+                            <img class="header-logo mb-1 img-fluid" src="assets/img/favico/favico.png"
+                                alt="Kapital Sug’urta">
                             <span class="logo-text fw-bold">KAPITAL SUG'URTA</span>
                         </a>
                     </div>
                     <div id="navbarNav" class="d-flex align-items-center">
                         <ul class="navbar-nav flex-row gap-5 fw-medium align-items-center justify-content-end mx-2">
                             <li class="nav-item d-none d-xl-block">
-                                <a class="nav-link active d-flex align-items-center" aria-current="page"
-                                    style="color: var(--bs-black);" href="#+998712001100">
+                                <a class="nav-link d-flex align-items-center nav-text" aria-current="page"
+                                    href="tel:+998712001100">
                                     <i class="ri-phone-fill navbar-icon fs-4"></i>
                                     +(99871) 200 1100
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active d-flex align-items-center gap-2" aria-current="page" href="#"
-                                    data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                                <a class="nav-link d-flex align-items-center gap-2 nav-text" aria-current="page"
+                                    href="#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
                                     <i class="ri-eye-line navbar-icon fs-4"></i>
-                                    <p class="d-none d-lg-block m-0">Maxsus imkoniyatlar</p>
+                                    <p class="d-none d-lg-block m-0 nav-text">Maxsus imkoniyatlar</p>
                                 </a>
                             </li>
                             <button class="btn btn-primary border-0 fs-5 rounded d-none d-lg-block">
@@ -149,7 +153,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="border-0 fs-6 px-3 py-2 rounded main-header-top-actions-item" type="button"
+                        <button class="border-0 list-unordered rounded main-header-top-actions-item" type="button"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                             aria-label="Toggle navigation">
                             <i class="ri-list-unordered"></i>
@@ -328,13 +332,14 @@
                     </button>
 
                     <div class="search-input d-flex justify-content-end">
-                        <div class="w-75 d-flex justify-content-end my-2 "  data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                            <button class="btn-search d-none d-xl-block rounded-start-2" type="submit">Qidirish</button>
+                        <div class="w-75 d-flex justify-content-end my-2 " data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <button class="btn-search d-none d-xl-block rounded-start-2" type="submit"
+                                id="search-modal">Qidirish</button>
                             <div class="btn btn-secondary rounded-end-2" style="height: fit-content;">
                                 <i class="ri-search-2-line"></i>
                             </div>
-                        </div>        
+                        </div>
                     </div>
                 </div>
 
@@ -497,10 +502,11 @@
                                     <div class="col-12 col-lg-12">
                                         <div class="h-100 d-flex flex-column swiper-slide-content-title">
                                             <h1 class="py-5 h1-swiper">TVEJMSQ (OSAGO)</h1>
-                                            <h5>Transport vositasi egalarining fuqorolik javobgarligini
+                                            <h5 class="h5-swiper">Transport vositasi egalarining fuqorolik
+                                                javobgarligini
                                                 majburiy <br />
                                                 sug'urta qilish</h5>
-                                            <a href="#" class="my-5  swiper-link-a d-flex gap-1">
+                                            <a href="#" class="my-5  swiper-link-a swiper-link-a-media d-flex gap-1">
                                                 <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
@@ -526,9 +532,9 @@
                                         <div class="h-100 d-flex flex-column swiper-slide-content-title">
                                             <h1 class="py-3 h1-swiper">SHAHSIY HUJJATLARNI <br /> ONLAYN SUG'URTALASH
                                             </h1>
-                                            <h5>Shahsiy hujjatlarni himoyalang</h5>
-                                            <a href="#" class="my-5 swiper-link-a d-flex gap-1">
-                                                <span class="fw-bold wand-span w-25">|</span>
+                                            <h5 class="h5-swiper">Shahsiy hujjatlarni himoyalang</h5>
+                                            <a href="#" class="my-5 swiper-link-a swiper-link-a-media d-flex gap-1">
+                                                <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
                                         </div>
@@ -551,9 +557,9 @@
                                     <div class="col-12 col-lg-12">
                                         <div class="h-100 d-flex flex-column swiper-slide-content-title">
                                             <h1 class="py-3 h1-swiper">BAXTSIZ HODISALARDAN <br /> SUG'URTA QILISH</h1>
-                                            <h5>Sizga va yaqinlaringizga zarur tibbiy yordam</h5>
-                                            <a href="#" class="my-5 swiper-link-a d-flex gap-1">
-                                                <span class="fw-bold wand-span w-25">|</span>
+                                            <h5 class="h5-swiper">Sizga va yaqinlaringizga zarur tibbiy yordam</h5>
+                                            <a href="#" class="my-5 swiper-link-a swiper-link-a-media d-flex gap-1">
+                                                <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
                                         </div>
@@ -576,9 +582,10 @@
                                     <div class="col-12 col-lg-12">
                                         <div class="h-100 d-flex flex-column swiper-slide-content-title">
                                             <h1 class="py-3 h1-swiper">SAYOHAT <br /> SUG'URTASI</h1>
-                                            <h5>Xorijiy mamlakatda bo'lish vaqtida shoshilinch <br> davolanish</h5>
-                                            <a href="#" class="my-5 swiper-link-a d-flex gap-1">
-                                                <span class="fw-bold wand-span w-25">|</span>
+                                            <h5 class="h5-swiper">Xorijiy mamlakatda bo'lish vaqtida shoshilinch <br>
+                                                davolanish</h5>
+                                            <a href="#" class="my-5 swiper-link-a swiper-link-a-media d-flex gap-1">
+                                                <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
                                         </div>
@@ -607,7 +614,7 @@
         <div class="container">
             <div class="frame d-flex justify-content-center align-items-center fs-2 fw-bold my-5">
                 <i class="ri-subtract-line span-insurance"></i>
-                <h1>ONLAYN SUG'URTA</h1>
+                <h1 class="text-center">ONLAYN SUG'URTA</h1>
                 <i class="ri-subtract-line span-insurance"></i>
             </div>
             <div class="d-flex justify-content-center align-items-center justify-content-center">
@@ -618,7 +625,8 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/tvejmsq.jpg" alt="" class="img-fluid dark-light-img">
+                                        <img src="assets/img/homepage-insurance/tvejmsq.jpg" alt=""
+                                            class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -644,7 +652,8 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/osgor.png" alt="" class="img-fluid dark-light-img">
+                                        <img src="assets/img/homepage-insurance/osgor.png" alt=""
+                                            class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -666,7 +675,8 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/tfjmsq.png" alt="" class="img-fluid dark-light-img">
+                                        <img src="assets/img/homepage-insurance/tfjmsq.png" alt=""
+                                            class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -690,7 +700,8 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/chempion.jpg" alt="" class="img-fluid dark-light-img">
+                                        <img src="assets/img/homepage-insurance/chempion.jpg" alt=""
+                                            class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; padding: 3px;">
@@ -711,7 +722,8 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/document.jpg" alt="" class="img-fluid dark-light-img">
+                                        <img src="assets/img/homepage-insurance/document.jpg" alt=""
+                                            class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px; 
@@ -733,7 +745,8 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/accidents.jpg" alt="" class="img-fluid dark-light-img">
+                                        <img src="assets/img/homepage-insurance/accidents.jpg" alt=""
+                                            class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px;">
@@ -754,7 +767,8 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/travel.jpg" alt="" class="img-fluid dark-light-img">
+                                        <img src="assets/img/homepage-insurance/travel.jpg" alt=""
+                                            class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
                                         style="height: 150px;">
@@ -784,13 +798,13 @@
 
                 <div
                     class="col-xxl-8 col-xl-8 d-flex flex-column justify-content-center align-items-center homepage-about-text rounded my-5">
-                    <div class="mx-5">
-                        <div class="frame d-flex fs-2 my-3">
-                            <i class="ri-subtract-line span-insurance"></i>
-                            <h1 class="fw-bold">KAPITAL SUG'URTA KOMPANIYASI</h1>
+                    <div class="my-5" style="margin: 0 30px;">
+                        <div class="frame d-flex fs-2 my-2">
+                            <i class="ri-subtract-line span-insurance d-none d-md-block"></i>
+                            <h1 class="fw-bold homepage-about-h1">KAPITAL SUG'URTA KOMPANIYASI</h1>
                         </div>
-                        <p>Kompaniyamiz haqida</p>
-                        <p>
+                        <p class="homepage-about-p">Kompaniyamiz haqida</p>
+                        <p class="homepage-about-p">
                             "KAPITAL SUG'URTA" o'z qimmatbaho buyumlarini bizga ishonib topshirgan minnatdor
                             mijozlardir.
                             "KAPITAL SUG'URTA" bizning qadriyatlarimizni baham ko'radigan va biz bilan
@@ -800,14 +814,14 @@
                             sug'urta himoyasini ta'minlab, biz har bir oila a'zosi sifatida g'amxo'rlik qilamiz.
                         </p>
                         <a href="#" class="swiper-link-a d-flex gap-1">
-                            <span class="fw-bold wand-span w-25">|</span>
+                            <span class="fw-bold wand-span">|</span>
                             BATAFSIL
                         </a>
                     </div>
                 </div>
 
                 <div class="col-xxl-4 col-xl-4 col-lg-12 d-flex justify-content-center align-items-center">
-                    <div class="homepage-about-img">
+                    <div class="homepage-about-img my-3">
                         <img src="assets/img/home-page/aboutImage.jpg" alt="" class="img-fluid dark-light-img">
                     </div>
                 </div>
@@ -885,7 +899,8 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3">
                     <a href="#" class="text-dark">
                         <div class="card-news border-0 rounded my-4">
-                            <img src="assets/img/news-pages/aban.jpg" alt="" class="rounded-top img-fluid card-new-img dark-light-img">
+                            <img src="assets/img/news-pages/aban.jpg" alt=""
+                                class="rounded-top img-fluid card-new-img dark-light-img">
                             <span class="bg-primary p-2 news-position fs-5 fw-bold ">23.10.2023</span>
                             <div class="card-frame-text">
                                 <h6 class="px-4 my-3">Siz sug'urtalangan mulkdan voz kechishingiz va sug'urtaning to'liq
@@ -893,33 +908,36 @@
                                     olishingiz mumkinligini bilarmidingiz ?</h6>
                             </div>
                         </div>
-                        
+
                     </a>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3">
                     <a href="#" class="text-dark">
                         <div class="card-news border-0 rounded my-4">
-                            <img src="assets/img/news-pages/21.png" alt="" class="rounded-top img-fluid card-new-img dark-light-img">
+                            <img src="assets/img/news-pages/21.png" alt=""
+                                class="rounded-top img-fluid card-new-img dark-light-img">
                             <span class="bg-primary p-2 news-position fs-5 fw-bold ">21.10.2023</span>
                             <div class="card-frame-text">
-                                <h6 class="px-4 my-3">Aziz hamyurtlar! Sizlarni 21-oktabr – O‘zbek tiliga davlat tili maqomi
+                                <h6 class="px-4 my-3">Aziz hamyurtlar! Sizlarni 21-oktabr – O‘zbek tiliga davlat tili
+                                    maqomi
                                     berilgan kun bilan chin yurakdan muborakbod etamiz!</h6>
                             </div>
                         </div>
-                        
+
                     </a>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3">
                     <a href="#" class="text-dark">
                         <div class="card-news border-0 rounded my-4">
-                            <img src="assets/img/news-pages/parking.jpg" alt="" class="rounded-top img-fluid card-new-img dark-light-img">
+                            <img src="assets/img/news-pages/parking.jpg" alt=""
+                                class="rounded-top img-fluid card-new-img dark-light-img">
                             <span class="bg-primary p-2 news-position fs-5 fw-bold ">04.10.2023</span>
                             <div class="card-frame-text">
                                 <h6 class="px-4 my-3">Do'stlar, sinoptiklar yomon ob-havoni bashorat qilmoqdalar.
                                 </h6>
                             </div>
                         </div>
-                        
+
                     </a>
                 </div>
             </div>
@@ -965,9 +983,9 @@
 
                 </div>
                 <div class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12 m-auto my-5">
-                    <div class="frame d-flex justify-content-center align-items-center my-4 fs-2 fw-bold ">
+                    <div class="frame d-flex justify-content-center align-items-center my-4 fs-2 fw-bold">
                         <i class="ri-subtract-line span-insurance"></i>
-                        <h1>ONLAYN SO’ROVNOMA</h1>
+                        <h1 class="text-center">ONLAYN SO’ROVNOMA</h1>
                         <i class="ri-subtract-line span-insurance"></i>
                     </div>
                     <div class="card-feedback border-0 rounded px-4 py-3 m-auto">
@@ -1015,23 +1033,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-xxl-6 col-xl-6 col-lg-6 bottom">
-                    <div class="text-start d-flex justify-content-center align-items-center fs-2 fw-bold my-5">
+                    <div
+                        class="d-flex align-items-center justify-content-lg-start justify-content-center fs-2 fw-bold my-5">
                         <i class="ri-subtract-line span-insurance"></i>
-                        <h1 class="fw-bold">
+                        <h1 class="fw-bold ">
                             МОБИЛЬНОЕ
-                            <br class="d-xl-none d-block">
-                            <span class="app-span">
+                            <br />
+                            <span class="app-span ">
                                 ПРИЛОЖЕНИЕ
                             </span>
                         </h1>
                         <i class="ri-subtract-line span-insurance"></i>
                     </div>
-                    <p class="my-4">Загрузите наше новое мобильное приложение и всегда держите под рукой простой и
+                    <p class="my-4 text-lg-start text-center">Загрузите наше новое мобильное приложение и всегда держите
+                        под рукой простой и
                         быстрый доступ к
                         нашей службе поддержки клиентов, оформлению полисов страхования в режиме онлайн</p>
-                    <div class="row">
+                    <div class="row align-items-center justify-content-lg-start justify-content-center">
                         <div class="col-6">
-                            <div class="box-market d-flex gap-3 mb-3">
+                            <div class="box-market  gap-3 mb-3">
                                 <div class="row ">
                                     <div class="col-6 ">
                                         <a href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
@@ -1043,7 +1063,7 @@
                                     <div class="col-6 ">
                                         <a href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
                                             style="width: 350px;">
-                                            <img src="assets/img/mobile-app/appStore.svg" alt=""
+                                            <img src="assets/img/mobile-app/available-on-the-app-store.svg" alt=""
                                                 class="img-fluid rounded bg-light play-market">
                                         </a>
                                     </div>
@@ -1056,7 +1076,7 @@
                 <div class="col-xxl-6 col-xl-6 col-lg-6 bottom">
                     <div class="d-flex justify-content-center align-items-center mt-5">
                         <img src="assets/img/mobile-app/iphone.png" alt=""
-                            class="img-fluid iphone-img  d-none d-lg-block dark-light-img">
+                            class="img-fluid iphone-img d-none d-lg-block dark-light-img" style="margin-top: 43px;">
                     </div>
                 </div>
             </div>
@@ -1218,21 +1238,20 @@
                         <div class="d-flex justify-content-center">
                             <div class="connection-contact d-flex flex-column gap-3 my-3">
                                 <h1 class="fw-bold">Bog'lanish</h1>
-                                <a href="tel:+998712001100" class="fs-6 fw-bolder w-75 contact-a"
-                                    style="color: var(--bs-black);">
+                                <a href="tel:+998712001100" class="fs-6 fw-bolder w-75 contact-a">
                                     <i class="ri-phone-fill contact-icon"></i>
                                     +(99871) 200 1100
                                 </a>
-                                <a href="mailto:info@kapitalsugurta.uz" class="fs-6 fw-bolder contact-a"
-                                    style="color: var(--bs-black);">
+                                <a href="mailto:info@kapitalsugurta.uz" class="fs-6 fw-bolder contact-a">
                                     <i class="ri-mail-fill contact-icon"></i>
                                     office@go.kapitalsugurta.uz
                                 </a>
-                                <h6 class="fw-bolder">
+                                <a href="https://yandex.uz/maps/org/158849698467/?ll=69.299374%2C41.315519&z=17"
+                                    class="fs-6 fw-bolder contact-a">
                                     <i class="ri-map-pin-2-fill contact-icon"></i>
                                     O'zbekiston Respublikasi, Toshkent sh., <br />
                                     100000, M.Gandi ko'chasi 44-uy
-                                </h6>
+                                </a>
                                 <div class="social d-flex gap-4">
                                     <a href="https://www.instagram.com/kapitalsugurta.uz"
                                         class="fs-5 d-flex justify-content-center align-items-center">
@@ -1334,10 +1353,12 @@
             </div> -->
             <div class="row my-3">
                 <div class="col-xxl-4 col-xl-6 col-lg-12 text-center">
-                    <p class="text-white footer-text-size">© Kapital Sug’urta 1991 - 2023. Barcha huquqlar himoyalangan.</p>
+                    <p class="text-white footer-text-size">© Kapital Sug’urta 1991 - 2023. Barcha huquqlar himoyalangan.
+                    </p>
                 </div>
                 <div class="col-xxl-5 col-xl-6 col-lg-12 text-center">
-                    <p class="text-white footer-text-size">Materiallardan nusxa olishda saytga havola ko'rsatish talab qilinadi</p>
+                    <p class="text-white footer-text-size">Materiallardan nusxa olishda saytga havola ko'rsatish talab
+                        qilinadi</p>
                 </div>
                 <div class="col-xxl-3 col-xl-12 col-lg-12 text-center">
                     <a href="https://triger.uz/" class="footer-text-size contact-links-a">TRIGGER tomonidan ishlab
@@ -1352,14 +1373,14 @@
 
 
     <!-- ============ scroll up ============  -->
-    <button type="button" class="btn btn-primary btn-floating btn-lg rounded" id="btn-back-to-top">
-        <i class="ri-arrow-up-double-fill"></i>
-    </button>
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
 
     <!-- jquery -->
-    <script src="assets/js/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
 
     <script src="assets/js/jquery-2.1.3.min.js"></script>
     <script src="assets/js/jquery-ui-1.11.2.min.js"></script>
@@ -1372,7 +1393,7 @@
     <!-- seasons js  -->
     <!-- <script src="assets/js/seasons.js"></script> -->
 
-    <script src="assets/js/scrollreveal.js"></script>
+    <!-- <script src="assets/js/scrollreveal.js"></script>
     <script>
 
         const sr = ScrollReveal({
@@ -1389,10 +1410,12 @@
             origin: 'bottom',
             interval: 400,
         })
-    </script>
+    </script> -->
 
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- bootstrap notify  -->
+    <script src="assets/js/bootstrap-notify.min.js"></script>
     <!-- swiper js -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- shepherd js -->

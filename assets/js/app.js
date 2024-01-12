@@ -69,7 +69,7 @@ const tabPanels = document.querySelectorAll("[role=tabpanel]");
 tabsContainer.addEventListener("mouseover", (e) => {
     const clickedTab = e.target.closest("button");
     const currentTab = tabsContainer.querySelector('[aria-selected="true"]');
-    if (clickedTab === currentTab){
+    if (clickedTab === currentTab) {
         switchTab(clickedTab);
     }
     if (!clickedTab || clickedTab === currentTab) return;
@@ -140,14 +140,14 @@ function switchTab(newTab) {
     });
 
     activePanel.removeAttribute("hidden", false);
-
-    $(document).on('mouseenter', activePanel, function () {
-        console.log('inside');
-
-        // newTab.setAttribute("aria-selected", true);
-        // newTab.setAttribute("tabindex", "0");
-        // newTab.focus();
-    });
+    /* 
+        $(document).on('mouseenter', activePanel, function () {
+            console.log('inside');
+    
+            // newTab.setAttribute("aria-selected", true);
+            // newTab.setAttribute("tabindex", "0");
+            // newTab.focus();
+        }); */
 
     newTab.setAttribute("aria-selected", true);
     newTab.setAttribute("tabindex", "0");
@@ -229,39 +229,76 @@ $('document').ready(function () {
     });
 });
 
-$('.form_box').on('input', 'input[type="text"][maxlength]', function(){
-	if (this.value.length > this.maxLength){
-		this.value = this.value.slice(0, this.maxLength);
-	}
+$('.form_box').on('input', 'input[type="text"][maxlength]', function () {
+    if (this.value.length > this.maxLength) {
+        this.value = this.value.slice(0, this.maxLength);
+    }
 });
 
-$('.form_box').on('input', 'input[type="number"][maxlength]', function(){
-	if (this.value.length > this.maxLength){
-		this.value = this.value.slice(0, this.maxLength);
-	}
+$('.form_box').on('input', 'input[type="number"][maxlength]', function () {
+    if (this.value.length > this.maxLength) {
+        this.value = this.value.slice(0, this.maxLength);
+    }
 });
+
+// bootstrap notify 
+$(function(){
+    $(".bootstrap-notify-js").on("click",function(){
+   
+      var notify = $.notify('<strong>Saving</strong> Do not close this page...', {
+        type: 'primary',
+        allow_dismiss: true,
+      });
+  
+  
+      notify('message', '<strong>Saving</strong> Page Data.');
+  
+  
+      setTimeout(function() {
+        notify('message', '<strong>Saving</strong> User Data.');
+      }, 500);
+      
+    });
+  });
+  
+  
+
+
+
 
 
 // scroll up
-let mybutton = document.getElementById("btn-back-to-top");
+const sections = document.querySelectorAll('section[id]')
 
-window.onscroll = function () {
-    scrollFunction();
-};
+function scrollActive() {
+    const scrollY = window.pageYOffset
 
-function scrollFunction() {
-    if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-    ) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
 }
-mybutton.addEventListener("click", backToTop);
+window.addEventListener('scroll', scrollActive)
 
-function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+    const nav = document.getElementById('header')
+
+    if (this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
+window.addEventListener('scroll', scrollHeader)
+
+/*==================== SHOW SCROLL UP ====================*/
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+
+    if (this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
