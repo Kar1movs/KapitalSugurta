@@ -343,7 +343,7 @@
     filter: var(--bs-filter);
     background-size: 100%;
 
-}
+} 
 
 .swiper-pagination-bullet {
     width: 10px;
@@ -499,8 +499,12 @@
 
 .news-position {
     position: absolute;
-    top: 134px;
+    top: 306px;
     left: 0;
+}
+
+.card-new-img {
+    height: 356px;
 }
 
 /*   + --------- + */

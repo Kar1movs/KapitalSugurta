@@ -1,6 +1,9 @@
 "use strict";
 
-// swiper 
+//   + ------ +
+//  / swiper /
+// + ------ + 
+
 const swiper = new Swiper('.header-intro-swiper', {
     effect: "coverflow",
     grabCursor: true,
@@ -59,9 +62,7 @@ const swiper = new Swiper('.header-intro-swiper', {
     },
 });
 
-
-
-
+// ***************************** tabs ******************************* //
 const tabsContainer = document.querySelector("[role=tablist]");
 const tabButtons = tabsContainer.querySelectorAll("[role=tab]");
 const tabPanels = document.querySelectorAll("[role=tabpanel]");
@@ -121,13 +122,11 @@ function switchTab(newTab) {
     const activePanel = tabsContainer.nextElementSibling.querySelector(
         "#" + CSS.escape(activePanelId)
     );
-    // console.log(tabPanels);
 
     $(document).on('mouseleave', '[data-bs-toggle-hover="active"]', function closeTab() {
 
         activePanel.setAttribute("hidden", false);
     });
-
 
     tabButtons.forEach((button) => {
         button.setAttribute("aria-selected", false);
@@ -140,22 +139,12 @@ function switchTab(newTab) {
     });
 
     activePanel.removeAttribute("hidden", false);
-    /* 
-        $(document).on('mouseenter', activePanel, function () {
-            console.log('inside');
-    
-            // newTab.setAttribute("aria-selected", true);
-            // newTab.setAttribute("tabindex", "0");
-            // newTab.focus();
-        }); */
 
     newTab.setAttribute("aria-selected", true);
     newTab.setAttribute("tabindex", "0");
     newTab.focus();
 
     moveIndicator(oldTab, newTab);
-
-
 }
 
 // move underline indicator
@@ -197,7 +186,7 @@ $(document).ready(function () {
 });
 
 
-// counter 
+// *************************** counter ********************** // 
 if ($('.counter').length > 0) {
     $('.counter').counterUp({
         delay: 10,
@@ -217,11 +206,9 @@ $('document').ready(function () {
     $('#button-sumbit').on('click', function () {
         $('.form_box .rfield').each(function () {
             if ($(this).val() != '') {
-                console.log(32);
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
             } else {
-                console.log(33);
                 // Если поле пустое добавляем класс-указание
                 $(this).addClass('empty_field');
             }
@@ -241,51 +228,25 @@ $('.form_box').on('input', 'input[type="number"][maxlength]', function () {
     }
 });
 
-// bootstrap notify 
-$(function(){
-    $(".bootstrap-notify-js").on("click",function(){
-   
-      var notify = $.notify('<strong>Saving</strong> Do not close this page...', {
-        type: 'primary',
-        allow_dismiss: true,
-      });
-  
-  
-      notify('message', '<strong>Saving</strong> Page Data.');
-  
-  
-      setTimeout(function() {
-        notify('message', '<strong>Saving</strong> User Data.');
-      }, 500);
-      
-    });
-  });
-  
-  
+// *************************** scroll up *************************** //
+// const sections = document.querySelectorAll('section[id]')
 
+// function scrollActive() {
+//     const scrollY = window.pageYOffset
 
+//     sections.forEach(current => {
+//         const sectionHeight = current.offsetHeight
+//         const sectionTop = current.offsetTop - 50;
+//         sectionId = current.getAttribute('id')
 
-
-
-// scroll up
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//             document.querySelector('.logo a[href*=' + sectionId + ']').classList.add('active-link')
+//         } else {
+//             document.querySelector('.logo a[href*=' + sectionId + ']').classList.remove('active-link')
+//         }
+//     })
+// }
+// window.addEventListener('scroll', scrollActive)
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {

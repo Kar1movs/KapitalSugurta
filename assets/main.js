@@ -561,7 +561,6 @@ $(document).ready(function () {
     });
 });
 /* ***************************************************************************** */
-
 /* dark light mode bilan ulanishlar ****************************** */
 
 let darkMode = localStorage.getItem("darkMode");

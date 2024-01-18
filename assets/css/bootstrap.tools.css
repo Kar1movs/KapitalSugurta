@@ -45,3 +45,16 @@ textarea:focus{
 .btn:hover{
 background-color: var(--bs-primary-hover);
 }
+.progress-primary{
+    background-color: var(--bs-white);
+    margin-top: 1rem;
+    height: 12px !important;
+}
+.progress-primary .progress-bar-info{
+    background-color: var(--bs-primary-hover);
+
+}
+
+.bg-primary-mode {
+    background-color: var(--bs-primary-mode);
+}

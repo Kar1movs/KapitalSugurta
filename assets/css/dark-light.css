@@ -7,6 +7,7 @@
     --grey--dark: #aca79a;
     --border-color-dark: #dee2e6;
     --bs-filter: none;
+    --bs-primary-mode: var(--primary);
 }
 
 :root[data-theme="dark"] {
@@ -17,6 +18,7 @@
     --bs-black: #ffffff;
     --primary: #f1ca29;
     --border-color-dark: #f1ca29;
+    --bs-primary-mode: var(--bs-wheat);
 }
 
 .navbar-tabs-button:focus {
@@ -91,34 +93,115 @@ body {
     background: #fff;
     border-radius: 90px;
     transition: 0.3s;
+
 }
+
+
+.mode-theme-js~.label-dark-light-mode  #bx-svg-js {
+    background: url(../img/svg/moon.svg) no-repeat right/contain;
+}
+
+.mode-theme-js~.label-dark-light-mode #bx-svg-js {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 30px;
+    top: 0px;
+    right: 2px;
+    left: initial;
+    z-index: -1;
+    background-size: 20px 20px !important;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode-theme-js.active~.label-dark-light-mode:after {
+    background: url(../img/svg/sun.svg) no-repeat left/contain;
+}
+
+.mode-theme-js.active~.label-dark-light-mode::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 30px;
+    top: 0px;
+    left: 5px;
+    z-index: -1;
+    background-size: 22px 22px !important;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease-in-out;
+}
+
+/* .mode-theme-js~.label-dark-light-mode::after {
+    background: url(../img/svg/moon.svg) no-repeat right/contain;
+} */
+
+/* .mode-theme-js.active~.label-dark-light-mode::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 30px;
+    top: 0px;
+    left: 5px;
+    z-index: -1;
+    background-size: 22px 22px !important;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease-in-out;
+} */
+
+.scale-mode {
+    animation: scalemode 300ms forwards;
+}
+
+@keyframes scalemode {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 #toggle1[type=checkbox] {
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 99;
-  opacity: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    opacity: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
-#toggle1[type=checkbox][checked= true] + .label-dark-light-mode {
+
+#toggle1[type=checkbox][checked=true]+.label-dark-light-mode {
     background-color: var(--bs-primary);
 }
 
-#toggle1[type=checkbox][checked= true] + .label-dark-light-mode:before {
+#toggle1[type=checkbox][checked=true]+.label-dark-light-mode:before {
     background-color: var(--bs-white);
     left: calc(100% - 5px);
     transform: translateX(-100%);
 }
 
 .label-dark-light-mode:active:before {
-	width: 30px;
+    width: 30px;
 }
 
 :root[data-theme="dark"] .dark-mode-toggle-text:before {

@@ -1,18 +1,18 @@
-.inp-voise-mode[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
+.inp-voise-mode[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
 }
 
 .label-voise-mode {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 70px;
-	height: 30px;
-	background: grey;
-	display: block;
-	border-radius: 100px;
-	position: relative;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 30px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
 }
 
 .label-voise-mode:after {
@@ -22,22 +22,22 @@
     left: 5px;
     width: 20px;
     height: 20px;
-    background: #fff;
+    background: var(--bs-white);
     border-radius: 90px;
     transition: 0.3s;
 }
 
-.inp-voise-mode:checked + label {
-	background: var(--bs-primary);
+.inp-voise-mode:checked+label {
+    background: var(--bs-primary);
 }
 
-.inp-voise-mode:checked + label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
+.inp-voise-mode:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
 }
 
 .label-voise-mode:active:after {
-	width: 30px;
+    width: 30px;
 }
 
 
@@ -65,4 +65,44 @@
         border-radius: 90px;
         transition: 0.3s;
     }
+}
+
+
+
+/* BTN VOICE */
+.btn-voice {
+    z-index: 999;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 42px;
+    height: 42px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important;
+    /* background: rgb(22, 123, 183); */
+    transition: linear-gradient 500ms ease-in-out;
+    /* background: linear-gradient(286deg, rgba(22, 123, 183, 1) 0%, rgba(22, 77, 183, 1) 35%, rgba(22, 98, 183, 1) 62%, rgba(22, 90, 183, 1) 100%); */
+    background: transparent;
+}
+
+.btn-voice:hover {
+    /* background: linear-gradient(286deg, rgba(22, 123, 183, 1) 0%, rgba(29, 92, 215, 1) 35%, rgba(29, 98, 215, 1) 62%, rgba(29, 90, 215, 1) 100%); */
+}
+
+.icon-voice {
+    background: var(--bs-primary);
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    border-radius: var(--bs-border-radius) !important;
+}
+.icon-voice:hover {
+    background: var(--bs-primary-hover);
+}
+.bx-volume-effect {
+    text-shadow: 0 0 transparent;
+    transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.btn-voice:hover .bx-volume-effect {
+    text-shadow: 4px 4px #2e2e2e;
+    transform: translate(-2px, -2px);
 }

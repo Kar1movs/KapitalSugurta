@@ -10,6 +10,9 @@
     <!-- dark-light  -->
     <script src="assets/js/dak-light.js" defer></script>
 
+    <!-- voice mode js  -->
+    <script src="assets/js/voice-mode.js" defer></script>
+
     <!-- favico  -->
     <link type="image/x-icon" href="/assets/img/favico/favico.png" rel="shortcut icon">
 
@@ -19,6 +22,9 @@
     <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
+    <!-- box icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -27,6 +33,18 @@
 
     <!-- swiper css  -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!-- animate css  -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+
+    <!-- prety check box -->
+    <link rel="stylesheet" href="assets/css/pretty-checkbox.css">
+
+    <!-- strat rating css -->
+    <link rel="stylesheet" href="assets/css/star-rating.css">
+
+    <!-- niice select css  -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
 
     <!-- main css  -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -45,6 +63,13 @@
 </head>
 
 <body>
+    <!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
+    <select class="voiceModeControl d-none invisible" id="voiceSelect" hidden=""></select>
+    <button class="btn-voice border-0 shadow voiceUnique" id="voice">
+        <span class="icon-voice d-flex align-items-center justify-content-center">
+            <i class="bx bx-volume-full bx-sm text-white bx-volume-effect"></i>
+        </span>
+    </button>
     <!-- modal  -->
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel">
         <div class="modal-dialog modal-dialog-centered justify-content-center">
@@ -67,23 +92,51 @@
                             <input type="checkbox" id="toggle1"
                                 class="mode-theme-js toggle-unique dark-light-mode js-dark-mode-toggle dark-mode-toggle"
                                 value="on" checked="false">
-                            <label class="label label-dark-light-mode bootstrap-notify-js" for="toggle1">dark/light</label>
+                            <label class="label label-dark-light-mode bootstrap-notify-js position-relative"
+                                for="toggle1"><span class="moon-svg-js" id="bx-svg-js"></span>dark/light</label>
                         </div>
                         <span class="fs-2 fw-bold modal-span modal-text-span"><i class="ri-subtract-line"></i></span>
-                        <label for="toggle1" class="w-100 my-2 fw-bolder modal-text h5 cursor-pointer">kunduzgi/tungi
-                            rejim</label>
+                        <label for="toggle1" class="w-100 my-2 fw-bolder modal-text h5 cursor-pointer text-dark-light-mode ">
+                            
+                            Kunduzgi/Tungi Rejim
+                        </label>
                     </div>
 
                     <!-- </div> -->
 
-                    <div class="voise-mode d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
-                        <div class="inp d-flex align-items-center mx-1" style="width: 83px;">
-                            <input type="checkbox" id="switch" class="inp-voise-mode" />
-                            <label for="switch" class="label-voise-mode">Toggle</label>
+                    <div class="voiceOn d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
+                        <div class="noDefalult voise-mode" data-bs-target="#voiceModal">
+                            <div class="inp voicemode d-flex align-items-center mx-1">
+                                <input type="checkbox" id="toggleVoiceMode" class="inp-voise-mode toggleUnique" />
+                                <label for="toggleVoiceMode" class="label-voise-mode">Toggle</label>
+                            </div>
                         </div>
                         <span class="fs-2 fw-bold modal-span modal-text-span-2"><i class="ri-subtract-line"></i></span>
-                        <h5 class="w-100 my-2 fw-bolder modal-text">matnni ovozli rejimda o'qish</h5>
+                        <h5 class="w-100 my-2 fw-bolder modal-text">Matnni Ovozli Rejimda O'qish</h5>
                     </div>
+                    <hr class="my-4 border">
+
+                    <!-- <div class="d-flex align-items-center flex-wrap">
+                        <div
+                            class="d-flex align-items-center justify-content-evenly mb-2 flex-wrap dropdown-not-close z-index-9">
+                            <button class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
+                                value="decrease">A-
+                            </button>
+                            <button class="dropdown-item dropdown-item-not-close autoSize resetFont text-center mx-2"
+                                value="resetFont" style="font-size: 16px;">auto
+                            </button>
+                            <button class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
+                                value="increase">A+
+                            </button>
+                        </div>
+                        <span class="modal-line"></span>
+                        <div class="fw-bolder">
+                            <div class="my-size text-center p-1" id="currentSize">16px</div>
+                        </div>
+                        <div class="darkLightMode w-100">
+                            <b>matnni katta/kichik rejimga o'girish</b>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -91,8 +144,8 @@
 
     <!-- modal search -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-dialog modal-dialog-scrollable">
+            <div class="modal-content w-100">
                 <input type="text" id="searchInpOpen"
                     class="form-control border d-none d-xl-block py-3 input-box-shadow"
                     aria-label="Text input with radio button" placeholder="Qidirish...">
@@ -350,29 +403,29 @@
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Avto sug'urta</h5>
-                                        <a href="assets/html/tabs/avtolux.html">"AVTO-LUX" sug'urta mahsuloti</a>
-                                        <a href="assets/html/tabs/kasko-gaz.html">Kasko-Gaz</a>
-                                        <a href="assets/html/tabs/kasko.html">Kasko</a>
-                                        <a href="assets/html/tabs/kapital-parking.html">"KAPITAL PARKING" sug'urta
+                                        <a href="#">"AVTO-LUX" sug'urta mahsuloti</a>
+                                        <a href="#">Kasko-Gaz</a>
+                                        <a href="#">Kasko</a>
+                                        <a href="#">"KAPITAL PARKING" sug'urta
                                             mahsuloti</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Shaxsiy sug'urta</h5>
-                                        <a href="assets/html/tabs/accidents.html">Baxtsiz hodisalardan sug'urta
+                                        <a href="#">Baxtsiz hodisalardan sug'urta
                                             qilish</a>
-                                        <a href="assets/html/tabs/sports.html">Sportchilarni sug'urtasi</a>
-                                        <a href="assets/html/tabs/travel.html">Sayohat sug'urtasi</a>
-                                        <a href="assets/html/tabs/incoming-tourists.html">O'zbekistonga kiruvchi
+                                        <a href="#">Sportchilarni sug'urtasi</a>
+                                        <a href="#">Sayohat sug'urtasi</a>
+                                        <a href="#">O'zbekistonga kiruvchi
                                             turistlarni sug'urtalash</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Javobgarlik sug'urtasi</h5>
-                                        <a href="assets/html/tabs/dasgo.html">"DASGO" sug'urta mahsuloti</a>
-                                        <a href="assets/html/tabs/avtotransport.html">Avtotransport vositalari
+                                        <a href="#">"DASGO" sug'urta mahsuloti</a>
+                                        <a href="#">Avtotransport vositalari
                                             egalarining
                                             <br />
                                             fuqorolik javobgarligini majburiy
@@ -383,12 +436,12 @@
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Mulkni sug'urtalash</h5>
-                                        <a href="assets/html/tabs/capital-house.html">Kapital honodon</a>
-                                        <a href="assets/html/tabs/real-estate.html">Ko'chmas mulk sug'urtasi</a>
-                                        <a href="assets/html/tabs/kapital-home.html">Kapital uy</a>
-                                        <a href="assets/html/tabs/kapitalofis.html">Kapital ofis</a>
-                                        <a href="assets/html/tabs/mortgage-insurance.html">Ipoteka sug'urtasi</a>
-                                        <a href="assets/html/tabs/personal-document.html">Shaxsiy hujjat</a>
+                                        <a href="#">Kapital honodon</a>
+                                        <a href="#">Ko'chmas mulk sug'urtasi</a>
+                                        <a href="#">Kapital uy</a>
+                                        <a href="#">Kapital ofis</a>#
+                                        <a href="#">Ipoteka sug'urtasi</a>
+                                        <a href="#">Shaxsiy hujjat</a>
                                     </div>
                                 </div>
                             </div>
@@ -401,43 +454,43 @@
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Mulkni sug'urtalash</h5>
-                                        <a href="assets/html/404/404.html">Mulkni sug'urtalash</a>
-                                        <a href="assets/html/tabs/cargo-insurance.html">Yuklarni sug'urta qilish</a>
-                                        <a href="assets/html/tabs/construction-and-installation.html">Qurilish va
+                                        <a href="#">Mulkni sug'urtalash</a>
+                                        <a href="#">Yuklarni sug'urta qilish</a>
+                                        <a href="#">Qurilish va
                                             o'rnatish risklarni <br /> majburiy sug'urta
                                             qilish</a>
-                                        <a href="assets/html/tabs/construction-risk-insurance.html">Qurilish va
+                                        <a href="#">Qurilish va
                                             o'rnatish xavfini <br /> sug'urtalash</a>
-                                        <a href="assets/html/tabs/car-breakdown-insurance.html">Mashina va jihozlarni
+                                        <a href="#">Mashina va jihozlarni
                                             buzilishlardan sug'urtalash</a>
-                                        <a href="assets/html/tabs/electronic-equipment-insurance.html">Elektron
+                                        <a href="#">Elektron
                                             uskunlarni sug'urta qilish</a>
-                                        <a href="assets/html/tabs/ipotke-insurance.html">Ipoteka sug'urtasi</a>
+                                        <a href="#">Ipoteka sug'urtasi</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Avto sug'urta</h5>
-                                        <a href="assets/html/404/404.html">Kasko-Ekonom</a>
-                                        <a href="assets/html/404/404.html">Kasko-Limit</a>
-                                        <a href="assets/html/tabs/avtolux.html">"AUTO-LUX" sug'urta mahsuloti</a>
-                                        <a href="assets/html/tabs/kasko.html">Kasko</a>
-                                        <a href="assets/html/tabs/kasko-gaz.html">Kasko-Gaz</a>
+                                        <a href="#">Kasko-Ekonom</a>
+                                        <a href="#">Kasko-Limit</a>
+                                        <a href="#">"AUTO-LUX" sug'urta mahsuloti</a>
+                                        <a href="#">Kasko</a>
+                                        <a href="#">Kasko-Gaz</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Tibbiy sug'urta</h5>
-                                        <a href="assets/html/tabs/voluntary-health-insurance.html">"Ixtiyoriy tibbiy
+                                        <a href="#">"Ixtiyoriy tibbiy
                                             sug'urta</a>
-                                        <a href="assets/html/tabs/accidents.html">Baxtsiz hodisalardan sug'urta
+                                        <a href="#">Baxtsiz hodisalardan sug'urta
                                             qilish</a>
                                     </div>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                                     <div class="dropdown-text">
                                         <h5>Fuqorolik javobgarligi sug'urtasi</h5>
-                                        <a href="assets/html/tabs/osgor-employer.html">OSGOR - ish beruvchining
+                                        <a href="#">OSGOR - ish beruvchining
                                             fuqorolik <br />
                                             javobgarligini majburiy sug'urta <br />
                                             qilish
@@ -1420,6 +1473,10 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- shepherd js -->
     <script src="assets/js/shepherd.min.js"></script>
+
+    <script src="assets/js/star-rating.js"></script>
+
+    <script src="assets/js/jquery.nice-select.js"></script>
 
     <!-- app js -->
     <script src="assets/js/app.js"></script>
