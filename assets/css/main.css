@@ -561,14 +561,14 @@ th {
     width: 100%;
 }
 
-.play-market {
-    box-shadow: 0 2px 14px rgba(0, 0, 0, .08);
-    transition: 0.6s;
+.link-app {
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, .08);
+    transition: 250ms;
 }
 
-.play-market:hover {
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
-    transition: 0.6s;
+.link-app:hover {
+    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.16);
+    transition: 250ms;
 }
 
 /*   + ------ + */
@@ -890,16 +890,9 @@ th {
     .navbar-tabs-button {
         font-size: 13px;
     }
-
-    .modal-text-span {
-        margin-left: 78px;
-    }
 }
 
 @media (min-width: 1400px) {
-    .modal-text-span {
-        margin-left: 78px;
-    }
 
     .list-unordered {
         width: 45px;
@@ -1253,11 +1246,11 @@ th {
     }
 
     .modal-content {
-        width: 260px;
+        width: 300px;
     }
 
     .modal-head {
-        width: 260px;
+        width: 300px;
     }
 
     .modal-frame-text h5 {
@@ -1270,14 +1263,6 @@ th {
 
     .modal-text {
         font-size: 10px;
-    }
-
-    .modal-text-span {
-        margin-left: 60px;
-    }
-
-    .modal-text-span-2 {
-        margin-left: 10px;
     }
 
     .h1-swiper {

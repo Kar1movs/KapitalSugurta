@@ -58,3 +58,6 @@ background-color: var(--bs-primary-hover);
 .bg-primary-mode {
     background-color: var(--bs-primary-mode);
 }
+.cursor-pointer {
+    cursor: pointer;
+}

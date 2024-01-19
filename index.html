@@ -64,8 +64,8 @@
 
 <body>
     <!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
-    <select class="voiceModeControl d-none invisible" id="voiceSelect" hidden=""></select>
-    <button class="btn-voice border-0 shadow voiceUnique" id="voice">
+    <select class="voice-mode-control d-none invisible" id="voiceSelect" hidden=""></select>
+    <button class="btn-voice border-0 shadow voice-unique" id="voice">
         <span class="icon-voice d-flex align-items-center justify-content-center">
             <i class="bx bx-volume-full bx-sm text-white bx-volume-effect"></i>
         </span>
@@ -89,30 +89,46 @@
                     <div
                         class="dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
                         <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center">
-                            <input type="checkbox" id="toggle1"
-                                class="mode-theme-js toggle-unique dark-light-mode js-dark-mode-toggle dark-mode-toggle"
-                                value="on" checked="false">
-                            <label class="label label-dark-light-mode bootstrap-notify-js position-relative"
-                                for="toggle1"><span class="moon-svg-js" id="bx-svg-js"></span>dark/light</label>
+                            <input type="checkbox" id="dark-light-mode"
+                                class="mode-theme-js dark-light-mode dark-mode-toggle" value="on" checked="false" />
+
+                            <label class="label label-dark-light-mode position-relative"
+                                for="dark-light-mode">dark/light
+                            </label>
+
+                            <label for="dark-light-mode" class="moon-svg-js" id="bx-svg-dark-light-js">
+                                <i class="bx bx-moon bx-small bx-change-dark-light-icon w-100 h-100"></i>
+                            </label>
+
                         </div>
                         <span class="fs-2 fw-bold modal-span modal-text-span"><i class="ri-subtract-line"></i></span>
-                        <label for="toggle1" class="w-100 my-2 fw-bolder modal-text h5 cursor-pointer text-dark-light-mode ">
-                            
+                        <label for="dark-light-mode" class="my-2 fw-bolder modal-text h5 cursor-pointer ">
                             Kunduzgi/Tungi Rejim
                         </label>
                     </div>
 
                     <!-- </div> -->
 
-                    <div class="voiceOn d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
+                    <div class="voice-on d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
                         <div class="noDefalult voise-mode" data-bs-target="#voiceModal">
-                            <div class="inp voicemode d-flex align-items-center mx-1">
-                                <input type="checkbox" id="toggleVoiceMode" class="inp-voise-mode toggleUnique" />
-                                <label for="toggleVoiceMode" class="label-voise-mode">Toggle</label>
+                            <div class="position-relative z-index inp voice-mode d-flex align-items-center mx-1">
+
+                                <input type="checkbox" id="toggle-voice-mode" class="mode-voice-js" checked="false" />
+
+                                <label for="toggle-voice-mode"
+                                    class="label label-voise-mode position-relative">Toggle</label>
+
+                                <label for="toggle-voice-mode" class="voice-svg-js cursor-pointer" id="bx-svg-voice-js">
+                                    <i class="bx bx-volume-full bx-small bx-change-voice-icon w-100 h-100"></i>
+                                </label>
+
+
                             </div>
                         </div>
                         <span class="fs-2 fw-bold modal-span modal-text-span-2"><i class="ri-subtract-line"></i></span>
-                        <h5 class="w-100 my-2 fw-bolder modal-text">Matnni Ovozli Rejimda O'qish</h5>
+                        <label for="toggle-voice-mode" class="my-2 fw-bolder h5 modal-text cursor-pointer ">Matnni
+                            Ovozli
+                            Rejimda O'qish</label>
                     </div>
                     <hr class="my-4 border">
 
@@ -144,7 +160,8 @@
 
     <!-- modal search -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-dialog modal-dialog-scrollable">
+        <div
+            class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-dialog modal-dialog-scrollable">
             <div class="modal-content w-100">
                 <input type="text" id="searchInpOpen"
                     class="form-control border d-none d-xl-block py-3 input-box-shadow"
@@ -367,7 +384,7 @@
         <!-- ============ Navbar hover section start ============ -->
         <section class="navbar-hover border-top d-lg-block d-none" data-bs-toggle-hover="active" id="navbar-hover">
             <div class="container">
-                <div class=" w-100" role="tablist" aria-labelledby="channel-name">
+                <div class=" w-100" role="tablist" id="myTab" aria-labelledby="channel-name">
                     <button id="tab-1" class="nav-link navbar-tabs-button" role="tab" aria-controls="tabPanel-1"
                         aria-selected="true" tabindex="0" data-bs-toggle="pill">JISMONIY
                         SHAXSLAR
@@ -396,7 +413,7 @@
                     </div>
                 </div>
 
-                <div class="tab-panels">
+                <div class="tab-panels" id="myTabContent">
                     <div id="tabPanel-1" hidden role="tabpanel" tabindex="0" aria-labelledby="tab-1">
                         <div class="border-top">
                             <div class="row">
@@ -447,7 +464,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="tabPanel-2" hidden role="tabpanel" tabindex="0" aria-labelledby="tab-2">
                         <div class="border-top">
                             <div class="row">
@@ -505,7 +521,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="tabPanel-3" hidden role="tabpanel" tabindex="0" aria-labelledby="tab-3">
                         <div class="border-top">
                             <div class="row">
@@ -519,7 +534,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="tabPanel-4" hidden role="tabpanel" tabindex="0" aria-labelledby="tab-4">
                         <div class="border-top">
                             <div class="row">
@@ -1104,20 +1118,22 @@
                         нашей службе поддержки клиентов, оформлению полисов страхования в режиме онлайн</p>
                     <div class="row align-items-center justify-content-lg-start justify-content-center">
                         <div class="col-6">
-                            <div class="box-market  gap-3 mb-3">
-                                <div class="row ">
+                            <div class="box-market mb-3">
+                                <div class="row g-5">
                                     <div class="col-6 ">
-                                        <a href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
-                                            style="width: 350px;">
-                                            <img src="assets/img/mobile-app/playmarket.svg" alt=""
-                                                class="img-fluid  play-market p-2 bg-light rounded">
+                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app border-light-subtle"
+                                            href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
+                                            style="width: 140px; height: 48px;">
+                                            <img src="assets/img/mobile-app/google-play.svg"
+                                                class="img-fluid play-market w-100 h-100 object-fit-contain">
                                         </a>
                                     </div>
                                     <div class="col-6 ">
-                                        <a href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
-                                            style="width: 350px;">
-                                            <img src="assets/img/mobile-app/available-on-the-app-store.svg" alt=""
-                                                class="img-fluid rounded bg-light play-market">
+                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle"
+                                            href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
+                                            style="width: 140px; height: 48px;">
+                                            <img src="assets/img/mobile-app/app-store.svg"
+                                                class="img-fluid app-story w-100 h-100 object-fit-contain">
                                         </a>
                                     </div>
                                 </div>
@@ -1149,34 +1165,34 @@
             </div>
             <div class="row gap-4 justify-content-center">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 links-box">
-                    <div class="">
+                    <a href="https://gov.uz/digital/" target="_blank">
                         <div class="p-3">
                             <p class="">Axborotni rivojlantirish vazirligi <br /> texnologiyalar</p>
-                            <a href="https://gov.uz/digital/" class="fw-bold links-a">
+                            <div class="fw-bold links-a">
                                 <i class="ri-global-line">https://www.mitc.uz</i>
-                            </a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 links-box">
-                    <div class="">
+                    <a href="https://www.lex.uz/uz/" target="_blank">
                         <div class="p-3">
                             <p class="">O'zbekiston Respublikasi qonun hujjatlari ma’lumotlar bazasi</p>
-                            <a href="https://www.lex.uz/uz/" class="fw-bold links-a">
+                            <div class="fw-bold links-a">
                                 <i class="ri-global-line">https://www.lex.uz</i>
-                            </a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 links-box" style="height: 120px;">
-                    <div class="">
+                    <a href="https://pm.gov.uz/ru#/" target="_blank">
                         <div class="p-3">
                             <p class="">Sug'urta bozorida tajriba</p>
-                            <a href="https://pm.gov.uz/ru#/" class="fw-bold links-a">
+                            <div class="fw-bold links-a">
                                 <i class="ri-global-line">https://pm.gov.uz</i>
-                            </a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1319,7 +1335,7 @@
                                         <i class="ri-telegram-line"></i>
                                     </a>
                                 </div>
-                                <div class="d-flex gap-4">
+                                <div class="d-none gap-2">
                                     <a
                                         href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient">
                                         <img src="assets/img/contact/playMarketDark.svg" alt="" class="img-fluid"
@@ -1330,6 +1346,26 @@
                                             style="width: 140px;">
                                     </a>
                                 </div>
+                                <div class="box-market mb-3">
+                                <div class="row g-1">
+                                    <div class="col-6 ">
+                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app border border-light-subtle"
+                                            href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
+                                            style="width: 140px; height: 48px;">
+                                            <img src="assets/img/mobile-app/google-play.svg"
+                                                class="img-fluid play-market w-100 h-100 object-fit-contain">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle"
+                                            href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
+                                            style="width: 140px; height: 48px;">
+                                            <img src="assets/img/mobile-app/app-store.svg"
+                                                class="img-fluid app-story w-100 h-100 object-fit-contain">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>

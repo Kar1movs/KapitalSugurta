@@ -5,6 +5,8 @@ let svgNone = document.querySelectorAll(".svg-none");
 // let labelDarkLightModeAfter = window.getComputedStyle(labelDarkLightMode, '::after');
 // let content = labelDarkLightModeAfter.content;
 // console.log(content);
+let bxSvg = document.getElementById('bx-svg-dark-light-js');
+let bxChangeIcon = document.querySelector('.bx-change-dark-light-icon');
 let saveToggle = document.querySelector(".dark-mode input[type='checkbox']");
 const wrapper = document.querySelector(":root");
 
@@ -40,6 +42,8 @@ const disableDarkMode = () => {
 
 if (darkMode === 'enabled') {
     enableDarkMode();
+    bxChangeIcon.classList.add('bx-sun');
+        bxChangeIcon.classList.remove('bx-moon');
 }
 
 
@@ -64,6 +68,13 @@ darkModeToggle.addEventListener("click", () => {
 
     if (darkMode !== 'enabled') {
         enableDarkMode();
+        bxChangeIcon.classList.add('bx-sun');
+        bxChangeIcon.classList.remove('bx-moon');
+        setTimeout(function () {
+
+            bxSvg.classList.add('scale-mode');
+        }, 50);
+        bxSvg.classList.remove('scale-mode');
         $.notify({
             // options
             icon: 'bx bx-moon bx-sm',
@@ -113,6 +124,12 @@ darkModeToggle.addEventListener("click", () => {
         /*disableScroll();*/
     } else {
         disableDarkMode();
+        bxChangeIcon.classList.add('bx-moon');
+        bxChangeIcon.classList.remove('bx-sun');
+        setTimeout(function () {
+            bxSvg.classList.add('scale-mode');
+        }, 50);
+        bxSvg.classList.remove('scale-mode');
         $.notify({
             // options
             icon: 'bx bx-sun bx-sm',

@@ -3,15 +3,17 @@
 /* Voice on mode ******************************************** */
 /* Modal okna zvukovoy effect uchun ************************* */
 var VoiceModeStorage = localStorage.getItem("voiceModeStorage");
-var voiceOn = document.querySelector(".voiceOn");
-var voiceMode = document.querySelector(".voiceMode");
+var voiceOn = document.querySelector(".voice-on");
+var voiceMode = document.querySelector(".voice-mode");
 var timeCloseModalAlert = 100;
 var voiceCheckStatus = 0;
-var voiceModeControl = document.querySelector(".voiceModeControl");
-var voiceSaveToggle = document.querySelector("input[id='toggleVoiceMode']");
+var voiceModeControl = document.querySelector(".voice-mode-control");
+var voiceSaveToggle = document.querySelector("input[id='toggle-voice-mode']");
+let bxSvgVoice = document.getElementById('bx-svg-voice-js');
+let bxChangeIconVoice = document.querySelector('.bx-change-voice-icon');
 // const voiceModeToggle = document.querySelector(".mode__voice");
 // var justVoiceId = document.getElementById("voiceId");
-var justVoiceClass = document.querySelector(".voiceUnique");
+var justVoiceClass = document.querySelector(".voice-unique");
 
 /* Barcha matnlarni ovozlarni ******************************* */
 
@@ -249,6 +251,8 @@ const disableVoiceMode = () => {
 if (VoiceModeStorage === "enabled") {
     enableVoiceMode();
     EnableAllSound();
+    bxChangeIconVoice.classList.add('bx-volume-mute');
+    bxChangeIconVoice.classList.remove('bx-volume-full');
 }
 
 voiceSaveToggle.addEventListener("click", () => {
@@ -260,6 +264,13 @@ voiceSaveToggle.addEventListener("click", () => {
         enableVoiceMode();
         EnableAllSound();
 
+        bxChangeIconVoice.classList.add('bx-volume-mute');
+        bxChangeIconVoice.classList.remove('bx-volume-full');
+        setTimeout(function () {
+
+            bxSvgVoice.classList.add('scale-mode');
+        }, 50);
+        bxSvgVoice.classList.remove('scale-mode');
         $.notify({
             // options
             icon: 'bx bx-volume-full bx-sm',
@@ -309,7 +320,12 @@ voiceSaveToggle.addEventListener("click", () => {
     } else {
         disableVoiceMode();
         DisableAllSound();
-
+        bxChangeIconVoice.classList.add('bx-volume-full');
+        bxChangeIconVoice.classList.remove('bx-volume-mute');
+        setTimeout(function () {
+            bxSvgVoice.classList.add('scale-mode');
+        }, 50);
+        bxSvgVoice.classList.remove('scale-mode');
         $.notify({
             // options
             icon: 'bx bx-volume-mute bx-sm',

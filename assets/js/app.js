@@ -174,8 +174,17 @@ function moveIndicator(oldTab, newTab) {
         tabsContainer.style.setProperty("--_width", newTabWidth);
     }, 220);
 }
+// bootstrap tab panel rechange 
+// const triggerTabList = document.querySelectorAll('#myTab button')
+// triggerTabList.forEach(triggerEl => {
+//     const tabTrigger = new bootstrap.Tab(triggerEl)
 
-
+//     triggerEl.addEventListener('mouseover', event => {
+//         event.preventDefault()
+//         tabTrigger.show()
+//     })
+// })
+// search 
 $(document).ready(function () {
     $(document).on('click', '#search-modal', function () {
         var interval = 500;
@@ -192,8 +201,8 @@ if ($('.counter').length > 0) {
         delay: 10,
         time: 1000
     });
-    $('.counter').addClass('animated fadeInDownBig');
-    $('h3').addClass('animated fadeIn');
+    // $('.counter').addClass('animated fadeInDownBig');
+    // $('h3').addClass('animated fadeIn');
 }
 
 
