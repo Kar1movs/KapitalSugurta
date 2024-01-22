@@ -8,6 +8,7 @@
     --border-color-dark: #dee2e6;
     --bs-filter: none;
     --bs-primary-mode: var(--primary);
+    --bs-load-bg: rgba(255, 255, 255, 0.5);
 }
 
 :root[data-theme="dark"] {
@@ -19,6 +20,7 @@
     --primary: #f1ca29;
     --border-color-dark: #f1ca29;
     --bs-primary-mode: var(--bs-wheat);
+    --bs-load-bg: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-tabs-button:focus {

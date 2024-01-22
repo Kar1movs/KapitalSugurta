@@ -1,0 +1,67 @@
+.increment,
+.decremet,
+.autoSize {
+    width: 37px;
+    height: 37px;
+    background-color: var(--bs-primary);
+    color: var(--bs-white) !important;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.decremet {
+    font-size: 10px;
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.decremet.visibile {
+    visibility: visible;
+    user-select: auto;
+    pointer-events: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.increment {
+    font-size: 24px;
+    visibility: visible;
+    user-select: auto;
+    pointer-events: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.increment.visibile-hide {
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.autoSizeInvisible {
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.autoSizeInvisible.visibile {
+    visibility: visible;
+    user-select: auto;
+    pointer-events: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.dropdown-not-close .dropdown-item:hover, .dropdown-not-close .dropdown-item:focus {
+    background-color: var(--bs-primary-hover) !important;
+    color: var(--bs-white) !important;
+}

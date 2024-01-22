@@ -4,7 +4,7 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-    transition: 200ms;
+    /* transition: 200ms; */
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -14,17 +14,39 @@
     --z-modal: 1000;
 }
 
+.load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: auto 0;
+    background-color: var(--bs-load-bg);
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    z-index: 100;
+}
+.load .load-gif {
+    width: calc(100% / 3);
+    height: calc(100vh / 3);
+}
+.custom-tooltip > .tooltip-inner {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    font-size: 16px;
+    max-width: fit-content;
+}
+.custom-tooltip .tooltip-arrow:before {
+    border-top-color: var(--bs-primary) !important;
+}
 /*   + ------- + */
 /*  /  MODAL  / */
 /* + ------- + */
 .modal-content {
     background: var(--bs-white);
-    width: 655px;
 }
 
-.modal-head {
-    width: 655px;
-}
 
 .modal-text {
     color: var(--bs-black);
@@ -863,8 +885,8 @@ th {
     background-color: var(--bs-primary-hover);
 }
 
-.scrollup__icon {
-    font-size: 1.5rem;
+.scrollup-icon {
+    font-size: 24px;
     color: #FFF;
 }
 
@@ -900,20 +922,6 @@ th {
         font-size: 16px;
     }
 
-    .homepage-showcase-swiper.swiper {
-        height: 500px
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-content-title {
-        font-size: 3rem
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-image,
-    .homepage-showcase-swiper.swiper .swiper-slide-image img {
-        width: calc(var(--aspect-ratio) * 500px);
-        height: 500px
-    }
-
     .swiper-section {
         margin-top: 130px;
     }
@@ -935,19 +943,6 @@ th {
 }
 
 @media (min-width: 1300px) {
-    .homepage-showcase-swiper.swiper {
-        height: 450px
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-content-title {
-        font-size: 2.75rem
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-image,
-    .homepage-showcase-swiper.swiper .swiper-slide-image img {
-        width: calc(var(--aspect-ratio) * 450px);
-        height: 450px
-    }
 
     .news-position {
         position: absolute;
@@ -965,20 +960,6 @@ th {
         width: 40px;
         height: 40px;
         font-size: 16px;
-    }
-
-    .homepage-showcase-swiper.swiper {
-        height: 400px
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-content-title {
-        font-size: 2.5rem
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-image,
-    .homepage-showcase-swiper.swiper .swiper-slide-image img {
-        width: calc(var(--aspect-ratio) * 400px);
-        height: 400px
     }
 
     .search-input {
@@ -1018,40 +999,6 @@ th {
         width: 36px;
         height: 36px;
         font-size: 16px;
-    }
-
-    .homepage-showcase-swiper.swiper {
-        height: 350px
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-content {
-        width: auto;
-        color: #222220
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-content-title {
-        font-size: 2rem
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-image {
-        position: unset
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-image img {
-        position: absolute;
-        right: 0;
-        -o-object-position: right;
-        object-position: right;
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-image,
-    .homepage-showcase-swiper.swiper .swiper-slide-image img {
-        width: calc(var(--aspect-ratio) * 350px);
-        height: 350px
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-image:after {
-        content: none
     }
 
     .swiper-section {
@@ -1133,19 +1080,6 @@ th {
         color: white;
     }
 
-    .homepage-showcase-swiper.swiper .swiper-slide-content-title {
-        font-size: 2.75rem
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-content {
-        padding: 0 .875rem 70px 0
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-pagination {
-        left: calc(var(--left-offset) + 25px);
-        bottom: 40px
-    }
-
     .news-position {
         position: absolute;
         top: 282px;
@@ -1204,10 +1138,6 @@ th {
 
     .logo-text {
         font-size: 11px;
-    }
-
-    .homepage-showcase-swiper.swiper .swiper-slide-content-title {
-        font-size: 2.25rem
     }
 
     .card {

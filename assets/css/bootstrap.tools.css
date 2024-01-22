@@ -61,3 +61,38 @@ background-color: var(--bs-primary-hover);
 .cursor-pointer {
     cursor: pointer;
 }
+
+.w-fit-content{
+    width: fit-content;
+}
+
+.w-min-content{
+    width: min-content;
+}
+.w-max-content{
+    width: max-content;
+}
+.custom-tooltip {
+    /* left: 12px !important; */
+    inset: auto auto 12px 0px !important;
+}
+.custom-tooltip .tooltip-arrow{
+    /* top: 50% !important;
+    transform: translateY(-50%) !important; */
+}
+
+.bg-grey{
+    background-color: grey;
+}
+
+.bg-primary-dark{
+    background-color: var(--bs-primary-hover);
+}
+
+.accordion-item:first-of-type .accordion-button {
+    z-index: 0;
+}
+
+span [data-notify="message"] {
+    display: flex;
+}

@@ -1,9 +1,26 @@
 "use strict";
+/*=============== Loader | Omonjon ===============*/
+document.addEventListener('DOMContentLoaded', function (eventObject) {
+    $('.load').fadeIn("slow");
+})
+window.addEventListener("load", function (eventObject) {
+    $('.load').fadeOut("slow");
+});
+
+//   + --------- +
+//  / tool tips /
+// + --------- + 
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+$('[rel="tooltip"]').on('click', function () {
+    $(this).tooltip('hide')
+})
 
 //   + ------ +
 //  / swiper /
 // + ------ + 
-
 const swiper = new Swiper('.header-intro-swiper', {
     effect: "coverflow",
     grabCursor: true,
@@ -236,26 +253,6 @@ $('.form_box').on('input', 'input[type="number"][maxlength]', function () {
         this.value = this.value.slice(0, this.maxLength);
     }
 });
-
-// *************************** scroll up *************************** //
-// const sections = document.querySelectorAll('section[id]')
-
-// function scrollActive() {
-//     const scrollY = window.pageYOffset
-
-//     sections.forEach(current => {
-//         const sectionHeight = current.offsetHeight
-//         const sectionTop = current.offsetTop - 50;
-//         sectionId = current.getAttribute('id')
-
-//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//             document.querySelector('.logo a[href*=' + sectionId + ']').classList.add('active-link')
-//         } else {
-//             document.querySelector('.logo a[href*=' + sectionId + ']').classList.remove('active-link')
-//         }
-//     })
-// }
-// window.addEventListener('scroll', scrollActive)
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {

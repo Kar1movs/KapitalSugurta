@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dataFont">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,11 @@
 
     <!-- voice mode js  -->
     <script src="assets/js/voice-mode.js" defer></script>
+
+    <!-- inc-dec-size js  -->
+        <script src="assets/js/inc-dec-size.js" defer></script>
+
+    <script src="assets/js/lottie-player.js" defer></script>
 
     <!-- favico  -->
     <link type="image/x-icon" href="/assets/img/favico/favico.png" rel="shortcut icon">
@@ -55,6 +60,9 @@
     <!-- voise-mode -->
     <link rel="stylesheet" href="assets/css/voice-mode.css">
 
+    <!-- inc-dec size  -->
+    <link rel="stylesheet" href="assets/css/inc-dec-size.css">
+
     <!-- fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,9 +78,17 @@
             <i class="bx bx-volume-full bx-sm text-white bx-volume-effect"></i>
         </span>
     </button>
+
+    <!-- Loader = SUXROBBEK -->
+    <div class="load" id="load" style="display: none;">
+        <lottie-player autoplay="" loop="" mode="normal" speed="1.5" src="assets/json/loader.json" class="load-gif"
+            background="transparent">
+        </lottie-player>
+    </div>
+
     <!-- modal  -->
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-head">
                     <div class="d-flex justify-content-between m-3">
@@ -86,73 +102,87 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div
-                        class="dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
-                        <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center">
-                            <input type="checkbox" id="dark-light-mode"
-                                class="mode-theme-js dark-light-mode dark-mode-toggle" value="on" checked="false" />
+                    <div class="d-flex gap-2">
+                        <div
+                            class=" dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 py-2 my-3 w-fit-content">
+                            <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center dark-light-tooltip"
+                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top"
+                                data-bs-title="Kunduzgi/Tungi Rejim" title="Kunduzgi/Tungi Rejim">
+                                <input type="checkbox" id="dark-light-mode"
+                                    class="mode-theme-js dark-light-mode dark-mode-toggle" value="on" checked="false" />
 
-                            <label class="label label-dark-light-mode position-relative"
-                                for="dark-light-mode">dark/light
-                            </label>
-
-                            <label for="dark-light-mode" class="moon-svg-js" id="bx-svg-dark-light-js">
-                                <i class="bx bx-moon bx-small bx-change-dark-light-icon w-100 h-100"></i>
-                            </label>
-
-                        </div>
-                        <span class="fs-2 fw-bold modal-span modal-text-span"><i class="ri-subtract-line"></i></span>
-                        <label for="dark-light-mode" class="my-2 fw-bolder modal-text h5 cursor-pointer ">
-                            Kunduzgi/Tungi Rejim
-                        </label>
-                    </div>
-
-                    <!-- </div> -->
-
-                    <div class="voice-on d-flex align-items-center gap-2 border rounded-5 px-2 my-3">
-                        <div class="noDefalult voise-mode" data-bs-target="#voiceModal">
-                            <div class="position-relative z-index inp voice-mode d-flex align-items-center mx-1">
-
-                                <input type="checkbox" id="toggle-voice-mode" class="mode-voice-js" checked="false" />
-
-                                <label for="toggle-voice-mode"
-                                    class="label label-voise-mode position-relative">Toggle</label>
-
-                                <label for="toggle-voice-mode" class="voice-svg-js cursor-pointer" id="bx-svg-voice-js">
-                                    <i class="bx bx-volume-full bx-small bx-change-voice-icon w-100 h-100"></i>
+                                <label class="label label-dark-light-mode position-relative "
+                                    for="dark-light-mode">dark/light
                                 </label>
 
+                                <label for="dark-light-mode" class="moon-svg-js" id="bx-svg-dark-light-js">
+                                    <i class="bx bx-moon bx-small bx-change-dark-light-icon w-100 h-100" style="font-size: 20px !important;"></i>
+                                </label>
 
                             </div>
+                            <span class="fs-2 fw-bold modal-span modal-text-span d-none" style="font-size: 30px !important;"><i
+                                    class="ri-subtract-line"></i></span>
+                            <label for="dark-light-mode" class="my-2 fw-bolder modal-text h5 cursor-pointer d-none">
+                                Kunduzgi/Tungi Rejim
+                            </label>
                         </div>
-                        <span class="fs-2 fw-bold modal-span modal-text-span-2"><i class="ri-subtract-line"></i></span>
-                        <label for="toggle-voice-mode" class="my-2 fw-bolder h5 modal-text cursor-pointer ">Matnni
-                            Ovozli
-                            Rejimda O'qish</label>
-                    </div>
-                    <hr class="my-4 border">
-
-                    <!-- <div class="d-flex align-items-center flex-wrap">
                         <div
-                            class="d-flex align-items-center justify-content-evenly mb-2 flex-wrap dropdown-not-close z-index-9">
-                            <button class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
-                                value="decrease">A-
-                            </button>
-                            <button class="dropdown-item dropdown-item-not-close autoSize resetFont text-center mx-2"
-                                value="resetFont" style="font-size: 16px;">auto
-                            </button>
-                            <button class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
-                                value="increase">A+
-                            </button>
+                            class=" voice-on d-flex align-items-center gap-2 border rounded-5 px-2 py-2 my-3 w-fit-content">
+                            <div class="noDefalult voise-mode" data-bs-target="#voiceModal">
+                                <div class="position-relative z-index inp voice-mode d-flex align-items-center"
+                                    data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                    data-bs-placement="top" data-bs-title="Matnni Ovozli Rejimda O'qish"
+                                    title="Matnni Ovozli Rejimda O'qish">
+
+                                    <input type="checkbox" id="toggle-voice-mode" class="mode-voice-js"
+                                        checked="false" />
+
+                                    <label for="toggle-voice-mode"
+                                        class="label label-voise-mode position-relative">Toggle</label>
+
+                                    <label for="toggle-voice-mode" class="voice-svg-js cursor-pointer"
+                                        id="bx-svg-voice-js">
+                                        <i class="bx bx-volume-full bx-small bx-change-voice-icon w-100 h-100" style="font-size: 20px !important;"></i>
+                                    </label>
+
+
+                                </div>
+                            </div>
+                            <span class="fs-2 fw-bold modal-span modal-text-span-2 d-none"><i
+                                    class="ri-subtract-line"></i></span>
+                            <label for="toggle-voice-mode"
+                                class="my-2 fw-bolder h5 modal-text cursor-pointer d-none">Matnni
+                                Ovozli
+                                Rejimda O'qish</label>
                         </div>
-                        <span class="modal-line"></span>
-                        <div class="fw-bolder">
-                            <div class="my-size text-center p-1" id="currentSize">16px</div>
+                        <div class="d-flex align-items-center position-fontIncDec">
+                            <div class="d-flex align-items-center flex-wrap">
+                                <div
+                                    class="d-flex align-items-center row-gap-2 justify-content-evenly dropdown-not-close">
+                                    <button
+                                        class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
+                                        value="decrease" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                        data-bs-placement="top" data-bs-title="Mattini kichkinalashtirish">A-
+                                    </button>
+                                    <button
+                                        class="dropdown-item dropdown-item-not-close autoSize autoSizeInvisible resetFont text-center mx-2"
+                                        value="resetFont" style="font-size: 16px;"  data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                        data-bs-placement="top" data-bs-title="Matnni dastlabki holatga qaytarish">auto
+                                    </button>
+                                    <button
+                                        class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
+                                        value="increase"  data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                        data-bs-placement="top" data-bs-title="Matnni kattalashtirish">A+
+                                    </button>
+                                    <div class="my-size text-center fw-bold p-0" id="currentSize"><span
+                                            class="bg-primary-dark text-light p-1 mx-2 rounded-3 d-flex align-items-center justify-content-center"
+                                            style="width: 37px; height: 37px; font-size: 16px;">1x</span></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="darkLightMode w-100">
-                            <b>matnni katta/kichik rejimga o'girish</b>
-                        </div>
-                    </div> -->
+                    </div>
+
+                    <hr class="my-4 border">
                 </div>
             </div>
         </div>
@@ -191,19 +221,19 @@
                             <li class="nav-item d-none d-xl-block">
                                 <a class="nav-link d-flex align-items-center nav-text" aria-current="page"
                                     href="tel:+998712001100">
-                                    <i class="ri-phone-fill navbar-icon fs-4"></i>
+                                    <i class="ri-phone-fill navbar-icon fs-4" style="font-size: 20px !important;"></i>
                                     +(99871) 200 1100
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2 nav-text" aria-current="page"
                                     href="#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-                                    <i class="ri-eye-line navbar-icon fs-4"></i>
+                                    <i class="ri-eye-line navbar-icon fs-4" style="font-size: 20px !important;"></i>
                                     <p class="d-none d-lg-block m-0 nav-text">Maxsus imkoniyatlar</p>
                                 </a>
                             </li>
                             <button class="btn btn-primary border-0 fs-5 rounded d-none d-lg-block">
-                                <i class="ri-file-download-line"></i>
+                                <i class="ri-file-download-line" style="font-size: 20px !important;"></i>
                                 Europrotocol
                             </button>
                         </ul>
@@ -226,7 +256,7 @@
                         <button class="border-0 list-unordered rounded main-header-top-actions-item" type="button"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                             aria-label="Toggle navigation">
-                            <i class="ri-list-unordered"></i>
+                            <i class="ri-list-unordered" style="font-size: 20px !important;"></i>
                         </button>
                     </div>
 
@@ -235,7 +265,7 @@
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <a href="#" class="offcanvas-title fw-medium fs-4" id="offcanvasNavbarLabel">
-                                <i class="ri-map-pin-line text-warning"></i>
+                                <i class="ri-map-pin-line text-warning" style="font-size: 24px !important;"></i>
                                 Filiallar
                             </a>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
@@ -407,7 +437,7 @@
                             <button class="btn-search d-none d-xl-block rounded-start-2" type="submit"
                                 id="search-modal">Qidirish</button>
                             <div class="btn btn-secondary rounded-end-2" style="height: fit-content;">
-                                <i class="ri-search-2-line"></i>
+                                <i class="ri-search-2-line" style="font-size: 20px !important;"></i>
                             </div>
                         </div>
                     </div>
@@ -680,9 +710,9 @@
     <section class="homepage-insurance py-5" id="product">
         <div class="container">
             <div class="frame d-flex justify-content-center align-items-center fs-2 fw-bold my-5">
-                <i class="ri-subtract-line span-insurance"></i>
+                <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                 <h1 class="text-center">ONLAYN SUG'URTA</h1>
-                <i class="ri-subtract-line span-insurance"></i>
+                <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
             </div>
             <div class="d-flex justify-content-center align-items-center justify-content-center">
                 <div class="row">
@@ -958,9 +988,9 @@
     <section class="news-page py-5" id="news-page">
         <div class="container">
             <div class="frame d-flex justify-content-center align-items-center my-4 fs-2 fw-bold ">
-                <i class="ri-subtract-line span-insurance"></i>
+                <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                 <h1>YANGILIKLAR</h1>
-                <i class="ri-subtract-line span-insurance"></i>
+                <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
             </div>
             <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3">
@@ -1021,12 +1051,12 @@
             <div class="row">
                 <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 my-5">
                     <div class="frame d-flex justify-content-center align-items-center my-4 fs-2 fw-bold ">
-                        <i class="ri-subtract-line span-insurance"></i>
+                        <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                         <h1 class="text-center">MUROJAATLAR
                             <br class="d-none d-xl-block">
                             STATISTIKASI
                         </h1>
-                        <i class="ri-subtract-line span-insurance"></i>
+                        <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                     </div>
                     <table>
                         <tr>
@@ -1051,9 +1081,9 @@
                 </div>
                 <div class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12 m-auto my-5">
                     <div class="frame d-flex justify-content-center align-items-center my-4 fs-2 fw-bold">
-                        <i class="ri-subtract-line span-insurance"></i>
+                        <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                         <h1 class="text-center">ONLAYN SO’ROVNOMA</h1>
-                        <i class="ri-subtract-line span-insurance"></i>
+                        <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                     </div>
                     <div class="card-feedback border-0 rounded px-4 py-3 m-auto">
                         <h5>Nima sababdan "Kapital Sug’urta" AJ ST mijozligini tanladingiz</h5>
@@ -1102,7 +1132,7 @@
                 <div class="col-xxl-6 col-xl-6 col-lg-6 bottom">
                     <div
                         class="d-flex align-items-center justify-content-lg-start justify-content-center fs-2 fw-bold my-5">
-                        <i class="ri-subtract-line span-insurance"></i>
+                        <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                         <h1 class="fw-bold ">
                             МОБИЛЬНОЕ
                             <br />
@@ -1110,7 +1140,7 @@
                                 ПРИЛОЖЕНИЕ
                             </span>
                         </h1>
-                        <i class="ri-subtract-line span-insurance"></i>
+                        <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                     </div>
                     <p class="my-4 text-lg-start text-center">Загрузите наше новое мобильное приложение и всегда держите
                         под рукой простой и
@@ -1159,9 +1189,9 @@
     <section class="links py-5" id="links">
         <div class="container">
             <div class="frame d-flex justify-content-center align-items-center my-4 fs-2 fw-bold ">
-                <i class="ri-subtract-line span-insurance"></i>
+                <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
                 <h1 class="fw-bold">FOYDALI HAVOLALAR</h1>
-                <i class="ri-subtract-line span-insurance"></i>
+                <i class="ri-subtract-line span-insurance" style="font-size: 30px !important;"></i>
             </div>
             <div class="row gap-4 justify-content-center">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 links-box">
@@ -1169,7 +1199,7 @@
                         <div class="p-3">
                             <p class="">Axborotni rivojlantirish vazirligi <br /> texnologiyalar</p>
                             <div class="fw-bold links-a">
-                                <i class="ri-global-line">https://www.mitc.uz</i>
+                                <i class="ri-global-line" style="font-size: 20px !important;">https://www.mitc.uz</i>
                             </div>
                         </div>
                     </a>
@@ -1179,7 +1209,7 @@
                         <div class="p-3">
                             <p class="">O'zbekiston Respublikasi qonun hujjatlari ma’lumotlar bazasi</p>
                             <div class="fw-bold links-a">
-                                <i class="ri-global-line">https://www.lex.uz</i>
+                                <i class="ri-global-line" style="font-size: 20px !important;">https://www.lex.uz</i>
                             </div>
                         </div>
                     </a>
@@ -1189,7 +1219,7 @@
                         <div class="p-3">
                             <p class="">Sug'urta bozorida tajriba</p>
                             <div class="fw-bold links-a">
-                                <i class="ri-global-line">https://pm.gov.uz</i>
+                                <i class="ri-global-line" style="font-size: 20px !important;">https://pm.gov.uz</i>
                             </div>
                         </div>
                     </a>
@@ -1308,31 +1338,31 @@
                             <div class="connection-contact d-flex flex-column gap-3 my-3">
                                 <h1 class="fw-bold">Bog'lanish</h1>
                                 <a href="tel:+998712001100" class="fs-6 fw-bolder w-75 contact-a">
-                                    <i class="ri-phone-fill contact-icon"></i>
+                                    <i class="ri-phone-fill contact-icon" style="font-size: 20px !important;"></i>
                                     +(99871) 200 1100
                                 </a>
                                 <a href="mailto:info@kapitalsugurta.uz" class="fs-6 fw-bolder contact-a">
-                                    <i class="ri-mail-fill contact-icon"></i>
+                                    <i class="ri-mail-fill contact-icon" style="font-size: 20px !important;"></i>
                                     office@go.kapitalsugurta.uz
                                 </a>
                                 <a href="https://yandex.uz/maps/org/158849698467/?ll=69.299374%2C41.315519&z=17"
                                     class="fs-6 fw-bolder contact-a">
-                                    <i class="ri-map-pin-2-fill contact-icon"></i>
+                                    <i class="ri-map-pin-2-fill contact-icon" style="font-size: 20px !important;"></i>
                                     O'zbekiston Respublikasi, Toshkent sh., <br />
                                     100000, M.Gandi ko'chasi 44-uy
                                 </a>
                                 <div class="social d-flex gap-4">
                                     <a href="https://www.instagram.com/kapitalsugurta.uz"
                                         class="fs-5 d-flex justify-content-center align-items-center">
-                                        <i class="ri-instagram-line"></i>
+                                        <i class="ri-instagram-line" style="font-size: 20px !important;"></i>
                                     </a>
                                     <a href="https://www.facebook.com/kapitalsugurta.uz"
                                         class="fs-5 d-flex justify-content-center align-items-center">
-                                        <i class="ri-facebook-fill"></i>
+                                        <i class="ri-facebook-fill" style="font-size: 20px !important;"></i>
                                     </a>
                                     <a href="https://t.me/kapitalsugurta"
                                         class="fs-5 d-flex justify-content-center align-items-center">
-                                        <i class="ri-telegram-line"></i>
+                                        <i class="ri-telegram-line" style="font-size: 20px !important;"></i>
                                     </a>
                                 </div>
                                 <div class="d-none gap-2">
@@ -1347,25 +1377,25 @@
                                     </a>
                                 </div>
                                 <div class="box-market mb-3">
-                                <div class="row g-1">
-                                    <div class="col-6 ">
-                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app border border-light-subtle"
-                                            href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
-                                            style="width: 140px; height: 48px;">
-                                            <img src="assets/img/mobile-app/google-play.svg"
-                                                class="img-fluid play-market w-100 h-100 object-fit-contain">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 ">
-                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle"
-                                            href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
-                                            style="width: 140px; height: 48px;">
-                                            <img src="assets/img/mobile-app/app-store.svg"
-                                                class="img-fluid app-story w-100 h-100 object-fit-contain">
-                                        </a>
+                                    <div class="row g-1">
+                                        <div class="col-6 ">
+                                            <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app border border-light-subtle"
+                                                href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
+                                                style="width: 140px; height: 48px;">
+                                                <img src="assets/img/mobile-app/google-play.svg"
+                                                    class="img-fluid play-market w-100 h-100 object-fit-contain">
+                                            </a>
+                                        </div>
+                                        <div class="col-6 ">
+                                            <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle"
+                                                href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
+                                                style="width: 140px; height: 48px;">
+                                                <img src="assets/img/mobile-app/app-store.svg"
+                                                    class="img-fluid app-story w-100 h-100 object-fit-contain">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -1450,7 +1480,8 @@
                         qilinadi</p>
                 </div>
                 <div class="col-xxl-3 col-xl-12 col-lg-12 text-center">
-                    <a href="https://triger.uz/" class="footer-text-size contact-links-a">TRIGGER tomonidan ishlab
+                    <a href="https://triger.uz/" target="_blank" class="footer-text-size contact-links-a">TRIGGER
+                        tomonidan ishlab
                         chiqilgan</a>
                 </div>
             </div>
@@ -1459,14 +1490,15 @@
 
     <!-- ============ footer section end ============  -->
 
+    <!-- ============ scroll up start ============  -->
 
-
-    <!-- ============ scroll up ============  -->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
+    <a href="#" class="scrollup" id="scroll-up" >
+        <i class="uil uil-arrow-up scrollup-icon"></i>
     </a>
 
+    <!-- ============ scroll up end ============  -->
 
+    <!-- ============ scripts ============ -->
     <!-- jquery -->
     <script src="assets/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
@@ -1509,11 +1541,14 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- shepherd js -->
     <script src="assets/js/shepherd.min.js"></script>
-
+    <!-- start rating js  -->
     <script src="assets/js/star-rating.js"></script>
-
+    <!-- jquery nice select  -->
     <script src="assets/js/jquery.nice-select.js"></script>
-
+    <!-- floating core js  -->
+    <script src="assets/js/floating-ui-core@1.5.3.js"></script>
+    <!-- floating dom js  -->
+    <script src="assets/js/floating-ui-dom@1.5.4.js"></script>
     <!-- app js -->
     <script src="assets/js/app.js"></script>
 </body>
