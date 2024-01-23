@@ -1,4 +1,4 @@
-let darkMode = localStorage.getItem("dark-mode");
+let darkMode = localStorage.getItem("dark-mode-js");
 const darkModeToggle = document.querySelector(".mode-theme-js");
 let svgNone = document.querySelectorAll(".svg-none");
 // let labelDarkLightMode = document.querySelector(".label-dark-light-mode");
@@ -6,7 +6,7 @@ let svgNone = document.querySelectorAll(".svg-none");
 // let content = labelDarkLightModeAfter.content;
 // console.log(content);
 let bxSvg = document.getElementById('bx-svg-dark-light-js');
-let bxChangeIcon = document.querySelector('.bx-change-dark-light-icon');
+let bxChangeIcon = document.querySelector('.bx-change-dark-light-icon-js');
 let saveToggle = document.querySelector(".dark-mode input[type='checkbox']");
 const wrapper = document.querySelector(":root");
 
@@ -23,7 +23,7 @@ const enableDarkMode = () => {
         element.style.display = "none";
     }
 
-    localStorage.setItem("dark-mode", "enabled");
+    localStorage.setItem("dark-mode-js", "enabled");
 };
 
 const disableDarkMode = () => {
@@ -37,7 +37,7 @@ const disableDarkMode = () => {
         element.style.display = "block";
     }
 
-    localStorage.setItem("dark-mode", null);
+    localStorage.setItem("dark-mode-js", null);
 };
 
 if (darkMode === 'enabled') {
@@ -64,7 +64,7 @@ function enableScroll() {
 }
 
 darkModeToggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("dark-mode");
+    darkMode = localStorage.getItem("dark-mode-js");
 
     if (darkMode !== 'enabled') {
         enableDarkMode();

@@ -6,7 +6,7 @@
     --primary: #f1ca29;
     --grey--dark: #aca79a;
     --border-color-dark: #dee2e6;
-    --bs-filter: none;
+    --bs-filter: brightness(0.9);;
     --bs-primary-mode: var(--primary);
     --bs-load-bg: rgba(255, 255, 255, 0.5);
 }
@@ -36,7 +36,7 @@ h6,
 p,
 th,
 td,
-label {
+label{
     color: var(--bs-black);
 }
 
@@ -205,37 +205,16 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
+@media screen and (max-width: 768px){
+    .dropdown-item{
+        margin: 8px 0 8px 0 !important;
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 576px) {
-    .label-dark-light-mode {
-        position: absolute;
-        z-index: 15;
-        cursor: pointer;
-        text-indent: -9999px;
-        width: 60px;
-        height: 20px;
-        background: grey;
-        display: block;
-        border-radius: 100px;
-    }
-
-    .label-dark-light-mode:before {
-        content: '';
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        border-radius: 90px;
-        transition: 0.3s;
+    .dropdown-item{
+        margin: 8px 0 8px 0 !important;
+        width: 100%;
     }
 }

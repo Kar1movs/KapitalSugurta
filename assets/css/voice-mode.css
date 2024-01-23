@@ -145,6 +145,13 @@
     transition: all 3500ms ease-in-out;
 }
 
+@media screen and (max-width: 768px) {    
+    .voice-on {
+        width: 100%;
+        margin: 10px 0 10px 0 !important;
+    }
+}
+
 .voice-on .bx::before {
     width: 100%;
     height: 100%;

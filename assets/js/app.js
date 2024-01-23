@@ -1,5 +1,5 @@
 "use strict";
-/*=============== Loader | Omonjon ===============*/
+/*=============== Loader | Suxrobbek ===============*/
 document.addEventListener('DOMContentLoaded', function (eventObject) {
     $('.load').fadeIn("slow");
 })
@@ -15,71 +15,13 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 $('[rel="tooltip"]').on('click', function () {
-    $(this).tooltip('hide')
+    $(this).tooltip('hide');
 })
 
-//   + ------ +
-//  / swiper /
-// + ------ + 
-const swiper = new Swiper('.header-intro-swiper', {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-    },
-    // Optional parameters
-    loop: false,
+//   + ----- +
+//  / tabs /
+// + ---- + 
 
-    autoplay: {
-        delay: 6500,
-        disableOnInteraction: false,
-    },
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-    on: {
-        afterInit: function () {
-            $('video').each(function () {
-                if ($(this).parents('.swiper-slide').hasClass('swiper-slide-active')) {
-                    // $(this)[0].play();
-                } else {
-                    $(this)[0].pause();
-                }
-            })
-        },
-        slideChange: function () {
-            $('video').each(function () {
-
-                if ($(this).parents('.swiper-slide').hasClass('swiper-slide-active')) {
-                    $(this)[0].pause();
-                } else {
-                    $(this)[0].play();
-                }
-            })
-        },
-    },
-});
-
-// ***************************** tabs ******************************* //
 const tabsContainer = document.querySelector("[role=tablist]");
 const tabButtons = tabsContainer.querySelectorAll("[role=tab]");
 const tabPanels = document.querySelectorAll("[role=tabpanel]");
@@ -201,9 +143,13 @@ function moveIndicator(oldTab, newTab) {
 //         tabTrigger.show()
 //     })
 // })
-// search 
+
+//   + ------ +
+//  / search /
+// + ------ + 
+
 $(document).ready(function () {
-    $(document).on('click', '#search-modal', function () {
+    $(document).on('click', '#search-modal-js', function () {
         var interval = 500;
         setTimeout(() => {
             $('#searchInpOpen').focus();
@@ -211,8 +157,10 @@ $(document).ready(function () {
     })
 });
 
+//   + ------- +
+//  / counter /
+// + ------- + 
 
-// *************************** counter ********************** // 
 if ($('.counter').length > 0) {
     $('.counter').counterUp({
         delay: 10,
@@ -254,15 +202,18 @@ $('.form_box').on('input', 'input[type="number"][maxlength]', function () {
     }
 });
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
+//   + ------------------------ +
+//  / CHANGE BACKGROUND HEADER /
+// + ------------------------ + 
 function scrollHeader() {
-    const nav = document.getElementById('header')
+    const nav = document.getElementById('header-js')
 
     if (this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
-
-/*==================== SHOW SCROLL UP ====================*/
+//   + -------------- +
+//  / SHOW SCROLL UP /
+// + -------------- + 
 function scrollUp() {
     const scrollUp = document.getElementById('scroll-up');
 

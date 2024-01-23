@@ -1,12 +1,10 @@
-/* ########################################################## */
-/* Font size incremine or decremine ************************* */
 $(document).ready(function () {
     let plus5Max = '22px';
     let minus5Min = '16px';
-    let decrease = document.querySelector(".decremet");
-    let increase = document.querySelector(".increment");
-    let autoSizeInvisible = document.querySelector(".autoSizeInvisible");
-    let currentSize = document.getElementById("currentSize");
+    let decrease = document.querySelector(".decremet-js");
+    let increase = document.querySelector(".increment-js");
+    let autoSizeInvisible = document.querySelector(".auto-size-in-visible-js");
+    let currentSize = document.getElementById("current-size-js");
     var curFontSize = localStorage["FontSize"];
     var multipleTextBefore = 'Saytda font o\'lchovi';
     var multipleBefore = '<span class="bg-primary-dark text-light p-1 mx-2 rounded-3 d-flex align-items-center justify-content-center" style="width: 37px; height: 37px;font-size: 16px;">' + '1x' + '</span>';
@@ -64,7 +62,7 @@ $(document).ready(function () {
         }
 
     }
-    $(".increaseFont,.decreaseFont,.resetFont").click(function () {
+    $(".increase-font-js,.decrease-font-js,.reset-font-js").click(function () {
         var type = $(this).val();
         curFontSize = $('.dataFont').css('font-size');
         if (type === 'increase') {
@@ -155,7 +153,7 @@ $(document).ready(function () {
             // options
             icon: 'bx bx-font-size bx-sm,',
             title: 'Font o\'lchovi',
-            message: '<div class="d-flex align-items-center justify-content-center">' + multipleTextBefore + ' ' + ' <span class="bg-primary-dark text-light p-2 mx-2 rounded-3 d-flex align-items-center justify-content-center" style="width: 37px; height: 37px;font-size: 16px;">' + multiple + '</span> ' + ' ' + multipleTextAfter + '</div>', //curFontSize 
+            message: '<div class="d-flex align-items-center justify-content-start">' + multipleTextBefore + ' ' + ' <span class="bg-primary-dark text-light p-2 mx-2 rounded-3 d-flex align-items-center justify-content-center" style="width: 37px; height: 37px;font-size: 16px;">' + multiple + '</span> ' + ' ' + multipleTextAfter + '</div>', //curFontSize 
             // url: 'https://github.com/mouse0270/bootstrap-notify',
             // target: '_blank'
         }, {
@@ -189,5 +187,3 @@ $(document).ready(function () {
         });
     });
 });
-
-console.log(showProgressbar);

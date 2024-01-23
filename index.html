@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dataFont">
+<html lang="en" class="dataFont" data-colorless="false">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     <script src="assets/js/voice-mode.js" defer></script>
 
     <!-- inc-dec-size js  -->
-        <script src="assets/js/inc-dec-size.js" defer></script>
+    <script src="assets/js/inc-dec-size.js" defer></script>
 
     <script src="assets/js/lottie-player.js" defer></script>
 
@@ -36,8 +36,11 @@
     <!-- bootstrap tools css -->
     <link rel="stylesheet" href="assets/css/bootstrap.tools.css">
 
-    <!-- swiper css  -->
+    <!-- swiper css local  -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!-- swiper css  -->
+    <link rel="stylesheet" href="assets/css/swiper.css">
 
     <!-- animate css  -->
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -70,16 +73,16 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body data-image="false">
     <!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
-    <select class="voice-mode-control d-none invisible" id="voiceSelect" hidden=""></select>
-    <button class="btn-voice border-0 shadow voice-unique" id="voice">
+    <select class="voice-mode-control-js d-none invisible" id="voiceSelect" hidden=""></select>
+    <button class="btn-voice border-0 shadow d-none voice-unique-js" id="voice">
         <span class="icon-voice d-flex align-items-center justify-content-center">
             <i class="bx bx-volume-full bx-sm text-white bx-volume-effect"></i>
         </span>
     </button>
 
-    <!-- Loader = SUXROBBEK -->
+    <!-- Loader = Suxrobbek -->
     <div class="load" id="load" style="display: none;">
         <lottie-player autoplay="" loop="" mode="normal" speed="1.5" src="assets/json/loader.json" class="load-gif"
             background="transparent">
@@ -91,23 +94,24 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-head">
-                    <div class="d-flex justify-content-between m-3">
+                    <div class="d-flex justify-content-between mt-3 mx-3">
                         <div class="modal-frame-text">
                             <h5 class="fw-bold">Maxsus imkoniyatlar</h5>
-                            <p>Qulaylik uchun saytning mahsus imkoniyataridan foydalanishingiz
-                                mumkin !</p>
+                            <span>Qulaylik uchun saytning mahsus imkoniyataridan foydalanishingiz
+                                mumkin !</span>
                         </div>
                         <button type="button" class="btn-close bg-primary  my-2 p-2 border text-end"
                             data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div class="d-flex gap-2">
+                    <div class="d-block d-md-flex align-items-center gap-2">
                         <div
-                            class=" dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 py-2 my-3 w-fit-content">
-                            <div class="position-relative z-index dark-mode darklight-button d-flex align-items-center dark-light-tooltip"
-                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top"
-                                data-bs-title="Kunduzgi/Tungi Rejim" title="Kunduzgi/Tungi Rejim">
+                            class=" dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
+                            <div class="position-relative z-index dark-mode-js dark-mode darklight-button d-flex align-items-center dark-light-tooltip"
+                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"
+                                data-bs-placement="top" data-bs-title="Kunduzgi/Tungi Rejim"
+                                title="Kunduzgi/Tungi Rejim">
                                 <input type="checkbox" id="dark-light-mode"
                                     class="mode-theme-js dark-light-mode dark-mode-toggle" value="on" checked="false" />
 
@@ -116,23 +120,26 @@
                                 </label>
 
                                 <label for="dark-light-mode" class="moon-svg-js" id="bx-svg-dark-light-js">
-                                    <i class="bx bx-moon bx-small bx-change-dark-light-icon w-100 h-100" style="font-size: 20px !important;"></i>
+                                    <i class="bx bx-moon bx-small bx-change-dark-light-icon-js w-100 h-100"
+                                        style="font-size: 20px !important;"></i>
                                 </label>
 
                             </div>
-                            <span class="fs-2 fw-bold modal-span modal-text-span d-none" style="font-size: 30px !important;"><i
-                                    class="ri-subtract-line"></i></span>
-                            <label for="dark-light-mode" class="my-2 fw-bolder modal-text h5 cursor-pointer d-none">
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-md-none"
+                                style=" height: 30px;"><i class="ri-subtract-line"></i></span>
+                            <label for="dark-light-mode"
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-md-none">
                                 Kunduzgi/Tungi Rejim
                             </label>
                         </div>
                         <div
-                            class=" voice-on d-flex align-items-center gap-2 border rounded-5 px-2 py-2 my-3 w-fit-content">
+                            class=" voice-on voice-on-js d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
                             <div class="noDefalult voise-mode" data-bs-target="#voiceModal">
-                                <div class="position-relative z-index inp voice-mode d-flex align-items-center"
+                                <div class="position-relative z-index inp voice-mode-js d-flex align-items-center"
                                     data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
-                                    data-bs-placement="top" data-bs-title="Matnni Ovozli Rejimda O'qish"
-                                    title="Matnni Ovozli Rejimda O'qish">
+                                    data-bs-trigger="hover" data-bs-placement="top"
+                                    data-bs-title="Matnni Ovozli Rejimda O'qish" title="Matnni Ovozli Rejimda O'qish">
 
                                     <input type="checkbox" id="toggle-voice-mode" class="mode-voice-js"
                                         checked="false" />
@@ -142,47 +149,50 @@
 
                                     <label for="toggle-voice-mode" class="voice-svg-js cursor-pointer"
                                         id="bx-svg-voice-js">
-                                        <i class="bx bx-volume-full bx-small bx-change-voice-icon w-100 h-100" style="font-size: 20px !important;"></i>
+                                        <i class="bx bx-volume-full bx-small bx-change-voice-icon-js w-100 h-100"
+                                            style="font-size: 20px !important;"></i>
                                     </label>
 
 
                                 </div>
                             </div>
-                            <span class="fs-2 fw-bold modal-span modal-text-span-2 d-none"><i
-                                    class="ri-subtract-line"></i></span>
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span-2 d-inline-flex align-items-center d-md-none"
+                                style="height: 30px;"><i class="ri-subtract-line"></i></span>
                             <label for="toggle-voice-mode"
-                                class="my-2 fw-bolder h5 modal-text cursor-pointer d-none">Matnni
+                                class="my-2 fw-bolder fs-10 modal-text cursor-pointer d-block d-md-none">
                                 Ovozli
                                 Rejimda O'qish</label>
                         </div>
-                        <div class="d-flex align-items-center position-fontIncDec">
-                            <div class="d-flex align-items-center flex-wrap">
+                        <div class="d-flex align-items-center position-font-inc-dec inc-dec mx-2">
+                            <div class="d-flex align-items-center flex-wrap w-100">
                                 <div
-                                    class="d-flex align-items-center row-gap-2 justify-content-evenly dropdown-not-close">
+                                    class="d-flex align-items-center row-gap-2 justify-content-between dropdown-not-close w-100">
                                     <button
-                                        class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
+                                        class="dropdown-item dropdown-item-not-close decremet decremet-js decrease-font-js text-center"
                                         value="decrease" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
-                                        data-bs-placement="top" data-bs-title="Mattini kichkinalashtirish">A-
+                                        data-bs-trigger="hover" data-bs-placement="top"
+                                        data-bs-title="Mattini kichkinalashtirish">A-
                                     </button>
                                     <button
-                                        class="dropdown-item dropdown-item-not-close autoSize autoSizeInvisible resetFont text-center mx-2"
-                                        value="resetFont" style="font-size: 16px;"  data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                        class="dropdown-item dropdown-item-not-close autoSize auto-size-in-visible auto-size-in-visible-js reset-font-js text-center mx-2"
+                                        value="resetFont" style="font-size: 16px;" data-bs-toggle="tooltip"
+                                        data-bs-trigger="hover" data-bs-custom-class="custom-tooltip"
                                         data-bs-placement="top" data-bs-title="Matnni dastlabki holatga qaytarish">auto
                                     </button>
                                     <button
-                                        class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
-                                        value="increase"  data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
-                                        data-bs-placement="top" data-bs-title="Matnni kattalashtirish">A+
+                                        class="dropdown-item dropdown-item-not-close increment increment-js increase-font-js text-center"
+                                        value="increase" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                        data-bs-trigger="hover" data-bs-placement="top"
+                                        data-bs-title="Matnni kattalashtirish">A+
                                     </button>
-                                    <div class="my-size text-center fw-bold p-0" id="currentSize"><span
+                                    <div class="my-size text-center fw-bold p-0" id="current-size-js"><span
                                             class="bg-primary-dark text-light p-1 mx-2 rounded-3 d-flex align-items-center justify-content-center"
                                             style="width: 37px; height: 37px; font-size: 16px;">1x</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <hr class="my-4 border">
                 </div>
             </div>
         </div>
@@ -192,9 +202,9 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div
             class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-dialog modal-dialog-scrollable">
-            <div class="modal-content w-100">
+            <div class="modal-content">
                 <input type="text" id="searchInpOpen"
-                    class="form-control border d-none d-xl-block py-3 input-box-shadow"
+                    class="form-control border d-none d-xl-block py-3 input-box-shadow rou overflow-hidden"
                     aria-label="Text input with radio button" placeholder="Qidirish...">
             </div>
         </div>
@@ -202,7 +212,7 @@
 
 
 
-    <header id="header" class="header border-bottom position-fixed w-100 top-0 z-1">
+    <header id="header-js" class="header border-bottom position-fixed w-100 top-0 z-1">
         <div class="container">
 
             <!-- ============ Navbar section start ============ -->
@@ -432,13 +442,16 @@
                     </button>
 
                     <div class="search-input d-flex justify-content-end">
-                        <div class="w-75 d-flex justify-content-end my-2 " data-bs-toggle="modal"
+                        <div class="w-50 d-flex justify-content-end my-2 btn-group" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
-                            <button class="btn-search d-none d-xl-block rounded-start-2" type="submit"
-                                id="search-modal">Qidirish</button>
-                            <div class="btn btn-secondary rounded-end-2" style="height: fit-content;">
+                            <button class="btn btn-search d-none d-xl-flex rounded-3 h-100 align-items-center"
+                                type="submit" id="search-modal-js"><i
+                                    class="bx bx-search-alt me-2 d-flex align-items-center"
+                                    style="font-size: 22px;"></i><span class="d-flex align-items-center">Qidirish</span>
+                            </button>
+                            <!-- <div class="btn btn-secondary rounded-end-2 col-1" style="height: fit-content;">
                                 <i class="ri-search-2-line" style="font-size: 20px !important;"></i>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -486,7 +499,7 @@
                                         <a href="#">Kapital honodon</a>
                                         <a href="#">Ko'chmas mulk sug'urtasi</a>
                                         <a href="#">Kapital uy</a>
-                                        <a href="#">Kapital ofis</a>#
+                                        <a href="#">Kapital ofis</a>
                                         <a href="#">Ipoteka sug'urtasi</a>
                                         <a href="#">Shaxsiy hujjat</a>
                                     </div>
@@ -586,11 +599,9 @@
     <!-- swiper section start  -->
 
     <section class="swiper-section" id="header-intro-swiper">
-
         <div class="swiper header-intro-swiper">
             <div class="swiper-wrapper">
-
-                <!-- slider-1  -->
+                <!-- swiper slide 1  -->
                 <div class="swiper-slide">
                     <div class="position-relative  w-100 h-100">
                         <div class="container">
@@ -603,7 +614,8 @@
                                                 javobgarligini
                                                 majburiy <br />
                                                 sug'urta qilish</h5>
-                                            <a href="#" class="my-5  swiper-link-a swiper-link-a-media d-flex gap-1">
+                                            <a href="#"
+                                                class="my-5  swiper-link-a swiper-link-a-media d-flex align-items-center gap-1">
                                                 <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
@@ -613,13 +625,11 @@
                             </div>
                         </div>
                         <div class="swiper-slider-img">
-                            <video src="assets/img/swiper_video/car.mp4" autoplay playsinline
-                                class="back-video"></video>
+                            <img src="./assets/img/swiper-img/car.png" alt="" class="back-image">
                         </div>
                     </div>
                 </div>
-
-                <!-- slider-2  -->
+                <!-- swiper slide 2  -->
                 <div class="swiper-slide">
                     <div class="position-relative  w-100 h-100">
                         <div class="container">
@@ -630,7 +640,8 @@
                                             <h1 class="py-3 h1-swiper">SHAHSIY HUJJATLARNI <br /> ONLAYN SUG'URTALASH
                                             </h1>
                                             <h5 class="h5-swiper">Shahsiy hujjatlarni himoyalang</h5>
-                                            <a href="#" class="my-5 swiper-link-a swiper-link-a-media d-flex gap-1">
+                                            <a href="#"
+                                                class="my-5 swiper-link-a swiper-link-a-media align-items-center d-flex gap-1">
                                                 <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
@@ -640,12 +651,12 @@
                             </div>
                         </div>
                         <div class="swiper-slider-img">
-                            <video src="assets/img/swiper_video/document.mp4" autoplay class="back-video"></video>
+                            <img src="./assets/img/swiper-img/document.png" alt="" class="back-image">
                         </div>
                     </div>
                 </div>
 
-                <!-- slider 3 -->
+                <!-- swiper slide 3 -->
                 <div class="swiper-slide">
                     <div class="position-relative  w-100 h-100">
                         <div class="container">
@@ -655,7 +666,8 @@
                                         <div class="h-100 d-flex flex-column swiper-slide-content-title">
                                             <h1 class="py-3 h1-swiper">BAXTSIZ HODISALARDAN <br /> SUG'URTA QILISH</h1>
                                             <h5 class="h5-swiper">Sizga va yaqinlaringizga zarur tibbiy yordam</h5>
-                                            <a href="#" class="my-5 swiper-link-a swiper-link-a-media d-flex gap-1">
+                                            <a href="#"
+                                                class="my-5 swiper-link-a swiper-link-a-media d-flex align-items-center gap-1">
                                                 <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
@@ -665,12 +677,12 @@
                             </div>
                         </div>
                         <div class="swiper-slider-img">
-                            <video src="assets/img/swiper_video/accident.mp4" autoplay class="back-video"></video>
+                            <img src="./assets/img/swiper-img/accident.png" alt="" class="back-image">
                         </div>
                     </div>
                 </div>
 
-                <!-- slider 4  -->
+                <!-- swiper slider 4  -->
                 <div class="swiper-slide">
                     <div class="position-relative  w-100 h-100">
                         <div class="container">
@@ -681,7 +693,8 @@
                                             <h1 class="py-3 h1-swiper">SAYOHAT <br /> SUG'URTASI</h1>
                                             <h5 class="h5-swiper">Xorijiy mamlakatda bo'lish vaqtida shoshilinch <br>
                                                 davolanish</h5>
-                                            <a href="#" class="my-5 swiper-link-a swiper-link-a-media d-flex gap-1">
+                                            <a href="#"
+                                                class="my-5 swiper-link-a swiper-link-a-media d-flex align-items-center gap-1">
                                                 <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
@@ -691,14 +704,10 @@
                             </div>
                         </div>
                         <div class="swiper-slider-img">
-                            <video src="assets/img/swiper_video/plane.mp4" autoplay class="back-video"></video>
+                            <img src="./assets/img/swiper-img/plane.png" alt="" class="back-image">
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="container">
-                <div class="swiper-pagination text-start mb-3"></div>
             </div>
         </div>
     </section>
@@ -889,10 +898,10 @@
     <!-- ============ section product end ============  -->
 
     <!-- ============ section homepage start ============ -->
+
     <section class="homepage-about custom-container page-content py-5" id="homepage-about">
         <div class="container">
             <div class="row">
-
                 <div
                     class="col-xxl-8 col-xl-8 d-flex flex-column justify-content-center align-items-center homepage-about-text rounded my-5">
                     <div class="my-5" style="margin: 0 30px;">
@@ -916,7 +925,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-xxl-4 col-xl-4 col-lg-12 d-flex justify-content-center align-items-center">
                     <div class="homepage-about-img my-3">
                         <img src="assets/img/home-page/aboutImage.jpg" alt="" class="img-fluid dark-light-img">
@@ -1149,21 +1157,19 @@
                     <div class="row align-items-center justify-content-lg-start justify-content-center">
                         <div class="col-6">
                             <div class="box-market mb-3">
-                                <div class="row g-5">
-                                    <div class="col-6 ">
-                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app border-light-subtle"
-                                            href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
-                                            style="width: 140px; height: 48px;">
+                                <div class="row g-3">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
+                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app link-app-play-and-app-store border-light-subtle"
+                                            href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US">
                                             <img src="assets/img/mobile-app/google-play.svg"
-                                                class="img-fluid play-market w-100 h-100 object-fit-contain">
+                                                class="img-fluid play-market object-fit-contain">
                                         </a>
                                     </div>
-                                    <div class="col-6 ">
-                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle"
-                                            href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
-                                            style="width: 140px; height: 48px;">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
+                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle link-app-play-and-app-store"
+                                            href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582">
                                             <img src="assets/img/mobile-app/app-store.svg"
-                                                class="img-fluid app-story w-100 h-100 object-fit-contain">
+                                                class="img-fluid app-story object-fit-contain">
                                         </a>
                                     </div>
                                 </div>
@@ -1378,21 +1384,25 @@
                                 </div>
                                 <div class="box-market mb-3">
                                     <div class="row g-1">
-                                        <div class="col-6 ">
-                                            <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app border border-light-subtle"
-                                                href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
-                                                style="width: 140px; height: 48px;">
-                                                <img src="assets/img/mobile-app/google-play.svg"
-                                                    class="img-fluid play-market w-100 h-100 object-fit-contain">
-                                            </a>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 my-2 rounded-3 link-app border border-light-subtle"
+                                                    href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
+                                                    style="width: 140px; height: 48px;">
+                                                    <img src="assets/img/mobile-app/google-play.svg"
+                                                        class="img-fluid play-market w-100 h-100 object-fit-contain">
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="col-6 ">
-                                            <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle"
-                                                href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
-                                                style="width: 140px; height: 48px;">
-                                                <img src="assets/img/mobile-app/app-store.svg"
-                                                    class="img-fluid app-story w-100 h-100 object-fit-contain">
-                                            </a>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 my-2 rounded-3 link-app border-light-subtle"
+                                                    href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
+                                                    style="width: 140px; height: 48px;">
+                                                    <img src="assets/img/mobile-app/app-store.svg"
+                                                        class="img-fluid app-story w-100 h-100 object-fit-contain">
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1492,7 +1502,7 @@
 
     <!-- ============ scroll up start ============  -->
 
-    <a href="#" class="scrollup" id="scroll-up" >
+    <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup-icon"></i>
     </a>
 
@@ -1508,36 +1518,14 @@
     <script src="assets/js/waypoints.min-2.0.3.js"></script>
     <script src="assets/js/jquery.counterup-1.0.min.js"></script>
 
-    <!-- main js  -->
-    <!-- <script src="assets/js/main.js"></script> -->
-
     <!-- seasons js  -->
     <!-- <script src="assets/js/seasons.js"></script> -->
-
-    <!-- <script src="assets/js/scrollreveal.js"></script>
-    <script>
-
-        const sr = ScrollReveal({
-            distance: '30px',
-            duration: 1000,
-            reset: true,
-        });
-
-        sr.reveal(`.top`, {
-            origin: 'top',
-            interval: 400,
-        })
-        sr.reveal(`.bottom`, {
-            origin: 'bottom',
-            interval: 400,
-        })
-    </script> -->
 
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- bootstrap notify  -->
     <script src="assets/js/bootstrap-notify.min.js"></script>
-    <!-- swiper js -->
+    <!-- swiper js local -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- shepherd js -->
     <script src="assets/js/shepherd.min.js"></script>
@@ -1545,12 +1533,10 @@
     <script src="assets/js/star-rating.js"></script>
     <!-- jquery nice select  -->
     <script src="assets/js/jquery.nice-select.js"></script>
-    <!-- floating core js  -->
-    <script src="assets/js/floating-ui-core@1.5.3.js"></script>
-    <!-- floating dom js  -->
-    <script src="assets/js/floating-ui-dom@1.5.4.js"></script>
     <!-- app js -->
     <script src="assets/js/app.js"></script>
+    <!-- swiper js  -->
+    <script src="assets/js/swiper.js"></script>
 </body>
 
 </html>

@@ -1,19 +1,15 @@
-
-/* ########################################################## */
-/* Voice on mode ******************************************** */
-/* Modal okna zvukovoy effect uchun ************************* */
-var VoiceModeStorage = localStorage.getItem("voiceModeStorage");
-var voiceOn = document.querySelector(".voice-on");
-var voiceMode = document.querySelector(".voice-mode");
+var VoiceModeStorage = localStorage.getItem("voiceModeStorage-js");
+var voiceOn = document.querySelector(".voice-on-js");
+var voiceMode = document.querySelector(".voice-mode-js");
 var timeCloseModalAlert = 100;
 var voiceCheckStatus = 0;
-var voiceModeControl = document.querySelector(".voice-mode-control");
+var voiceModeControl = document.querySelector(".voice-mode-control-js");
 var voiceSaveToggle = document.querySelector("input[id='toggle-voice-mode']");
 let bxSvgVoice = document.getElementById('bx-svg-voice-js');
-let bxChangeIconVoice = document.querySelector('.bx-change-voice-icon');
+let bxChangeIconVoice = document.querySelector('.bx-change-voice-icon-js');
 // const voiceModeToggle = document.querySelector(".mode__voice");
 // var justVoiceId = document.getElementById("voiceId");
-var justVoiceClass = document.querySelector(".voice-unique");
+var justVoiceClass = document.querySelector(".voice-unique-js");
 
 /* Barcha matnlarni ovozlarni ******************************* */
 

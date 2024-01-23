@@ -2,55 +2,60 @@
     box-shadow: none !important;
     border: 0;
 }
+
 *:focus-visible {
     box-shadow: none !important;
     border: 0;
 }
 
-:root{
-    
-}
+:root {}
 
-a{
+a {
     text-decoration: none;
 }
-
-input:focus{
-    border: 1px solid black;
+input {
+    border: 1px solid transparent !important;
+}
+input:focus {
+    border: 1px solid var(--bs-primary) !important;
+}
+textarea{
+    border: 1px solid transparent !important;
+}
+textarea:focus {
+    border: 1px solid var(--bs-primary) !important;
 }
 
-textarea:focus{
-    border: 1px solid var(--bs-primary);
-}
-
-.btn:active{
+.btn:active {
     background: transparent;
 }
 
-.btn:focus-visible{
+.btn:focus-visible {
     padding: 0.40rem 0.80rem;
 }
 
-.btn:focus{
+.btn:focus {
     padding: 0.43rem 0.80rem;
 }
 
-.btn-search{
+.btn-search {
     color: var(--bs-black);
     background-color: var(--bs-wheat);
     padding: 5.5px 13px;
     border: none;
 }
 
-.btn:hover{
-background-color: var(--bs-primary-hover);
+.btn:hover {
+    background-color: var(--bs-primary-hover);
 }
-.progress-primary{
+
+.progress-primary {
     background-color: var(--bs-white);
     margin-top: 1rem;
     height: 12px !important;
 }
-.progress-primary .progress-bar-info{
+
+.progress-primary .progress-bar-info {
     background-color: var(--bs-primary-hover);
 
 }
@@ -58,34 +63,38 @@ background-color: var(--bs-primary-hover);
 .bg-primary-mode {
     background-color: var(--bs-primary-mode);
 }
+
 .cursor-pointer {
     cursor: pointer;
 }
 
-.w-fit-content{
+.w-fit-content {
     width: fit-content;
 }
 
-.w-min-content{
+.w-min-content {
     width: min-content;
 }
-.w-max-content{
+
+.w-max-content {
     width: max-content;
 }
+
 .custom-tooltip {
     /* left: 12px !important; */
     inset: auto auto 12px 0px !important;
 }
-.custom-tooltip .tooltip-arrow{
+
+.custom-tooltip .tooltip-arrow {
     /* top: 50% !important;
     transform: translateY(-50%) !important; */
 }
 
-.bg-grey{
+.bg-grey {
     background-color: grey;
 }
 
-.bg-primary-dark{
+.bg-primary-dark {
     background-color: var(--bs-primary-hover);
 }
 
@@ -95,4 +104,28 @@ background-color: var(--bs-primary-hover);
 
 span [data-notify="message"] {
     display: flex;
+}
+
+.fs-7 {
+    font-size: 0.875rem !important;
+}
+
+.fs-8 {
+    font-size: 0.8125rem !important;
+}
+
+.fs-9 {
+    font-size: 0.75rem !important;
+}
+
+.fs-10 {
+    font-size: 0.65rem !important;
+}
+
+input{
+    color: var(--bs-black) !important;
+}
+
+.tooltip.show {
+    opacity: 1;
 }

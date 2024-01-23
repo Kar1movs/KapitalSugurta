@@ -46,14 +46,14 @@
     cursor: not-allowed;
 }
 
-.autoSizeInvisible {
+.auto-size-in-visible {
     opacity: 0.4;
     user-select: none;
     pointer-events: none;
     cursor: not-allowed;
 }
 
-.autoSizeInvisible.visibile {
+.auto-size-in-visible.visibile {
     visibility: visible;
     user-select: auto;
     pointer-events: visible;
@@ -61,7 +61,30 @@
     cursor: pointer;
 }
 
-.dropdown-not-close .dropdown-item:hover, .dropdown-not-close .dropdown-item:focus {
+.dropdown-not-close .dropdown-item:hover,
+.dropdown-not-close .dropdown-item:focus {
     background-color: var(--bs-primary-hover) !important;
     color: var(--bs-white) !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    .position-font-inc-dec {
+        width: 40%;
+    }
+
+    .inc-dec {
+        margin: 0 10px 0 10px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .position-font-inc-dec {
+        width: 65%;
+    }
+
+    .inc-dec {
+        margin: 0 10px 0 10px !important;
+    }
 }
