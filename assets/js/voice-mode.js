@@ -12,7 +12,7 @@ let bxChangeIconVoice = document.querySelector('.bx-change-voice-icon-js');
 var justVoiceClass = document.querySelector(".voice-unique-js");
 
 /* Barcha matnlarni ovozlarni ******************************* */
-
+ 
 /* ijro etuvchi funksiyalar shuni ichida ******************** */
 
 function activeVoice() {

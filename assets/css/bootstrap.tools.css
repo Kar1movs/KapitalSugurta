@@ -129,3 +129,6 @@ input{
 .tooltip.show {
     opacity: 1;
 }
+.object-position-end {
+    object-position: right;
+}

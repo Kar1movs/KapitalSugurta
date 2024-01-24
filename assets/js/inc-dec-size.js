@@ -5,13 +5,17 @@ $(document).ready(function () {
     let increase = document.querySelector(".increment-js");
     let autoSizeInvisible = document.querySelector(".auto-size-in-visible-js");
     let currentSize = document.getElementById("current-size-js");
-    var curFontSize = localStorage["FontSize"];
+    var curFontSize = localStorage["font-size"];
     var multipleTextBefore = 'Saytda font o\'lchovi';
     var multipleBefore = '<span class="bg-primary-dark text-light p-1 mx-2 rounded-3 d-flex align-items-center justify-content-center" style="width: 37px; height: 37px;font-size: 16px;">' + '1x' + '</span>';
     var multipleTextAfter = 'karra kattalashtirildi';
+    var incDecWrapper = document.querySelector(":root");
+    incDecWrapper.setAttribute("data-fonts", "true");
     if (curFontSize) {
         //set to previously saved fontsize if available
-        $('.dataFont').css('font-size', curFontSize);
+        // $('.dataFont').css('font-size', curFontSize);
+        $("html[data-fonts='true']").css("font-size", curFontSize);
+
         if (curFontSize === '16px') {
             multipleTextAfter = ' dastlabki holatga qaytarildi!';
             multipleBefore = '1x';
@@ -64,7 +68,7 @@ $(document).ready(function () {
     }
     $(".increase-font-js,.decrease-font-js,.reset-font-js").click(function () {
         var type = $(this).val();
-        curFontSize = $('.dataFont').css('font-size');
+        curFontSize = $("html[data-fonts='true']").css('font-size');
         if (type === 'increase') {
             decrease.classList.remove('active-last');
             decrease.classList.add('visibile');
@@ -72,7 +76,7 @@ $(document).ready(function () {
             autoSizeInvisible.classList.add('visibile');
 
             if (curFontSize !== plus5Max) {
-                $('.dataFont').css('font-size', parseInt(curFontSize) + 1 + "px");
+                $("html[data-fonts='true']").css('font-size', parseInt(curFontSize) + 1 + "px");
                 curFontSize = parseInt(curFontSize) + 1 + "px";
                 if (curFontSize === plus5Max) {
                     increase.classList.add('active-last');
@@ -89,7 +93,7 @@ $(document).ready(function () {
             increase.classList.remove('visibile-hide');
 
             if (curFontSize !== minus5Min) {
-                $('.dataFont').css('font-size', parseInt(curFontSize) - 1 + "px");
+                $("html[data-fonts='true']").css('font-size', parseInt(curFontSize) - 1 + "px");
                 curFontSize = parseInt(curFontSize) - 1 + "px";
                 if (curFontSize === minus5Min) {
                     autoSizeInvisible.classList.remove('visibile');
@@ -109,11 +113,11 @@ $(document).ready(function () {
             increase.classList.remove('visibile-hide');
             autoSizeInvisible.classList.remove('visibile');
 
-            $('.dataFont').css('font-size', "16px");
+            $("html[data-fonts='true']").css('font-size', "16px");
             curFontSize = "16px";
         }
 
-        localStorage.setItem('FontSize', curFontSize);
+        localStorage.setItem('font-size', curFontSize);
 
         var multipleTextBefore = 'Saytda font o\'lchovi';
         var multiple = '16px';

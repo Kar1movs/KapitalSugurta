@@ -1,51 +1,53 @@
-let darkMode = localStorage.getItem("dark-mode");
-const darkModeToggle = document.querySelector(".mode-theme-js");
-let svgNone = document.querySelectorAll(".svg-none");
+let imgNoneMode = localStorage.getItem("img-none");
+const imgNoneModeToggle = document.querySelector(".img-none-mode-theme-js");
+let imgNoneSvg = document.querySelectorAll(".svg-none");
+let slash = document.querySelector('.bx-none-image');
 // let labelDarkLightMode = document.querySelector(".label-dark-light-mode");
 // let labelDarkLightModeAfter = window.getComputedStyle(labelDarkLightMode, '::after');
 // let content = labelDarkLightModeAfter.content;
 // console.log(content);
-let bxSvg = document.getElementById('bx-svg-dark-light-js');
-let bxChangeIcon = document.querySelector('.bx-change-dark-light-icon-js');
-let saveToggle = document.querySelector(".dark-mode input[type='checkbox']");
-const wrapper = document.querySelector(":root");
+let imgNoneBxSvg = document.getElementById('bx-svg-img-none-js');
+let imgNonebxChangeIcon = document.querySelector('.bx-change-img-none-icon-js');
+let imgNoneSaveToggle = document.querySelector(".img-none-mode-parent input[type='checkbox']");
+const imgNoneWrapper = document.querySelector(":root");
 
-const enableDarkMode = () => {
-    document.documentElement.classList.add("dark-mode");
-    document.documentElement.classList.remove("light-mode");
-    wrapper.setAttribute("data-theme", "dark");
-    darkModeToggle.classList.add("active");
+const enableImgNoneMode = () => {
+    document.documentElement.classList.add("img-none");
+    document.documentElement.classList.remove("img-have");
+    imgNoneWrapper.setAttribute("data-img", "true");
+    imgNoneModeToggle.classList.add("active");
 
-    saveToggle.setAttribute("checked", "true");
+    imgNoneSaveToggle.setAttribute("checked", "true");
 
-    for (let i = 0; i < svgNone.length; i++) {
-        const element = svgNone[i];
+    for (let i = 0; i < imgNoneSvg.length; i++) {
+        const element = imgNoneSvg[i];
         element.style.display = "none";
     }
 
-    localStorage.setItem("dark-mode", "enabled");
+    localStorage.setItem("img-none", "enabled");
 };
 
-const disableDarkMode = () => {
-    document.documentElement.classList.add("light-mode");
-    document.documentElement.classList.remove("dark-mode");
-    wrapper.setAttribute("data-theme", "light");
-    darkModeToggle.classList.remove("active");
-    saveToggle.setAttribute("checked", "false");
-    for (let i = 0; i < svgNone.length; i++) {
-        const element = svgNone[i];
+const disableImgNoneMode = () => {
+    document.documentElement.classList.add("img-have");
+    document.documentElement.classList.remove("img-none");
+    wrapper.setAttribute("data-img", "false");
+    imgNoneModeToggle.classList.remove("active");
+    imgNoneSaveToggle.setAttribute("checked", "false");
+    for (let i = 0; i < imgNoneSvg.length; i++) {
+        const element = imgNoneSvg[i];
         element.style.display = "block";
     }
 
-    localStorage.setItem("dark-mode", null);
+    localStorage.setItem("img-none", null);
 };
 
-if (darkMode === 'enabled') {
-    enableDarkMode();
-    bxChangeIcon.classList.add('bx-sun');
-        bxChangeIcon.classList.remove('bx-moon');
-}
+if (imgNoneMode === 'enabled') {
+    enableImgNoneMode();
+    // imgNonebxChangeIcon.classList.add('bx-image-alt');
+    // imgNonebxChangeIcon.classList.remove('bx-image-alt');
+    imgNonebxChangeIcon.classList.remove('bx-none-image');
 
+}
 
 function disableScroll() {
     // Get the current page scroll position
@@ -63,23 +65,23 @@ function enableScroll() {
     };
 }
 
-darkModeToggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("dark-mode");
+imgNoneModeToggle.addEventListener("click", () => {
+    imgNoneMode = localStorage.getItem("img-none");
 
-    if (darkMode !== 'enabled') {
-        enableDarkMode();
-        bxChangeIcon.classList.add('bx-sun');
-        bxChangeIcon.classList.remove('bx-moon');
+    if (imgNoneMode !== 'enabled') {
+        enableImgNoneMode();
+        // imgNonebxChangeIcon.classList.add('bx-image-alt');
+        // imgNonebxChangeIcon.classList.remove('bx-image-alt');
+        imgNonebxChangeIcon.classList.remove('bx-none-image');
         setTimeout(function () {
-
-            bxSvg.classList.add('scale-mode');
+            imgNoneBxSvg.classList.add('scale-mode');
         }, 50);
-        bxSvg.classList.remove('scale-mode');
+        imgNoneBxSvg.classList.remove('scale-mode');
         $.notify({
             // options
-            icon: 'bx bx-moon bx-sm',
-            title: 'Tungi rejim yoqildi',
-            message: 'Sayda tungi rejim ishga tushdi !',
+            icon: 'bx bx-image-alt bx-none-image bx-sm position-relative',
+            title: 'Ramlar sahifda o\'chirib qo\'yildi rejim yoqildi',
+            message: 'Ramlar sahifda o\'chirib qo\'yildi rejim yoqildi',
             // url: 'https://github.com/mouse0270/bootstrap-notify',
             // target: '_blank'
         }, {
@@ -123,18 +125,19 @@ darkModeToggle.addEventListener("click", () => {
         });
         /*disableScroll();*/
     } else {
-        disableDarkMode();
-        bxChangeIcon.classList.add('bx-moon');
-        bxChangeIcon.classList.remove('bx-sun');
+        disableImgNoneMode();
+        // imgNonebxChangeIcon.classList.add('bx-image-alt');
+        // imgNonebxChangeIcon.classList.remove('bx-image-alt');
+        imgNonebxChangeIcon.classList.add('bx-none-image');
         setTimeout(function () {
-            bxSvg.classList.add('scale-mode');
+            imgNoneBxSvg.classList.add('scale-mode');
         }, 50);
-        bxSvg.classList.remove('scale-mode');
+        imgNoneBxSvg.classList.remove('scale-mode');
         $.notify({
             // options
-            icon: 'bx bx-sun bx-sm',
-            title: 'Kunduzgi rejim yoqildi',
-            message: 'Sayda kunduzgi rejim ishga tushdi !',
+            icon: 'bx bx-image-alt bx-sm',
+            title: 'Ramlar sahifda joylab qo\'yildi',
+            message: 'Ramlar sahifda joylab qo\'yildi',
             // url: 'https://github.com/mouse0270/bootstrap-notify',
             // target: '_blank'
         }, {

@@ -85,10 +85,10 @@ html[data-colorless="true"] {
 /* + -------- + */
 
 .header {
-    width: 100%;
+    /* width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 1; */
     background: var(--bs-white);
 }
 
@@ -809,13 +809,19 @@ th {
 .scrollup {
     position: fixed;
     right: 3.5rem;
-    bottom: 8.8% !important;
+    /* bottom: 8.8% !important; */
     background-color: var(--bs-primary);
     opacity: .8;
-    padding: .2rem .6rem;
-    border-radius: .4rem;
+    padding: .2rem .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     z-index: var(--z-tooltip);
-    transition: .4s;
+    transition: .4s ease-in-out;
+    bottom: -5rem;
 }
 
 .scrollup:hover {

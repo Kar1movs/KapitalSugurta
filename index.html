@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="dataFont" data-colorless="false">
+<html lang="en"> <!-- data-colorless="false" --><!--dataFont    => data-fonts="true" -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAPITAL SUG'URTA Kompaniyasi | Toshkent va butun O'zbekiston Respublikasi bo'yicha barcha turdagi sug'urta
         turlari.</title>
+    <!-- loader  -->
+    <script src="assets/js/lottie-player.js" defer></script>
 
     <!-- dark-light  -->
     <script src="assets/js/dak-light.js" defer></script>
@@ -16,7 +18,8 @@
     <!-- inc-dec-size js  -->
     <script src="assets/js/inc-dec-size.js" defer></script>
 
-    <script src="assets/js/lottie-player.js" defer></script>
+    <!-- img none  -->
+    <script src="assets/js/img-none.js" defer></script>
 
     <!-- favico  -->
     <link type="image/x-icon" href="/assets/img/favico/favico.png" rel="shortcut icon">
@@ -66,6 +69,9 @@
     <!-- inc-dec size  -->
     <link rel="stylesheet" href="assets/css/inc-dec-size.css">
 
+    <!-- img none css  -->
+    <link rel="stylesheet" href="assets/css/img-none.css">
+
     <!-- fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +79,7 @@
         rel="stylesheet">
 </head>
 
-<body data-image="false">
+<body>
     <!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
     <select class="voice-mode-control-js d-none invisible" id="voiceSelect" hidden=""></select>
     <button class="btn-voice border-0 shadow d-none voice-unique-js" id="voice">
@@ -129,6 +135,35 @@
                                 class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-md-none"
                                 style=" height: 30px;"><i class="ri-subtract-line"></i></span>
                             <label for="dark-light-mode"
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-md-none">
+                                Kunduzgi/Tungi Rejim
+                            </label>
+                        </div>
+                        <!-- img none -->
+                        <div
+                            class="dropdown-item no-default img-none d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
+                            <div class="position-relative z-index img-none-mode-parent d-flex align-items-center img-none-tooltip"
+                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"
+                                data-bs-placement="top" data-bs-title="Rasmsiz/Rasmli Rejim"
+                                title="Rasmsiz/Rasmli Rejim"><!-- dark-mode-js -->
+                                <input type="checkbox" id="img-none-mode"
+                                    class="img-none-mode-theme-js img-none-mode img-none-mode-toggle" value="on"
+                                    checked="false" />
+
+                                <label class="label label-img-none-mode position-relative " for="img-none-mode">img/not
+                                    img
+                                </label>
+
+                                <label for="img-none-mode" class="" id="bx-svg-img-none-js">
+                                    <i class="bx bx-image-alt bx-none-image bx-small bx-change-img-none-icon-js w-100 h-100"
+                                        style="font-size: 20px !important;"></i>
+                                </label>
+
+                            </div>
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-md-none"
+                                style=" height: 30px;"><i class="ri-subtract-line"></i></span>
+                            <label for="img-none-mode"
                                 class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-md-none">
                                 Kunduzgi/Tungi Rejim
                             </label>
@@ -192,6 +227,10 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -218,10 +257,10 @@
             <!-- ============ Navbar section start ============ -->
 
             <nav class="navbar" id="navbar">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="logo">
                         <a class="navbar-brand main-header-brand nuxt-link-exact-active " href="/">
-                            <img class="header-logo mb-1 img-fluid" src="assets/img/favico/favico.png"
+                            <img class="header-logo allways-have mb-1 img-fluid" src="assets/img/favico/favico.png"
                                 alt="Kapital Sug’urta">
                             <span class="logo-text fw-bold">KAPITAL SUG'URTA</span>
                         </a>
@@ -601,14 +640,15 @@
     <section class="swiper-section" id="header-intro-swiper">
         <div class="swiper header-intro-swiper">
             <div class="swiper-wrapper">
+
                 <!-- swiper slide 1  -->
-                <div class="swiper-slide">
-                    <div class="position-relative  w-100 h-100">
-                        <div class="container">
-                            <div class="swiper-text h-100 my-5 ">
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
-                                        <div class="h-100 d-flex flex-column swiper-slide-content-title">
+                <div class="swiper-slide shadow">
+                    <div class="position-relative  w-100 h-100 p-5">
+                        <div class="container h-100">
+                            <div class="swiper-text h-100">
+                                <div class="row h-100">
+                                    <div class="col-6 col-lg-6 h-100">
+                                        <div class="h-100 swiper-slide-content-title">
                                             <h1 class="py-5 h1-swiper">TVEJMSQ (OSAGO)</h1>
                                             <h5 class="h5-swiper">Transport vositasi egalarining fuqorolik
                                                 javobgarligini
@@ -624,19 +664,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slider-img">
-                            <img src="./assets/img/swiper-img/car.png" alt="" class="back-image">
+                        <div class="swiper-slider-img bg-white">
+                            <img src="./assets/img/swiper-img/tvejmsq.jpg" alt=""
+                                class="intro-slider-img w-100 h-100 object-fit-contain object-position-end bg-white">
                         </div>
                     </div>
                 </div>
                 <!-- swiper slide 2  -->
-                <div class="swiper-slide">
-                    <div class="position-relative  w-100 h-100">
-                        <div class="container">
-                            <div class="swiper-text h-100 my-5 ">
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
-                                        <div class="h-100 d-flex flex-column swiper-slide-content-title">
+                <div class="swiper-slide shadow">
+                    <div class="position-relative  w-100 h-100 p-5">
+                        <div class="container h-100">
+                            <div class="swiper-text h-100">
+                                <div class="row h-100">
+                                    <div class="col-6 col-lg-6 h-100">
+                                        <div class="h-100 swiper-slide-content-title">
                                             <h1 class="py-3 h1-swiper">SHAHSIY HUJJATLARNI <br /> ONLAYN SUG'URTALASH
                                             </h1>
                                             <h5 class="h5-swiper">Shahsiy hujjatlarni himoyalang</h5>
@@ -650,20 +691,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slider-img">
-                            <img src="./assets/img/swiper-img/document.png" alt="" class="back-image">
+                        <div class="swiper-slider-img bg-white">
+                            <img src="./assets/img/swiper-img/document.jpg" alt=""
+                                class="intro-slider-img w-100 h-100 object-fit-contain object-position-end bg-white">
                         </div>
                     </div>
                 </div>
 
                 <!-- swiper slide 3 -->
-                <div class="swiper-slide">
-                    <div class="position-relative  w-100 h-100">
-                        <div class="container">
-                            <div class="swiper-text h-100 my-5 ">
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
-                                        <div class="h-100 d-flex flex-column swiper-slide-content-title">
+                <div class="swiper-slide shadow">
+                    <div class="position-relative  w-100 h-100 p-5">
+                        <div class="container h-100">
+                            <div class="swiper-text h-100">
+                                <div class="row h-100">
+                                    <div class="col-6 col-lg-6 h-100">
+                                        <div class="h-100 swiper-slide-content-title">
                                             <h1 class="py-3 h1-swiper">BAXTSIZ HODISALARDAN <br /> SUG'URTA QILISH</h1>
                                             <h5 class="h5-swiper">Sizga va yaqinlaringizga zarur tibbiy yordam</h5>
                                             <a href="#"
@@ -676,20 +718,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slider-img">
-                            <img src="./assets/img/swiper-img/accident.png" alt="" class="back-image">
+                        <div class="swiper-slider-img bg-white">
+                            <img src="./assets/img/swiper-img/accidents.jpg" alt=""
+                                class="intro-slider-img w-100 h-100 object-fit-contain object-position-end bg-white">
                         </div>
                     </div>
                 </div>
 
                 <!-- swiper slider 4  -->
-                <div class="swiper-slide">
-                    <div class="position-relative  w-100 h-100">
-                        <div class="container">
-                            <div class="swiper-text h-100 my-5 ">
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
-                                        <div class="h-100 d-flex flex-column swiper-slide-content-title">
+                <div class="swiper-slide shadow">
+                    <div class="position-relative  w-100 h-100 p-5">
+                        <div class="container h-100">
+                            <div class="swiper-text h-100">
+                                <div class="row h-100">
+                                    <div class="col-6 col-lg-6 h-100">
+                                        <div class="h-100 swiper-slide-content-title">
                                             <h1 class="py-3 h1-swiper">SAYOHAT <br /> SUG'URTASI</h1>
                                             <h5 class="h5-swiper">Xorijiy mamlakatda bo'lish vaqtida shoshilinch <br>
                                                 davolanish</h5>
@@ -703,15 +746,57 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slider-img">
-                            <img src="./assets/img/swiper-img/plane.png" alt="" class="back-image">
+                        <div class="swiper-slider-img bg-white">
+                            <img src="./assets/img/swiper-img/travel.jpg" alt=""
+                                class="intro-slider-img w-100 h-100 object-fit-contain object-position-end bg-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- swiper slider 5  -->
+                <div class="swiper-slide shadow">
+                    <div class="position-relative  w-100 h-100 p-5">
+                        <div class="container h-100">
+                            <div class="swiper-text h-100">
+                                <div class="row h-100">
+                                    <div class="col-6 col-lg-6 h-100">
+                                        <div class="h-100 swiper-slide-content-title">
+                                            <h1 class="py-3 h1-swiper">SAYOHAT <br /> SUG'URTASI</h1>
+                                            <h5 class="h5-swiper">Xorijiy mamlakatda bo'lish vaqtida shoshilinch <br>
+                                                davolanish</h5>
+                                            <a href="#"
+                                                class="my-5 swiper-link-a swiper-link-a-media d-flex align-items-center gap-1">
+                                                <span class="fw-bold wand-span">|</span>
+                                                BATAFSIL
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slider-img bg-white">
+                            <img src="assets/img/swiper-img/osgor.jpg" alt=""
+                                class="intro-slider-img w-100 h-100 object-fit-contain object-position-end bg-white">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="w-100 position-absolute bottom-0 swiper-navigation-pagination-gen d-lg-flex d-none ">
+                <div class="position-relative swiper-navigation-pagination mx-auto w-75 h-100 rounded-5">
+                    <!-- Swiper Navigation arrows -->
+                    <div class="swiper-button-next p-2 header-shadow-nav rounded-circle bg-white d-xl-flex d-none">
+                        <i class="bx bx-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev p-2 header-shadow-nav rounded-circle bg-white d-xl-flex d-none ">
+                        <i class="bx bx-chevron-left"></i>
+                    </div>
+                    <!-- Swiper Pagination -->
+                    <div class="swiper-pagination "></div>
+                </div>
+            </div>
         </div>
     </section>
-
     <!-- swiper section end  -->
 
     <!-- section product start  -->
@@ -758,7 +843,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/osgor.png" alt=""
+                                        <img src="assets/img/homepage-insurance/osgor.jpg" alt=""
                                             class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
@@ -781,7 +866,7 @@
                             <div class="box rounded">
                                 <div class="container">
                                     <div class="img p-2">
-                                        <img src="assets/img/homepage-insurance/tfjmsq.png" alt=""
+                                        <img src="assets/img/homepage-insurance/tfjmsq.jpg" alt=""
                                             class="img-fluid dark-light-img">
                                     </div>
                                     <div class="frame-product text-center my-3 d-flex justify-content-between flex-column"
