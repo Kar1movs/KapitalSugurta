@@ -9,9 +9,11 @@
     --bs-filter: brightness(0.9);;
     --bs-primary-mode: var(--primary);
     --bs-load-bg: rgba(255, 255, 255, 0.5);
-}
+    --bs-swiper-filter: brightness(1);;
+    }
 
 :root[data-theme="dark"] {
+    --bs-swiper-filter: brightness(0.8);;
     --bs-filter: brightness(0.5);
     --bs-wheat: #414140;
     --bs-ww: #414140;

@@ -1,6 +1,11 @@
-html[data-img="true"] img:not(.allways-have){
+html[data-img="true"] img:not(.allways-have, .app-story, .play-market, .telegram ){
     display: none !important;
 }
+
+html[data-img="true"] .news-position{
+    display: none !important;
+}
+
 .img-none-mode-toggle {
     appearance: none;
     -moz-appearance: none;

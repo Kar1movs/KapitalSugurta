@@ -326,9 +326,7 @@ html[data-colorless="true"] {
     background: var(--bs-wheat);
     box-shadow: 0 2px 14px rgba(0, 0, 0, .08);
     transition: 0.6s;
-    width: 350px;
-    height: 450px;
-
+    width: 100%;
 }
 
 .card:hover {
@@ -358,18 +356,12 @@ html[data-colorless="true"] {
 .frame-product {
     font-size: 15px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 1rem;
-    height: 100%;
-    justify-content: space-between;
-
+    padding: 15px;
+    height: 200px;
 }
 
 .text-product {
-    position: relative;
     font-size: 1rem;
     margin-bottom: 1rem;
     color: var(--bs-black);
@@ -391,11 +383,14 @@ html[data-colorless="true"] {
     transform: translateX(50px);
     transition: all 300ms ease-in-out;
     background-color: var(--bs-ww);
+    
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 8px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    z-index: 1;
 }
 
 .homepage-about-text:hover {
     transform: translateX(65px);
-    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 8px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 8px -1px, rgba(0, 0, 0, 0.3) 0px 2px 4px -1px;
 }
 
 /*   + -------------------- + */
@@ -426,8 +421,11 @@ html[data-colorless="true"] {
     background-color: var(--bs-wheat);
     box-shadow: 0 2px 14px rgba(0, 0, 0, .08);
     transition: 0.6s;
-    position: relative;
     height: 100%;
+}
+
+.card-news-img{
+    position: relative !important;
 }
 
 .card-news:hover {
@@ -437,13 +435,11 @@ html[data-colorless="true"] {
 
 .news-position {
     position: absolute;
-    top: 306px;
+    bottom: 0;
     left: 0;
+    color: var(--bs-black);
 }
 
-.card-new-img {
-    height: 356px;
-}
 
 /*   + --------- + */
 /*  /  FEEDBACK / */
@@ -596,6 +592,13 @@ th {
 
 .contact-links-a {
     color: var(--bs-black);
+    font-weight: 600;
+    width: fit-content;
+    transition: 250ms;
+}
+.contact-links-a:hover {
+    color: var(--bs-primary-hover);
+    transition: 250ms;
 }
 
 .contact-a {
@@ -603,10 +606,6 @@ th {
 }
 
 .contact-a:hover {
-    color: var(--bs-primary-hover);
-}
-
-.contact-links-a:hover {
     color: var(--bs-primary-hover);
 }
 
@@ -875,29 +874,17 @@ th {
         width: 44.2%;
     }
 
-    .news-position {
-        position: absolute;
-        top: 366px;
-        left: 0;
-    }
-
-    .card-new-img {
+    /* .card-new-img {
         width: 100%;
         height: 416px;
-    }
+    } */
 }
 
 @media (min-width: 1300px) {
-
-    .news-position {
-        position: absolute;
-        top: 306px;
-        left: 0;
-    }
-
+/* 
     .card-new-img {
         height: 356px;
-    }
+    } */
 }
 
 @media screen and (max-width: 1200px) {
@@ -910,16 +897,10 @@ th {
     .search-input {
         width: 35.3%;
     }
-
-    .news-position {
-        position: absolute;
-        top: 306px;
-        left: 0;
-    }
-
+/* 
     .card-new-img {
         height: 356px;
-    }
+    } */
 
     .homepage-about-text {
         transform: translateX(40px);
@@ -960,15 +941,9 @@ th {
         width: 23.8%;
     }
 
-    .news-position {
-        position: absolute;
-        top: 246px;
-        left: 0;
-    }
-
-    .card-new-img {
+    /* .card-new-img {
         height: 296px;
-    }
+    } */
 
     .homepage-about-text {
         transform: translateX(40px);
@@ -1003,22 +978,10 @@ th {
         filter: brightness(0.5);
     }
 
-    .h1-swiper,
-    .h5-swiper,
-    .swiper-link-a {
-        color: white;
-    }
-
-    .news-position {
-        position: absolute;
-        top: 282px;
-        left: 0;
-    }
-
-    .card-new-img {
+    /* .card-new-img {
         height: 332px;
         width: 100%;
-    }
+    } */
 
     .homepage-about-text {
         transform: translateX(40px);
@@ -1059,24 +1022,6 @@ th {
 
     .logo-text {
         font-size: 11px;
-    }
-
-    .card {
-        box-shadow: 0 2px 14px rgba(0, 0, 0, .08);
-        transition: 0.6s;
-        width: 255px;
-        height: 420px;
-    }
-
-    .card-new-img {
-        width: 100%;
-        height: 415px;
-    }
-
-    .news-position {
-        position: absolute;
-        top: 365px;
-        left: 0;
     }
 
     .homepage-about-text {
