@@ -12,14 +12,18 @@
     <!-- dark-light  -->
     <script src="assets/js/dak-light.js" defer></script>
 
+    <!-- gray mode js  -->
+    <script src="assets/js/gray-mode.js" defer></script>
+
+    <!-- img none  -->
+    <script src="assets/js/img-none.js" defer></script>
+
     <!-- voice mode js  -->
     <script src="assets/js/voice-mode.js" defer></script>
 
     <!-- inc-dec-size js  -->
     <script src="assets/js/inc-dec-size.js" defer></script>
 
-    <!-- img none  -->
-    <script src="assets/js/img-none.js" defer></script>
 
     <!-- favico  -->
     <link type="image/x-icon" href="/assets/img/favico/favico.png" rel="shortcut icon">
@@ -63,14 +67,18 @@
     <!-- dark-light -->
     <link rel="stylesheet" href="assets/css/dark-light.css">
 
+    <!-- img none css  -->
+    <link rel="stylesheet" href="assets/css/img-none.css">
+
+    <!-- gray mode css -->
+    <link rel="stylesheet" href="assets/css/gray-mode.css">
+
     <!-- voise-mode -->
     <link rel="stylesheet" href="assets/css/voice-mode.css">
 
     <!-- inc-dec size  -->
     <link rel="stylesheet" href="assets/css/inc-dec-size.css">
 
-    <!-- img none css  -->
-    <link rel="stylesheet" href="assets/css/img-none.css">
 
     <!-- fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +119,8 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div class="d-block d-md-flex align-items-center gap-2">
+                    <div class="d-block d-lg-flex align-items-center gap-2">
+                        <!-- dark light  -->
                         <div
                             class=" dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
                             <div class="position-relative z-index dark-mode-js dark-mode darklight-button d-flex align-items-center dark-light-tooltip"
@@ -132,13 +141,45 @@
 
                             </div>
                             <span
-                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-md-none"
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-lg-none"
                                 style=" height: 30px;"><i class="ri-subtract-line"></i></span>
                             <label for="dark-light-mode"
-                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-md-none">
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-lg-none">
                                 Kunduzgi/Tungi Rejim
                             </label>
                         </div>
+
+                        <!-- gray mode -->
+                        <div
+                            class="dropdown-item no-default gray-light d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
+                            <div class="position-relative z-index gray-light-mode-parent  d-flex align-items-center gray-light-mode-tooltip"
+                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"
+                                data-bs-placement="top" data-bs-title="Rangli/rangsiz Rejim"
+                                title="Rangli/rangsiz Rejim">
+                                <input type="checkbox" id="gray-light-mode"
+                                    class="gray-light-mode-theme-js gray-light-mode gray-light-mode-toggle" value="on"
+                                    checked="false" />
+
+                                <label class="label label-gray-light-mode position-relative" for="gray-light-mode">
+                                    gray/light mode
+
+                                </label>
+
+                                <label for="gray-light-mode" class="" id="#bx-svg-gray-light-js">
+                                    <i class="bx bx-palette bx-none-gray-light bx-small bx-change-gray-light-icon-js w-100 h-100"
+                                        style="font-size: 20px !important;"></i>
+                                </label>
+
+                            </div>
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-lg-none"
+                                style=" height: 30px;"><i class="ri-subtract-line"></i></span>
+                            <label for="gray-light-mode"
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-lg-none">
+                                Rangli/rangsiz Rejim
+                            </label>
+                        </div>
+
                         <!-- img none -->
                         <div
                             class="dropdown-item no-default img-none d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
@@ -161,13 +202,15 @@
 
                             </div>
                             <span
-                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-md-none"
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-lg-none"
                                 style=" height: 30px;"><i class="ri-subtract-line"></i></span>
                             <label for="img-none-mode"
-                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-md-none">
-                                Kunduzgi/Tungi Rejim
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-lg-none">
+                                Rasmsiz/Rasmli Rejim
                             </label>
                         </div>
+
+                        <!-- voice mode  -->
                         <div
                             class=" voice-on voice-on-js d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
                             <div class="noDefalult voise-mode" data-bs-target="#voiceModal">
@@ -192,13 +235,15 @@
                                 </div>
                             </div>
                             <span
-                                class="fs-2 fw-bold modal-span modal-text-span-2 d-inline-flex align-items-center d-md-none"
+                                class="fs-2 fw-bold modal-span modal-text-span-2 d-inline-flex align-items-center d-lg-none"
                                 style="height: 30px;"><i class="ri-subtract-line"></i></span>
                             <label for="toggle-voice-mode"
-                                class="my-2 fw-bolder fs-10 modal-text cursor-pointer d-block d-md-none">
+                                class="my-2 fw-bolder fs-10 modal-text cursor-pointer d-block d-lg-none">
                                 Ovozli
                                 Rejimda O'qish</label>
                         </div>
+
+                        <!-- inc dec  -->
                         <div class="d-flex align-items-center position-font-inc-dec inc-dec mx-2">
                             <div class="d-flex align-items-center flex-wrap w-100">
                                 <div
@@ -655,7 +700,7 @@
                                                 majburiy <br />
                                                 sug'urta qilish</h5>
                                             <a href="#"
-                                                class="my-5  swiper-link-a swiper-link-a-media d-flex align-items-center gap-1">
+                                                class="my-5 swiper-link-a swiper-link-a-media d-flex align-items-center gap-1">
                                                 <span class="fw-bold wand-span">|</span>
                                                 BATAFSIL
                                             </a>
@@ -727,7 +772,7 @@
 
                 <!-- swiper slider 4  -->
                 <div class="swiper-slide shadow">
-                    <div class="position-relative w-100 h-100 p-3 p-lg-5 swiper-slide-filter" >
+                    <div class="position-relative w-100 h-100 p-3 p-lg-5 swiper-slide-filter">
                         <div class="container h-100">
                             <div class="swiper-text h-100">
                                 <div class="row h-100">
@@ -858,7 +903,7 @@
                         <div class="card border-0 pb-4">
                             <div class="box rounded">
                                 <div class="img p-2">
-                                    <img src="assets/img/homepage-insurance/tfjmsq.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/homepage-insurance/tfjmsq.jpg" alt="" class="img-fluid dark-light-img">
                                 </div>
                                 <div class="frame-product text-center my-3 d-flex justify-content-between flex-column">
                                     <h5 class="fw-bold">TFJMSQ</h5>
@@ -878,7 +923,7 @@
                         <div class="card border-0 pb-4">
                             <div class="box rounded">
                                 <div class="img p-2">
-                                    <img src="assets/img/homepage-insurance/chempion.jpg" alt="" class="img-fluid">
+                                    <img src="assets/img/homepage-insurance/chempion.jpg" alt="" class="img-fluid dark-light-img">
                                 </div>
                                 <div class="frame-product text-center my-3 d-flex justify-content-between flex-column">
                                     <h5 class="fw-bold">"CHEMPION" sug'urta mahsuloti</h5>
@@ -1065,39 +1110,36 @@
             <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3 d-flex justify-content-center">
                     <a href="#" class="card-news border-0  rounded my-4">
-                            <div class="card-news-img">
-                                <img src="assets/img/news-pages/aban.jpg" alt=""
-                                    class="rounded-top img-fluid card-new-img dark-light-img">
-                                <time data-time="23.10.2023"
-                                    class="bg-primary p-2 news-position fw-bold ">23.10.2023</time>
-                            </div>
-                                <h6 class="px-4 py-3">Siz sug'urtalangan mulkdan voz kechishingiz va
-                                    sug'urtaning
-                                    to'liq summasini qaytarib olishingiz mumkinligini bilarmidingiz ?</h6>
+                        <div class="card-news-img">
+                            <img src="assets/img/news-pages/aban.jpg" alt=""
+                                class="rounded-top img-fluid card-new-img dark-light-img">
+                            <time data-time="23.10.2023" class="bg-primary p-2 news-position fw-bold ">23.10.2023</time>
+                        </div>
+                        <h6 class="px-4 py-3">Siz sug'urtalangan mulkdan voz kechishingiz va
+                            sug'urtaning
+                            to'liq summasini qaytarib olishingiz mumkinligini bilarmidingiz ?</h6>
                     </a>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3 d-flex justify-content-center">
                     <a href="#" class="card-news border-0  rounded my-4">
-                            <div class="card-news-img">
-                                <img src="assets/img/news-pages/21.png" alt=""
-                                    class="rounded-top img-fluid card-new-img dark-light-img">
-                                <time data-time="21.10.2023"
-                                    class="bg-primary p-2 news-position fw-bold ">21.10.2023</time>
-                            </div>
-                                <h6 class="px-4 py-3">Aziz hamyurtlar! Sizlarni 21-oktabr – O‘zbek tiliga
-                                    davlat tili maqomi berilgan kun bilan chin yurakdan muborakbod etamiz!</h6>
+                        <div class="card-news-img">
+                            <img src="assets/img/news-pages/21.png" alt=""
+                                class="rounded-top img-fluid card-new-img dark-light-img">
+                            <time data-time="21.10.2023" class="bg-primary p-2 news-position fw-bold ">21.10.2023</time>
+                        </div>
+                        <h6 class="px-4 py-3">Aziz hamyurtlar! Sizlarni 21-oktabr – O‘zbek tiliga
+                            davlat tili maqomi berilgan kun bilan chin yurakdan muborakbod etamiz!</h6>
                     </a>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12  my-3 d-flex justify-content-center">
                     <a href="#" class="card-news  border-0  rounded my-4">
-                            <div class="card-news-img">
-                                <img src="assets/img/news-pages/parking.jpg" alt=""
-                                    class="rounded-top img-fluid card-new-img dark-light-img">
-                                <time data-time="04.10.2023"
-                                    class="bg-primary p-2 news-position fw-bold ">04.10.2023</time>
-                            </div>
-                                <h6 class="px-4 pt-3">Do'stlar, sinoptiklar yomon ob-havoni bashorat qilmoqdalar. </h6>
-                        </a>
+                        <div class="card-news-img">
+                            <img src="assets/img/news-pages/parking.jpg" alt=""
+                                class="rounded-top img-fluid card-new-img dark-light-img">
+                            <time data-time="04.10.2023" class="bg-primary p-2 news-position fw-bold ">04.10.2023</time>
+                        </div>
+                        <h6 class="px-4 pt-3">Do'stlar, sinoptiklar yomon ob-havoni bashorat qilmoqdalar. </h6>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1211,20 +1253,26 @@
                     <div class="row align-items-center justify-content-lg-start justify-content-center">
                         <div class="col-6">
                             <div class="box-market mb-3">
-                                <div class="row g-3">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
-                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3 link-app link-app-play-and-app-store border-light-subtle"
-                                            href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US" target="_blank">
-                                            <img src="assets/img/mobile-app/google-play.svg"
-                                                class="img-fluid play-market object-fit-contain">
-                                        </a>
+                                <div class="row g-1">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 my-2 rounded-3 link-app border border-light-subtle"
+                                                href="https://play.google.com/store/apps/details?id=uz.kapitalsugurta.kapital_klient&hl=ru&gl=US"
+                                                style="width: 140px; height: 48px;" target="_blank">
+                                                <img src="assets/img/mobile-app/google-play.svg"
+                                                    class="img-fluid play-market w-100 h-100 object-fit-contain">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
-                                        <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 rounded-3  link-app border-light-subtle link-app-play-and-app-store"
-                                            href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582" target="_blank">
-                                            <img src="assets/img/mobile-app/app-store.svg"
-                                                class="img-fluid app-story object-fit-contain">
-                                        </a>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a class="bg-white d-inline-flex align-items-center justify-content-center px-3 my-2 rounded-3 link-app border-light-subtle"
+                                                href="https://apps.apple.com/uz/app/kapital-sugurta/id6450005582"
+                                                style="width: 140px; height: 48px;" target="_blank">
+                                                <img src="assets/img/mobile-app/app-store.svg"
+                                                    class="img-fluid app-story w-100 h-100 object-fit-contain">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1401,7 +1449,8 @@
                                     <i class="ri-phone-fill contact-icon" style="font-size: 20px !important;"></i>
                                     +(99871) 200 1100
                                 </a>
-                                <a href="mailto:info@kapitalsugurta.uz" class="fs-6 fw-bolder contact-a" target="_blank">
+                                <a href="mailto:info@kapitalsugurta.uz" class="fs-6 fw-bolder contact-a"
+                                    target="_blank">
                                     <i class="ri-mail-fill contact-icon" style="font-size: 20px !important;"></i>
                                     office@go.kapitalsugurta.uz
                                 </a>

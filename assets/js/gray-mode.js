@@ -1,51 +1,51 @@
-let imgNoneMode = localStorage.getItem("img-none");
-const imgNoneModeToggle = document.querySelector(".img-none-mode-theme-js");
-let imgNoneSvg = document.querySelectorAll(".svg-none");
-let slash = document.querySelector('.bx-none-image');
+let grayLightMode = localStorage.getItem("gray-light-mode");
+const grayLightModeToggle = document.querySelector(".gray-light-mode-theme-js");
+let grayLightSvg = document.querySelectorAll(".svg-none");
+let graylightslash = document.querySelector('.bx-none-gray-light');
 // let labelDarkLightMode = document.querySelector(".label-dark-light-mode");
 // let labelDarkLightModeAfter = window.getComputedStyle(labelDarkLightMode, '::after');
 // let content = labelDarkLightModeAfter.content;
 // console.log(content);
-let imgNoneBxSvg = document.getElementById('bx-svg-img-none-js');
-let imgNonebxChangeIcon = document.querySelector('.bx-change-img-none-icon-js');
-let imgNoneSaveToggle = document.querySelector(".img-none-mode-parent input[type='checkbox']");
-const imgNoneWrapper = document.querySelector(":root");
+let grayLightBxSvg = document.getElementById('#bx-svg-gray-light-js');
+let grayLightbxChangeIcon = document.querySelector('.bx-change-gray-light-icon-js');
+let grayLightSaveToggle = document.querySelector(".gray-light-mode-parent input[type='checkbox']");
+const grayLightWrapper = document.querySelector(":root");
 
-const enableImgNoneMode = () => { 
-    document.documentElement.classList.add("img-none");
-    document.documentElement.classList.remove("img-have");
-    imgNoneWrapper.setAttribute("data-img", "true");
-    imgNoneModeToggle.classList.add("active");
+const enablegrayLightMode = () => { 
+    document.documentElement.classList.add("gray-light-mode");
+    document.documentElement.classList.remove("gray-light-have");
+    grayLightWrapper.setAttribute("data-colorless", "true");
+    grayLightModeToggle.classList.add("active");
 
-    imgNoneSaveToggle.setAttribute("checked", "true");
+    grayLightSaveToggle.setAttribute("checked", "true");
 
-    for (let i = 0; i < imgNoneSvg.length; i++) {
-        const element = imgNoneSvg[i];
+    for (let i = 0; i < grayLightSvg.length; i++) {
+        const element = grayLightSvg[i];
         element.style.display = "none";
     }
 
-    localStorage.setItem("img-none", "enabled");
+    localStorage.setItem("gray-light-mode", "enabled");
 };
 
-const disableImgNoneMode = () => {
-    document.documentElement.classList.add("img-have");
-    document.documentElement.classList.remove("img-none");
-    wrapper.setAttribute("data-img", "false");
-    imgNoneModeToggle.classList.remove("active");
-    imgNoneSaveToggle.setAttribute("checked", "false");
-    for (let i = 0; i < imgNoneSvg.length; i++) {
-        const element = imgNoneSvg[i];
+const disablegrayLightMode = () => {
+    document.documentElement.classList.add("gray-light-have");
+    document.documentElement.classList.remove("gray-light-mode");
+    wrapper.setAttribute("data-colorless", "false");
+    grayLightModeToggle.classList.remove("active");
+    grayLightSaveToggle.setAttribute("checked", "false");
+    for (let i = 0; i < grayLightSvg.length; i++) {
+        const element = grayLightSvg[i];
         element.style.display = "block";
     }
 
-    localStorage.setItem("img-none", null);
+    localStorage.setItem("gray-light-mode", null);
 };
 
-if (imgNoneMode === 'enabled') {
-    enableImgNoneMode();
-    // imgNonebxChangeIcon.classList.add('bx-image-alt');
-    // imgNonebxChangeIcon.classList.remove('bx-image-alt');
-    imgNonebxChangeIcon.classList.remove('bx-none-image');
+if (grayLightMode === 'enabled') {
+    enablegrayLightMode();
+    // grayLightbxChangeIcon.classList.add('bx-image-alt');
+    // grayLightbxChangeIcon.classList.remove('bx-image-alt');
+    grayLightbxChangeIcon.classList.remove('bx-none-gray-light');
 
 }
 
@@ -65,23 +65,23 @@ function enableScroll() {
     };
 }
 
-imgNoneModeToggle.addEventListener("click", () => {
-    imgNoneMode = localStorage.getItem("img-none");
+grayLightModeToggle.addEventListener("click", () => {
+    grayLightMode = localStorage.getItem("gray-light-mode");
 
-    if (imgNoneMode !== 'enabled') {
-        enableImgNoneMode();
-        // imgNonebxChangeIcon.classList.add('bx-image-alt');
-        // imgNonebxChangeIcon.classList.remove('bx-image-alt');
-        imgNonebxChangeIcon.classList.remove('bx-none-image');
+    if (grayLightMode !== 'enabled') {
+        enablegrayLightMode();
+        // grayLightbxChangeIcon.classList.add('bx-palette');
+        // grayLightbxChangeIcon.classList.remove('bx-palette');
+        grayLightbxChangeIcon.classList.remove('bx-none-gray-light');
         setTimeout(function () {
-            imgNoneBxSvg.classList.add('scale-mode');
+            grayLightBxSvg.classList.add('scale-mode');
         }, 50);
-        imgNoneBxSvg.classList.remove('scale-mode');
+        grayLightBxSvg.classList.remove('scale-mode');
         $.notify({
             // options
-            icon: 'bx bx-image-alt bx-none-image bx-sm position-relative',
-            title: 'Rasmiz rejim ishga tushdi',
-            message: 'Rasmlar sahifda o\'chirib qo\'yildi rejim yoqildi',
+            icon: 'bx bx-palette bx-none-gray-light bx-sm position-relative',
+            title: 'Rangsiz rejim ishga tushdi',
+            message: 'Ranglar sahifda o\'chirib qo\'yildi rejim yoqildi',
             // url: 'https://github.com/mouse0270/bootstrap-notify',
             // target: '_blank'
         }, {
@@ -125,19 +125,19 @@ imgNoneModeToggle.addEventListener("click", () => {
         });
         /*disableScroll();*/
     } else {
-        disableImgNoneMode();
-        // imgNonebxChangeIcon.classList.add('bx-image-alt');
-        // imgNonebxChangeIcon.classList.remove('bx-image-alt');
-        imgNonebxChangeIcon.classList.add('bx-none-image');
+        disablegrayLightMode();
+        // grayLightbxChangeIcon.classList.add('bx-image-alt');
+        // grayLightbxChangeIcon.classList.remove('bx-image-alt');
+        grayLightbxChangeIcon.classList.add('bx-none-gray-light');
         setTimeout(function () {
-            imgNoneBxSvg.classList.add('scale-mode');
+            grayLightBxSvg.classList.add('scale-mode');
         }, 50);
-        imgNoneBxSvg.classList.remove('scale-mode');
+        grayLightBxSvg.classList.remove('scale-mode');
         $.notify({
             // options
-            icon: 'bx bx-image-alt bx-sm',
-            title: 'Rasmli rejim ishga tushdi',
-            message: 'Rasmlar sahifda joylab qo\'yildi',
+            icon: 'bx bx-palette bx-sm',
+            title: 'Rangli rejim ishga tushdi',
+            message: 'Ranglar sahifda joylab qo\'yildi',
             // url: 'https://github.com/mouse0270/bootstrap-notify',
             // target: '_blank'
         }, {

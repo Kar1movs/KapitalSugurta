@@ -1,4 +1,4 @@
-var VoiceModeStorage = localStorage.getItem("voiceModeStorage-js");
+var VoiceModeStorage = localStorage.getItem("voice-mode-storage-js");
 var voiceOn = document.querySelector(".voice-on-js");
 var voiceMode = document.querySelector(".voice-mode-js");
 var timeCloseModalAlert = 100;

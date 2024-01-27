@@ -176,14 +176,7 @@ html[data-img="true"] .news-position{
     }
 }
 
-@media screen and (max-width: 768px){
-    .dropdown-item.img-none{
-        margin: 8px 0 8px 0 !important;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px){
     .dropdown-item.img-none{
         margin: 8px 0 8px 0 !important;
         width: 100%;
