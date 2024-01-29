@@ -6,7 +6,6 @@ html[data-img="true"] .news-position{
     top: 0;
     bottom: inherit;
     background-color: transparent !important;
-    /* color: #555; */
     position: relative;
 }
 

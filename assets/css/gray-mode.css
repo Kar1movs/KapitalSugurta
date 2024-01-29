@@ -46,13 +46,6 @@
 .label-gray-light-mode:active::after {
     width: 36px;
 }
-/* :root[data-theme="dark"] .dark-mode-toggle-text::after {
-    content: "deactivate ";
-}
-
-:root[data-theme="light"] .dark-mode-toggle-text::after {
-    content: "activate ";
-} */
 
 .label-gray-light-mode {
     cursor: pointer;

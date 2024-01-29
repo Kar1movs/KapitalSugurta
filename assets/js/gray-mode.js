@@ -6,7 +6,7 @@ let graylightslash = document.querySelector('.bx-none-gray-light');
 // let labelDarkLightModeAfter = window.getComputedStyle(labelDarkLightMode, '::after');
 // let content = labelDarkLightModeAfter.content;
 // console.log(content);
-let grayLightBxSvg = document.getElementById('#bx-svg-gray-light-js');
+let grayLightBxSvg = document.getElementById('bx-svg-gray-light-js');
 let grayLightbxChangeIcon = document.querySelector('.bx-change-gray-light-icon-js');
 let grayLightSaveToggle = document.querySelector(".gray-light-mode-parent input[type='checkbox']");
 const grayLightWrapper = document.querySelector(":root");

@@ -150,7 +150,7 @@ body {
 }
 
 .mode-theme-js.active~#bx-svg-dark-light-js {
-    display: block;
+    display: block; 
     position: absolute;
     width: 20px;
     height: 20px;
