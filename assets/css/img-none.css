@@ -3,7 +3,11 @@ html[data-img="true"] img:not(.allways-have, .app-story, .play-market, .telegram
 }
 
 html[data-img="true"] .news-position{
-    display: none !important;
+    top: 0;
+    bottom: inherit;
+    background-color: transparent !important;
+    /* color: #555; */
+    position: relative;
 }
 
 .img-none-mode-toggle {
