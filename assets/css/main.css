@@ -662,160 +662,6 @@ th {
     color: white;
 }
 
-/*   + -------- + */
-/*  /  TVEJMQS / */
-/* + -------- + */
-
-.tvejmqs-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/tvejmqs/header.PNG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 100px;
-}
-
-/*   + -------- + */
-/*  /  TFJMSQ / */
-/* + -------- + */
-
-.tfjmsq-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/tfjmsq/header.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 100px;
-}
-
-/*   + ------------------ + */
-/*  /  CALCULATOR POLICY / */
-/* + ------------------ + */
-
-.calculator-policy {
-    background-color: var(--bs-white);
-}
-
-.form_box input.empty_field {
-    border: 2px solid;
-    border-width: 2px;
-    border-color: red;
-}
-
-.page-404 {
-    background-color: var(--bs-primary);
-    color: var(--bs-black);
-}
-
-.home-page-404 {
-    background: var(--bs-white);
-    background-image: url(../img/tfjmsq/header.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 100px;
-}
-
-/*   + --------- + */
-/*  /  AVTOLUX  / */
-/* + --------- + */
-
-.avtolux-information {
-    background-color: var(--bs-white);
-}
-
-.avtolux-information-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/avtolux-information/avto-lux-header.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 50px;
-}
-
-.personal-insurance-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/unfortunate-insurance/unfortunate-insurance.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 50px;
-}
-
-.personal-insurance-travel-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/unfortunate-insurance/travel.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 50px;
-}
-
-.incoming-tourist-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/unfortunate-insurance/dom.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 50px;
-}
-
-.dasgo-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/tvejmqs/header.PNG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 50px;
-}
-
-.capital-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/unfortunate-insurance/dom.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 50px;
-}
-
-.kapitalofis-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/property-insurance/kapital-ofis.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 50px;
-}
-
-.bank-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/property-insurance/bank.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 100px;
-}
-
-.personal-documnet-home-page {
-    background: var(--bs-white);
-    background-image: url(../img/property-insurance/shaxsiy.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    background-size: 100%;
-    padding-bottom: 100px;
-}
 
 /*   + ----- + */
 /*  /  IMG  / */
@@ -867,18 +713,6 @@ th {
 /*  /  RESPONSIVE  / */
 /* + ------------ + */
 
-@media screen and (max-width: 1400px) {
-    .list-unordered {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-
-    .navbar-tabs-button {
-        font-size: 13px;
-    }
-}
-
 @media (min-width: 1400px) {
 
     .list-unordered {
@@ -890,27 +724,40 @@ th {
     .swiper-section {
         position: relative;
         z-index: 0;
-        margin-top: 130px;
+        margin-top: 127px;
     }
 
     .search-input {
         width: 44.2%;
     }
 
-    /* .card-new-img {
-        width: 100%;
-        height: 416px;
-    } */
 }
 
-@media (min-width: 1300px) {
-    /* 
-    .card-new-img {
-        height: 356px;
-    } */
+@media screen and (max-width: 1400px) {
+    .swiper-section {
+        position: relative;
+        z-index: 0;
+        margin-top: 127px;
+    }
+
+    .list-unordered {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .navbar-tabs-button {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
+    .swiper-section {
+        position: relative;
+        z-index: 0;
+        margin-top: 124px;
+    }
+
     .list-unordered {
         width: 40px;
         height: 40px;
@@ -920,11 +767,6 @@ th {
     .search-input {
         width: 35.3%;
     }
-
-    /* 
-    .card-new-img {
-        height: 356px;
-    } */
 
     .homepage-about-text {
         transform: translateX(40px);
@@ -937,14 +779,16 @@ th {
 }
 
 @media screen and (max-width: 992px) {
+    .swiper-section {
+        position: relative;
+        z-index: 0;
+        margin-top: 76px;
+    }
+
     .list-unordered {
         width: 36px;
         height: 36px;
         font-size: 16px;
-    }
-
-    .swiper-section {
-        margin-top: 76px;
     }
 
     .swiper-slide-content-title {
@@ -965,17 +809,14 @@ th {
         width: 23.8%;
     }
 
-    /* .card-new-img {
-        height: 296px;
-    } */
-
     .homepage-about-text {
-        transform: translateX(40px);
+        width: 95%;
+        transform: translateX(20px);
         height: 400px;
     }
 
     .homepage-about-text:hover {
-        transform: translateX(40px);
+        transform: translateX(20px);
     }
 
     .footer-text-size {
@@ -1002,17 +843,18 @@ th {
         filter: brightness(0.5);
     }
 
-    .center{
+    .center {
         justify-content: start;
     }
 
     .homepage-about-text {
-        transform: translateX(40px);
+        width: 95%;
+        transform: translateX(15px);
         height: 470px
     }
 
     .homepage-about-text:hover {
-        transform: translateX(40px);
+        transform: translateX(15px);
     }
 
     .contact-links {
@@ -1032,10 +874,10 @@ th {
 }
 
 @media screen and (max-width: 576px) {
-    .inc-dec{
+    .inc-dec {
         width: 75%;
     }
-    
+
     .swiper-section {
         margin-top: 60px;
     }
@@ -1055,12 +897,13 @@ th {
     }
 
     .homepage-about-text {
-        transform: translateX(40px);
+        width: 95%;
+        transform: translateX(20px);
         height: 470px;
     }
 
     .homepage-about-text:hover {
-        transform: translateX(40px);
+        transform: translateX(20px);
     }
 
     .footer-text-size {
@@ -1088,11 +931,11 @@ th {
     }
 
     .homepage-about-p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .homepage-about-h1 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .link-app-play-and-app-store {
@@ -1111,12 +954,11 @@ th {
 
     .scrollup {
         position: fixed;
-        right: 1.5rem;
-        bottom: 5% !important;
+        right: 2.5rem;
         background-color: var(--bs-primary) !important;
         opacity: .8;
         padding: 0.2rem 0.6rem;
-        border-radius: 0.4rem;
+        border-radius: 50%;
         z-index: var(--z-tooltip);
         transition: .4s;
     }

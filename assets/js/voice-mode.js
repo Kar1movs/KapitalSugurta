@@ -223,7 +223,7 @@ const enableVoiceMode = () => {
     voiceSaveToggle.classList.add('active');
     voiceCheckStatus = 1;
     activeVoice();
-    localStorage.setItem("voiceModeStorage", "enabled");
+    localStorage.setItem("voice-mode-storage", "enabled");
 };
 
 const DisableAllSound = () => {
@@ -241,7 +241,7 @@ const disableVoiceMode = () => {
     voiceSaveToggle.setAttribute("checked", "false");
     voiceSaveToggle.classList.remove('active');
     voiceCheckStatus = 0;
-    localStorage.setItem("voiceModeStorage", null);
+    localStorage.setItem("voice-mode-storage", null);
 };
 
 if (VoiceModeStorage === "enabled") {

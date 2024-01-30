@@ -133,17 +133,6 @@ function moveIndicator(oldTab, newTab) {
         tabsContainer.style.setProperty("--_width", newTabWidth);
     }, 220);
 }
-// bootstrap tab panel rechange 
-// const triggerTabList = document.querySelectorAll('#myTab button')
-// triggerTabList.forEach(triggerEl => {
-//     const tabTrigger = new bootstrap.Tab(triggerEl)
-
-//     triggerEl.addEventListener('mouseover', event => {
-//         event.preventDefault()
-//         tabTrigger.show()
-//     })
-// })
-
 //   + ------ +
 //  / search /
 // + ------ + 

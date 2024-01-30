@@ -1,16 +1,3 @@
-// var swiper = new Swiper(".header-intro-swiper", {
-//     effect: "cards",
-//     grabCursor: true,
-//     loop: false,
-//     cardsEffect: {
-//         perSlideOffset: 17, // Space between cards in px
-//         perSlideRotate: 1, // Rotation of cards in degrees
-//         centeredSlides: true,
-//     },
-// });
-
-
-
 if ($(".header-intro-swiper").length) {
     const swiperOptions = {
         loop: false,

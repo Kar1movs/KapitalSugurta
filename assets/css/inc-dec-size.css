@@ -77,3 +77,14 @@
         margin:  10px 10px 0 !important;
     }
 }
+
+@media screen and (max-width: 576px) {
+
+    .position-font-inc-dec {
+        width: 70%;
+    }
+
+    .inc-dec {
+        margin:  10px 10px 0 !important;
+    }
+}

@@ -43,7 +43,7 @@
 .h1-swiper,
 .h5-swiper,
 .swiper-link-a {
-    color: black;
+    color: var(--bs-black);
 }
 
 .swiper-link-a {
