@@ -13,6 +13,10 @@
     --z-modal: 1000;
 }
 
+body{
+    background: var(--bs-white) !important;
+}
+
 body[data-image="true"] img {
     display: none !important;
 }
@@ -25,6 +29,21 @@ html[data-colorless="true"] {
     background-color: darkgrey;
     background-image: none;
     color: #333 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+label {
+    word-wrap: break-word;
+    word-break: break-word;
+    word-spacing: normal;
 }
 
 .load {
@@ -320,10 +339,6 @@ html[data-colorless="true"] {
     background: var(--bs-white);
 }
 
-.span-insurance {
-    color: var(--bs-gray-400);
-}
-
 .card {
     background: var(--bs-wheat);
     box-shadow: 0 2px 14px rgba(0, 0, 0, .08);
@@ -369,6 +384,48 @@ html[data-colorless="true"] {
     color: var(--bs-black);
 }
 
+.each-title {
+    position: relative;
+}
+
+.each-title::before {
+    content: '-';
+    margin-right: 4px;
+    color: white;
+}
+
+.each-title::after {
+    content: '-';
+    margin-left: 4px;
+    color: white;
+}
+.each-title-left {
+    position: relative;
+}
+
+.each-title-left::before {
+    content: '-';
+    margin-right: 4px;
+    color: white;
+}
+
+.each-title-left::after {
+    content: ' ';
+    color: white;
+}
+.each-title-right {
+    position: relative;
+}
+
+.each-title-right::before {
+    content: ' ';
+    color: white;
+}
+
+.each-title-right::after {
+    content: '';
+    color: white;
+}
 
 /*   + --------------- + */
 /*  /  HOMEPAGE ABOUT / */
@@ -379,21 +436,16 @@ html[data-colorless="true"] {
 }
 
 .homepage-about-text {
-    margin: 100px 0;
-    padding: 2rem 1rem 2rem 0;
-    margin-left: -40px;
-    transform: translateX(50px);
-    transition: all 300ms ease-in-out;
     background-color: var(--bs-ww);
-
     box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 8px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     z-index: 1;
 }
 
+/* 
 .homepage-about-text:hover {
     transform: translateX(65px);
     box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 8px -1px, rgba(0, 0, 0, 0.3) 0px 2px 4px -1px;
-}
+} */
 
 /*   + -------------------- + */
 /*  /  HOMEPAGE STATISTICS / */
@@ -423,7 +475,8 @@ html[data-colorless="true"] {
     background-color: var(--bs-wheat);
     box-shadow: 0 2px 14px rgba(0, 0, 0, .08);
     transition: 0.6s;
-    height: 100%;
+    min-height: 128px;
+    /* height: 100%; */
 }
 
 .card-news-img {
@@ -435,12 +488,7 @@ html[data-colorless="true"] {
     transition: 0.6s;
 }
 
-.news-position {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: var(--bs-black);
-}
+
 
 
 /*   + --------- + */
@@ -543,6 +591,7 @@ th {
 
 .links-box {
     background: var(--bs-wheat);
+    height: 120px;
 }
 
 .links-box:hover {
@@ -721,12 +770,6 @@ th {
         font-size: 16px;
     }
 
-    .swiper-section {
-        position: relative;
-        z-index: 0;
-        margin-top: 127px;
-    }
-
     .search-input {
         width: 44.2%;
     }
@@ -734,12 +777,6 @@ th {
 }
 
 @media screen and (max-width: 1400px) {
-    .swiper-section {
-        position: relative;
-        z-index: 0;
-        margin-top: 127px;
-    }
-
     .list-unordered {
         width: 40px;
         height: 40px;
@@ -752,11 +789,6 @@ th {
 }
 
 @media screen and (max-width: 1200px) {
-    .swiper-section {
-        position: relative;
-        z-index: 0;
-        margin-top: 124px;
-    }
 
     .list-unordered {
         width: 40px;
@@ -779,24 +811,11 @@ th {
 }
 
 @media screen and (max-width: 992px) {
-    .swiper-section {
-        position: relative;
-        z-index: 0;
-        margin-top: 76px;
-    }
 
     .list-unordered {
         width: 36px;
         height: 36px;
         font-size: 16px;
-    }
-
-    .swiper-slide-content-title {
-        color: var(--bs-white);
-    }
-
-    .swiper-link-a:hover {
-        color: var(--bs-white);
     }
 
     :after,
@@ -833,10 +852,6 @@ th {
         width: 36px;
         height: 36px;
         font-size: 16px;
-    }
-
-    .swiper-section {
-        margin-top: 65px;
     }
 
     .back-image {
@@ -878,10 +893,6 @@ th {
         width: 75%;
     }
 
-    .swiper-section {
-        margin-top: 60px;
-    }
-
     .list-unordered {
         width: 30px;
         height: 30px;
@@ -912,18 +923,6 @@ th {
 
     .modal-frame-text h5 {
         font-size: 17px;
-    }
-
-    .h1-swiper {
-        font-size: 28px;
-    }
-
-    .h5-swiper {
-        font-size: 17px;
-    }
-
-    .swiper-link-a {
-        font-size: 15px;
     }
 
     .wand-span {

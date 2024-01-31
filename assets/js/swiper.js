@@ -1,23 +1,47 @@
 if ($(".header-intro-swiper").length) {
     const swiperOptions = {
-        loop: false,
         effect: 'cards',
-
         lazyLoading: true,
         limitRotation: false,
         slideShadows: false,
         translate: 0,
         grabCursor: true,
-
+        loop: false,
         cardsEffect: {
             perSlideOffset: 15, // Space between cards in px
-            perSlideRotate: 2, // Rotation of cards in degrees
+            perSlideRotate: 1, // Rotation of cards in degrees
             centeredSlides: true,
         },
+
         autoplay: {
             delay: 5000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
         },
+
+
+        // on: {
+        //     slideChangeTransitionStart: function () {
+        //       if (this.isBeginning) {
+        //         swiper.params.autoplay.direction = 'normal'; // Forward autoplay
+        //       } else if (this.isEnd) {
+        //         swiper.params.autoplay.direction = 'reverse'; // Reverse autoplay
+        //       }
+        //     },
+        //   },
+
+        // on: {
+        //     slideChangeTransitionStart: function () {
+        //         if (this.isBeginning) {
+        //             swiper.autoplay.start(); // Start autoplay with normal direction
+        //         } else if (this.isEnd) {
+        //             swiper.autoplay.stop(); // Stop autoplay
+        //             //swiper.autoplay.params.delay = 3000; // Reset autoplay delay
+        //             swiper.params.autoplay.direction = 'reverse'; // Set autoplay direction to reverse
+        //             swiper.autoplay.start(); // Start autoplay with reverse direction
+        //         }
+        //     },
+        // },
+
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -54,24 +78,25 @@ if ($(".header-intro-swiper").length) {
             767: {
                 cardsEffect: {
                     perSlideOffset: 10, // Space between cards in px
-                    perSlideRotate: 2, // Rotation of cards in degrees
+                    perSlideRotate: 1, // Rotation of cards in degrees
                     centeredSlides: true,
                 },
                 effect: "cards",
             },
             // when window width is >= 320px
-            768: {                cardsEffect: {
-                perSlideOffset: 10, // Space between cards in px
-                perSlideRotate: 2, // Rotation of cards in degrees
-                centeredSlides: true,
-            },
+            768: {
+                cardsEffect: {
+                    perSlideOffset: 10, // Space between cards in px
+                    perSlideRotate: 1, // Rotation of cards in degrees
+                    centeredSlides: true,
+                },
                 effect: "cards",
             },
             992: {
 
             },
             1200: {
-        
+
             },
         }
 

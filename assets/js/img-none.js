@@ -10,19 +10,40 @@ let imgNoneBxSvg = document.getElementById('bx-svg-img-none-js');
 let imgNonebxChangeIcon = document.querySelector('.bx-change-img-none-icon-js');
 let imgNoneSaveToggle = document.querySelector(".img-none-mode-parent input[type='checkbox']");
 const imgNoneWrapper = document.querySelector(":root");
+let allImgsTag = document.querySelectorAll("img");
+let homepageAboutText = document.querySelector(".homepage-about-col");
 
+
+
+// allImgsTag.forEach(img => {
+//     // Example: Add a new attribute 'data-info' with a value
+//     img.setAttribute('data-img', 'false');
+    
+//     // You can add more attributes as needed
+//   });
 const enableImgNoneMode = () => { 
     document.documentElement.classList.add("img-none");
     document.documentElement.classList.remove("img-have");
     imgNoneWrapper.setAttribute("data-img", "true");
     imgNoneModeToggle.classList.add("active");
 
+    homepageAboutText.classList.add("col-xxl-12");
+    homepageAboutText.classList.add("col-xl-12");
+    homepageAboutText.classList.remove("col-xxl-8");
+    homepageAboutText.classList.remove("col-xl-8");
     imgNoneSaveToggle.setAttribute("checked", "true");
 
     for (let i = 0; i < imgNoneSvg.length; i++) {
         const element = imgNoneSvg[i];
         element.style.display = "none";
     }
+
+    allImgsTag.forEach(img => {
+        // Example: Add a new attribute 'data-info' with a value
+        img.setAttribute('data-img', 'true');
+        
+        // You can add more attributes as needed
+      });
 
     localStorage.setItem("img-none", "enabled");
 };
@@ -32,11 +53,21 @@ const disableImgNoneMode = () => {
     document.documentElement.classList.remove("img-none");
     wrapper.setAttribute("data-img", "false");
     imgNoneModeToggle.classList.remove("active");
+    homepageAboutText.classList.remove("col-xxl-12");
+    homepageAboutText.classList.remove("col-xl-12");
+    homepageAboutText.classList.add("col-xxl-8");
+    homepageAboutText.classList.add("col-xl-8");
     imgNoneSaveToggle.setAttribute("checked", "false");
     for (let i = 0; i < imgNoneSvg.length; i++) {
         const element = imgNoneSvg[i];
         element.style.display = "block";
     }
+    allImgsTag.forEach(img => {
+        // Example: Add a new attribute 'data-info' with a value
+        img.setAttribute('data-img', 'false');
+        
+        // You can add more attributes as needed
+      });
 
     localStorage.setItem("img-none", null);
 };
