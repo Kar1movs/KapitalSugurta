@@ -13,7 +13,7 @@
     --z-modal: 1000;
 }
 
-body{
+body {
     background: var(--bs-white) !important;
 }
 
@@ -366,12 +366,8 @@ label {
     height: 50px;
 }
 
-.fs {
-    font-size: 20px;
-}
-
 .frame-product {
-    font-size: 15px;
+    font-size: .9rem;
     width: 100%;
     align-items: center;
     padding: 15px;
@@ -382,6 +378,24 @@ label {
     font-size: 1rem;
     margin-bottom: 1rem;
     color: var(--bs-black);
+}
+
+.left-line {
+    position: relative;
+}
+
+.left-line::before {
+    content: "";
+    margin-right: 2px;
+    width: 3.3px;
+    height: 30px;
+    background-color: var(--bs-before-left-line);
+    transition: all 0.4s;
+}
+
+.left-line:hover::before {
+    background-color: var(--bs-primary);
+    transition: all 0.4s;
 }
 
 .each-title {
@@ -399,6 +413,7 @@ label {
     margin-left: 4px;
     color: white;
 }
+
 .each-title-left {
     position: relative;
 }
@@ -413,6 +428,7 @@ label {
     content: ' ';
     color: white;
 }
+
 .each-title-right {
     position: relative;
 }
@@ -704,7 +720,7 @@ th {
 
 .footer {
     background: var(--bs-footer);
-    font-size: 14px;
+    font-size: .845rem;
 }
 
 .footer-text-size {
@@ -801,12 +817,12 @@ th {
     }
 
     .homepage-about-text {
-        transform: translateX(40px);
+        /* transform: translateX(40px); */
         height: 400px;
     }
 
     .homepage-about-text:hover {
-        transform: translateX(40px);
+        /* transform: translateX(40px); */
     }
 }
 
@@ -830,20 +846,16 @@ th {
 
     .homepage-about-text {
         width: 95%;
-        transform: translateX(20px);
+        /* transform: translateX(20px); */
         height: 400px;
     }
 
     .homepage-about-text:hover {
-        transform: translateX(20px);
+        /* transform: translateX(20px); */
     }
 
     .footer-text-size {
-        font-size: 18px;
-    }
-
-    .homepage-about-h1 {
-        font-size: 35px;
+        font-size: 1.125rem;
     }
 }
 
@@ -864,12 +876,12 @@ th {
 
     .homepage-about-text {
         width: 95%;
-        transform: translateX(15px);
+        /* transform: translateX(15px); */
         height: 470px
     }
 
     .homepage-about-text:hover {
-        transform: translateX(15px);
+        /* transform: translateX(15px); */
     }
 
     .contact-links {
@@ -880,11 +892,7 @@ th {
     }
 
     .footer-text-size {
-        font-size: 15px;
-    }
-
-    .homepage-about-h1 {
-        font-size: 25px;
+        font-size: 0.938rem;
     }
 }
 
@@ -909,16 +917,16 @@ th {
 
     .homepage-about-text {
         width: 95%;
-        transform: translateX(20px);
+        /* transform: translateX(20px); */
         height: 470px;
     }
 
     .homepage-about-text:hover {
-        transform: translateX(20px);
+        /* transform: translateX(20px); */
     }
 
     .footer-text-size {
-        font-size: 11px;
+        font-size: 0.688rem;
     }
 
     .modal-frame-text h5 {

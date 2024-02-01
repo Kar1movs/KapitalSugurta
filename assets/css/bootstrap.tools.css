@@ -155,9 +155,31 @@ input {
 }
 
 .h-420-px {
-    height: 420px;
+    height: 420px !important;
 }
 
 .pb-self-4{
     padding-bottom: 2.5rem;
+}
+
+.fs-16-px{
+    font-size: 16px !important;
+}
+.fs-18-px{
+    font-size: 18px !important;
+}
+.fs-20-px{
+    font-size: 20px !important;
+}
+.fs-22-px{
+    font-size: 22px !important;
+}
+.fs-24-px{
+    font-size: 24px !important;
+}
+
+@media screen and (max-width: 576px){
+    .h-420-px {
+        height: 470px !important;
+    }
 }

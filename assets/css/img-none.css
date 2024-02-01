@@ -5,6 +5,21 @@ html[data-img="true"] img:not(.allways-have, .app-story, .play-market, .telegram
     animation: noneOneSec 500ms ease-in-out forwards;*/
 }
 
+html[data-img="true"] .position-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+html[data-img="false"] .position-center {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+}
+
+
 @keyframes noneOneSec {
     0% {
         transform: scale(1);
@@ -132,44 +147,26 @@ div.card-news-img:has(img[data-img="false"]) {
     }
 } */
 
-
-
-
-html[data-img="true"] .mobile-app-img {
-    display: none !important;
+html[data-img="true"] .h1-swiper {
+    color: black;
 }
 
-/* html[data-img="true"] .homepage-about-none-img {
-
-    transform: scale(1);
-    animation: noneOneSec 500ms 0 ease-in-out forwards;
-} */
-
-
-html[data-img="true"] .position-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+html[data-img="true"] .h5-swiper {
+    color: black;
 }
 
-html[data-img="false"] .position-center {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    text-align: start;
+html[data-img="true"] .swiper-link-a {
+    color: black;
 }
 
-html[data-img="true"] .homepage-about-text {
-    /* width: 95%; */
-    /* transform: translateX(20px); */
+.news-date-with-image-position {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--bs-black);
 }
 
 html[data-img="true"] .news-date-with-image-position {
-    /* bottom: 0;
-    background-color: transparent !important;
-    position: relative;
-    color: var(--bs-black); */
     display: none;
 }
 
@@ -190,18 +187,30 @@ html[data-img="true"] .news-date-without-image-position {
 html[data-img="false"] .news-date-without-image-position {
     display: none;
 }
+/* 
+.news-date-without-image-position {
+    display: none;
+} */
 
-html[data-img="true"] .h1-swiper {
-    color: black;
+
+html[data-img="true"] .mobile-app-img {
+    display: none !important;
 }
 
-html[data-img="true"] .h5-swiper {
-    color: black;
+/* html[data-img="true"] .homepage-about-none-img {
+
+    transform: scale(1);
+    animation: noneOneSec 500ms 0 ease-in-out forwards;
+} */
+
+html[data-img="true"] .homepage-about-text {
+    /* width: 95%; */
+    /* transform: translateX(20px); */
 }
 
-html[data-img="true"] .swiper-link-a {
-    color: black;
-}
+
+
+
 
 .img-none-mode-toggle {
     appearance: none;
@@ -314,7 +323,7 @@ html[data-img="true"] .swiper-link-a {
 }
 
 .img-none .bx-small {
-    font-size: 1.35rem !important;
+    font-size: 21px !important;
 }
 
 .img-none-mode-theme-js~#bx-svg-img-none-js i {

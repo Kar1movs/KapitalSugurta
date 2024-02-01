@@ -12,6 +12,9 @@ let imgNoneSaveToggle = document.querySelector(".img-none-mode-parent input[type
 const imgNoneWrapper = document.querySelector(":root");
 let allImgsTag = document.querySelectorAll("img");
 let homepageAboutText = document.querySelector(".homepage-about-col");
+let dNoneTimeOneJs = document.querySelector(".d-none-time-one-js")
+let dNoneTimeTwoJs = document.querySelector(".d-none-time-two-js")
+let dNoneTimeThreeJs = document.querySelector(".d-none-time-three-js")
 
 
 
@@ -21,11 +24,23 @@ let homepageAboutText = document.querySelector(".homepage-about-col");
     
 //     // You can add more attributes as needed
 //   });
+
+dNoneTimeOneJs.classList.add("d-none");
+dNoneTimeTwoJs.classList.add("d-none");
+dNoneTimeThreeJs.classList.add("d-none");
+
 const enableImgNoneMode = () => { 
     document.documentElement.classList.add("img-none");
     document.documentElement.classList.remove("img-have");
     imgNoneWrapper.setAttribute("data-img", "true");
     imgNoneModeToggle.classList.add("active");
+
+    dNoneTimeOneJs.classList.add("d-block");
+    dNoneTimeOneJs.classList.remove("d-none");
+    dNoneTimeTwoJs.classList.add("d-block");
+    dNoneTimeTwoJs.classList.remove("d-none");
+    dNoneTimeThreeJs.classList.add("d-block");
+    dNoneTimeThreeJs.classList.remove("d-none");
 
     homepageAboutText.classList.add("col-xxl-12");
     homepageAboutText.classList.add("col-xl-12");
@@ -53,6 +68,14 @@ const disableImgNoneMode = () => {
     document.documentElement.classList.remove("img-none");
     wrapper.setAttribute("data-img", "false");
     imgNoneModeToggle.classList.remove("active");
+
+    dNoneTimeOneJs.classList.remove("d-block");
+    dNoneTimeOneJs.classList.add("d-none");
+    dNoneTimeTwoJs.classList.remove("d-block");
+    dNoneTimeTwoJs.classList.add("d-none");
+    dNoneTimeThreeJs.classList.remove("d-block");
+    dNoneTimeThreeJs.classList.add("d-none");
+
     homepageAboutText.classList.remove("col-xxl-12");
     homepageAboutText.classList.remove("col-xl-12");
     homepageAboutText.classList.add("col-xxl-8");

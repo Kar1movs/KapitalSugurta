@@ -5,6 +5,7 @@
     --bs-black: #000000;
     --primary: #f1ca29;
     --grey--dark: #aca79a;
+    --bs-before-left-line: #919191;
     --border-color-dark: #dee2e6;
     --bs-filter: brightness(0.8);;
     --bs-primary-mode: var(--primary);
@@ -20,6 +21,7 @@
     --bs-white: #222220;
     --bs-black: #ffffff;
     --primary: #f1ca29;
+    --bs-before-left-line: #f3ecec;
     --border-color-dark: #f1ca29;
     --bs-primary-mode: var(--bs-wheat);
     --bs-load-bg: rgba(0, 0, 0, 0.5);
@@ -169,7 +171,7 @@ body {
 }
 
 .dark-light .bx-small {
-    font-size: 1.35rem !important;
+    font-size: 21px !important;
 }
 
 .mode-theme-js~#bx-svg-dark-light-js i {
