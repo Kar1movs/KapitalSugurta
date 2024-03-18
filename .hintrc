@@ -35,7 +35,14 @@
     "compat-api/css": "off",
     "css-prefix-order": "off",
     "detect-css-reflows/composite": "off",
-    "detect-css-reflows/paint": "off"
+    "detect-css-reflows/paint": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-active": "off",
+        "duplicate-id": "off"
+      }
+    ]
   },
   "browserslist": [
     "defaults",
