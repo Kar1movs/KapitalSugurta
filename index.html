@@ -90,6 +90,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
 	<select class="voice-mode-control-js d-none invisible" id="voiceSelect" hidden=""></select>
 	<button class="btn-voice border-0 shadow d-none voice-unique-js" id="voice">
@@ -97,6 +98,210 @@
 			<i class="bx bx-volume-full bx-sm text-white bx-volume-effect"></i>
 		</span>
 	</button>
+=======
+    <!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
+    <select class="voice-mode-control-js d-none invisible" id="voiceSelect" hidden=""></select>
+		
+    <button class="btn-voice border-0 shadow d-none voice-unique-js" id="voice">
+        <span class="icon-voice d-flex align-items-center justify-content-center">
+            <i class="bx bx-volume-full bx-sm text-white bx-volume-effect"></i>
+        </span>
+    </button>
+
+    <!-- Loader = Suxrobbek -->
+    <div class="load" id="load" style="display: none;">
+        <lottie-player autoplay="" loop="" mode="normal" speed="1.5" src="assets/json/loader.json" class="load-gif"
+            background="transparent">
+        </lottie-player>
+    </div>
+
+    <!-- modal  -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <div class="d-flex justify-content-between mt-3 mx-3">
+                        <div class="modal-frame-text">
+                            <h5 class="fw-bold">Maxsus imkoniyatlar</h5>
+                            <span>Qulaylik uchun saytning mahsus imkoniyataridan foydalanishingiz
+                                mumkin !</span>
+                        </div>
+                        <button type="button" class="btn-close bg-primary  my-2 p-2 border text-end"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="d-block d-lg-flex align-items-center gap-2">
+                        <!-- dark light  -->
+                        <div
+                            class=" dropdown-item no-default dark-light d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
+                            <div class="position-relative z-index dark-mode-js dark-mode darklight-button d-flex align-items-center dark-light-tooltip"
+                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"
+                                data-bs-placement="top" data-bs-title="Kunduzgi/Tungi Rejim"
+                                title="Kunduzgi/Tungi Rejim">
+                                <input type="checkbox" id="dark-light-mode"
+                                    class="mode-theme-js dark-light-mode dark-mode-toggle" value="on" checked="false" />
+
+                                <label class="label label-dark-light-mode position-relative "
+                                    for="dark-light-mode">dark/light
+                                </label>
+
+                                <label for="dark-light-mode" class="moon-svg-js" id="bx-svg-dark-light-js">
+                                    <i
+                                        class="bx bx-moon bx-small bx-change-dark-light-icon-js w-100 h-100 fs-20-px"></i>
+                                </label>
+
+                            </div>
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-lg-none"
+                                style=" height: 30px;"><i class="ri-subtract-line"></i></span>
+                            <label for="dark-light-mode"
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-lg-none">
+                                Kunduzgi/Tungi Rejim
+                            </label>
+                        </div>
+
+                        <!-- gray mode -->
+                        <div
+                            class="dropdown-item no-default gray-light d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
+                            <div class="position-relative z-index gray-light-mode-parent  d-flex align-items-center gray-light-mode-tooltip"
+                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"
+                                data-bs-placement="top" data-bs-title="Rangli/rangsiz Rejim"
+                                title="Rangli/rangsiz Rejim">
+                                <input type="checkbox" id="gray-light-mode"
+                                    class="gray-light-mode-theme-js gray-light-mode gray-light-mode-toggle" value="on"
+                                    checked="false" />
+
+                                <label class="label label-gray-light-mode position-relative" for="gray-light-mode">
+                                    gray/light mode
+
+                                </label>
+
+                                <label for="gray-light-mode" class="" id="bx-svg-gray-light-js">
+                                    <i
+                                        class="bx bx-palette bx-none-gray-light bx-small bx-change-gray-light-icon-js w-100 h-100 fs-20-px"></i>
+                                </label>
+
+                            </div>
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-lg-none"
+                                style=" height: 30px;"><i class="ri-subtract-line"></i></span>
+                            <label for="gray-light-mode"
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-lg-none">
+                                Rangli/rangsiz Rejim
+                            </label>
+                        </div>
+
+                        <!-- img none -->
+                        <div
+                            class="dropdown-item no-default img-none d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
+                            <div class="position-relative z-index img-none-mode-parent d-flex align-items-center img-none-tooltip"
+                                data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"
+                                data-bs-placement="top" data-bs-title="Rasmsiz/Rasmli Rejim"
+                                title="Rasmsiz/Rasmli Rejim"><!-- dark-mode-js -->
+                                <input type="checkbox" id="img-none-mode"
+                                    class="img-none-mode-theme-js img-none-mode img-none-mode-toggle" value="on"
+                                    checked="false" />
+
+                                <label class="label label-img-none-mode position-relative " for="img-none-mode">img/not
+                                    img
+                                </label>
+
+                                <label for="img-none-mode" class="" id="bx-svg-img-none-js">
+                                    <i
+                                        class="bx bx-image-alt bx-none-image bx-small bx-change-img-none-icon-js w-100 h-100 fs-20-px"></i>
+                                </label>
+
+                            </div>
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span d-inline-flex align-items-center d-lg-none"
+                                style=" height: 30px;"><i class="ri-subtract-line"></i></span>
+                            <label for="img-none-mode"
+                                class=" fw-bolder modal-text fs-10 cursor-pointer d-inline-block d-lg-none">
+                                Rasmsiz/Rasmli Rejim
+                            </label>
+                        </div>
+
+                        <!-- voice mode  -->
+                        <div
+                            class=" voice-on voice-on-js d-flex align-items-center gap-2 border rounded-5 px-2 py-2 w-fit-content">
+                            <div class="noDefalult voise-mode" data-bs-target="#voiceModal">
+                                <div class="position-relative z-index inp voice-mode-js d-flex align-items-center"
+                                    data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                    data-bs-trigger="hover" data-bs-placement="top"
+                                    data-bs-title="Matnni Ovozli Rejimda O'qish" title="Matnni Ovozli Rejimda O'qish">
+
+                                    <input type="checkbox" id="toggle-voice-mode" class="mode-voice-js"
+                                        checked="false" />
+
+                                    <label for="toggle-voice-mode"
+                                        class="label label-voise-mode position-relative">Toggle</label>
+
+                                    <label for="toggle-voice-mode" class="voice-svg-js cursor-pointer"
+                                        id="bx-svg-voice-js">
+                                        <i
+                                            class="bx bx-volume-full bx-small bx-change-voice-icon-js w-100 h-100 fs-20-px"></i>
+                                    </label>
+
+
+                                </div>
+                            </div>
+                            <span
+                                class="fs-2 fw-bold modal-span modal-text-span-2 d-inline-flex align-items-center d-lg-none"
+                                style="height: 30px;"><i class="ri-subtract-line"></i></span>
+                            <label for="toggle-voice-mode"
+                                class="my-2 fw-bolder fs-10 modal-text cursor-pointer d-block d-lg-none">
+                                Ovozli
+                                Rejimda O'qish</label>
+                        </div>
+
+                        <!-- inc dec  -->
+                        <div class="d-flex align-items-center position-font-inc-dec inc-dec mx-2">
+                            <div class="d-flex align-items-center flex-wrap w-100">
+                                <div
+                                    class="d-flex align-items-center row-gap-2 justify-content-between dropdown-not-close w-100">
+                                    <button
+                                        class="dropdown-item dropdown-item-not-close decremet decremet-js decrease-font-js text-center"
+                                        value="decrease" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                        data-bs-trigger="hover" data-bs-placement="top"
+                                        data-bs-title="Mattini kichkinalashtirish">A-
+                                    </button>
+                                    <button
+                                        class="dropdown-item dropdown-item-not-close autoSize auto-size-in-visible auto-size-in-visible-js reset-font-js text-center mx-2 fs-16-px"
+                                        value="resetFont" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                        data-bs-custom-class="custom-tooltip" data-bs-placement="top"
+                                        data-bs-title="Matnni dastlabki holatga qaytarish">auto
+                                    </button>
+                                    <button
+                                        class="dropdown-item dropdown-item-not-close increment increment-js increase-font-js text-center"
+                                        value="increase" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+                                        data-bs-trigger="hover" data-bs-placement="top"
+                                        data-bs-title="Matnni kattalashtirish">A+
+                                    </button>
+                                    <div class="my-size text-center fw-bold p-0" id="current-size-js"><span
+                                            class="bg-primary-dark text-light p-1 mx-2 rounded-3 d-flex align-items-center justify-content-center fs-16-px">1x</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal search -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div
+            class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <input type="text" id="searchInpOpen"
+                    class="form-control border d-none d-xl-block py-3 input-box-shadow rou overflow-hidden"
+                    aria-label="Text input with radio button" placeholder="Qidirish...">
+            </div>
+        </div>
+    </div>
+>>>>>>> 23090d506dc08edc45de6a5ed8b47206355e8b80
 
 
 
