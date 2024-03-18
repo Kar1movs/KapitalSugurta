@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/aria": [
+      "default",
+      {
+        "aria-required-children": "off",
+        "aria-valid-attr-value": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off",
+        "link-name": "off"
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "no-inline-styles": "off",
+    "button-type": "off",
+    "disown-opener": "off",
+    "compat-api/css": "off",
+    "css-prefix-order": "off",
+    "detect-css-reflows/composite": "off",
+    "detect-css-reflows/paint": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 123",
+    "not firefox <= 123"
+  ]
+}

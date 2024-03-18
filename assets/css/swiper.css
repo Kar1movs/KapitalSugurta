@@ -44,6 +44,7 @@
 .h1-swiper,
 .h5-swiper,
 .swiper-link-a {
+    font-weight: 700;
     color: var(--bs-black);
 }
 
@@ -115,6 +116,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+		width: 90%;
     background: rgba(0, 0, 0, 0.6);
     padding: 8px 0;
     z-index: 15;
