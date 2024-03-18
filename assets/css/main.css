@@ -671,10 +671,13 @@ th {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+	transition: 0.3s;
 }
 
 .social a:hover {
 	background: var(--bs-primary-hover);
+	color: var(--bs-white);
+	transition: 0.3s;
 }
 
 .contact-links-a {
