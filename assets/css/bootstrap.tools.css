@@ -193,6 +193,18 @@ input {
 	transform: scale(2);
 }
 
+.xl-end-center{
+	justify-content: end;
+	align-items: end;
+}
+
+@media screen and (max-width: 1199px) {
+	.xl-end-center{
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 @media screen and (max-width: 576px) {
 	.h-420-px {
 		height: 470px !important;
