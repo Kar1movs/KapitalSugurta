@@ -867,15 +867,18 @@ th {
 		font-size: 1.125rem;
 	}
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
 	.logo {
 		width: 30%;
 	}
 }
+
 @media screen and (max-width: 767px) {
 	.logo {
 		width: 40%;
 	}
+
 	.list-unordered {
 		width: 36px;
 		height: 36px;
@@ -939,8 +942,12 @@ th {
 		font-size: 24px;
 	}
 
+	.section-title {
+		font-size: 20px;
+	}
+
 	.homepage-about-p {
-		font-size: 16px;
+		font-size: 13px;
 	}
 
 	.homepage-about-h1 {
